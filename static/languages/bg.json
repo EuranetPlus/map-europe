@@ -1,0 +1,12 @@
+{
+    "heading": "Военните разходи се увеличават във всички държави от ЕС",
+    "subheading": "Държавните разходи за военна отбрана като процент от БВП в страните от Европейския съюз през 2020 г.",
+    "legend1": "Страни извън ЕС",
+    "tooltip1": "% от БВП",
+    "textSourceDescription": "Източник",
+    "textSource": "Евростат",
+    "textNoteDescription": "Забележка",
+    "textNote": "Държавни разходи по COFOG (класификация на функциите на правителството на UNSD, възпроизведена в ESA2010) функция и вид.",
+    "textDataAccess": "Достъп до данните",
+    "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=en"
+}

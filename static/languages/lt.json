@@ -1,0 +1,12 @@
+{
+    "heading": "Karinės išlaidos visose ES valstybėse",
+    "subheading": "Bendrosios valdžios išlaidos karinei gynybai procentais nuo BVP Europos Sąjungos šalyse 2020 m",
+    "legend1": "ES nepriklausančios šalys",
+    "tooltip1": "% BVP",
+    "textSourceDescription": "Šaltinis",
+    "textSource": "Eurostatas",
+    "textNoteDescription": "Pastaba",
+    "textNote": "Valdžios išlaidos pagal COFOG (UNSD vyriausybės funkcijų klasifikatorius, pakartotas ESS2010) funkciją ir tipą.",
+    "textDataAccess": "Pasiekite duomenis",
+    "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=en"
+}

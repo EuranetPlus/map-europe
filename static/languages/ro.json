@@ -1,0 +1,12 @@
+{
+    "heading": "Cheltuielile militare au crescut în toate statele UE",
+    "subheading": "Cheltuielile publice generale pentru apărarea militară ca procent din PIB în țările Uniunii Europene în 2020",
+    "legend1": "Țări non-UE",
+    "tooltip1": "% din PIB",
+    "textSourceDescription": "Sursă",
+    "textSource": "Eurostat",
+    "textNoteDescription": "Notă",
+    "textNote": "Cheltuielile guvernamentale după funcția și tipul COFOG (clasificarea UNSD a funcțiilor guvernamentale, replicată în ESA2010).",
+    "textDataAccess": "Accesați datele",
+    "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=en"
+}

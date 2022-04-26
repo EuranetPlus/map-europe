@@ -1,0 +1,12 @@
+{
+    "heading": "Infieq militari fl-istati kollha tal-UE",
+    "subheading": "In-nefqa ġenerali tal-gvern fuq id-difiża militari bħala perċentwal tal-PGD fil-pajjiżi tal-Unjoni Ewropea fl-2020",
+    "legend1": "Pajjiżi mhux tal-UE",
+    "tooltip1": "% tal-PGD",
+    "textSourceDescription": "Sors",
+    "textSource": "Eurostat",
+    "textNoteDescription": "Nota",
+    "textNote": "Nefqa tal-gvern skont il-funzjoni u t-tip tal-COFOG (klassifikazzjoni UNSD tal-funzjonijiet tal-gvern, replikata fl-ESA2010).",
+    "textDataAccess": "Aċċessa għad-data",
+    "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=en"
+}

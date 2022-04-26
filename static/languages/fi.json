@@ -1,0 +1,12 @@
+{
+    "heading": "Sotilasmenot kasvavat kaikissa EU-maissa",
+    "subheading": "Julkiset menot sotilaalliseen puolustukseen suhteessa BKT:hen Euroopan unionin maissa vuonna 2020",
+    "legend1": "EU:n ulkopuoliset maat",
+    "tooltip1": "% BKT:sta",
+    "textSourceDescription": "Lähde",
+    "textSource": "Eurostat",
+    "textNoteDescription": "Huomautus",
+    "textNote": "Julkiset menot COFOG:n (UNSD:n julkishallinnon toimintojen luokittelu, jäljennetty EKT2010:ssä) toiminnon ja tyypin mukaan.",
+    "textDataAccess": "Käytä tietoja",
+    "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=fi"
+}

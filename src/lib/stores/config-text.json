@@ -1,0 +1,12 @@
+{
+	"heading": "Military spending up across all EU states",
+	"subheading": "General government expenditure on military defense as a percentage of GDP in countries of the European Union in 2020",
+	"legend1": "Non-EU countries",
+	"tooltip1": "% of GDP",
+	"textSourceDescription": "Source",
+	"textSource": "Eurostat",
+	"textNoteDescription": "Note",
+	"textNote": "Government expenditure by COFOG (UNSD classification of functions of government, replicated in ESA2010) function and type.",
+	"textDataAccess": "Access the data",
+	"linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=en"
+}

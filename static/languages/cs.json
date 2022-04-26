@@ -1,0 +1,12 @@
+{
+    "heading": "Vojenské výdaje ve všech státech EU rostou",
+    "subheading": "Vládní výdaje na vojenskou obranu jako procento HDP v zemích Evropské unie v roce 2020",
+    "legend1": "Země mimo EU",
+    "tooltip1": "% HDP",
+    "textSourceDescription": "Zdroj",
+    "textSource": "Eurostat",
+    "textNoteDescription": "Poznámka",
+    "textNote": "Vládní výdaje podle funkce a typu COFOG (klasifikace funkcí vlády UNSD, replikovaná v ESA2010).",
+    "textDataAccess": "Přístup k datům",
+    "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=cs"
+}

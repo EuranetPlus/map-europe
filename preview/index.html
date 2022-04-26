@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preview embedding</title>
+</head>
+
+
+<body>
+  <div class="wrapper">
+    <section>
+
+    <iframe title="Euranet Map" aria-label="Map" id="euranet-map" src="https://europe-map.vercel.app/" scrolling="no"frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="624"></iframe><script type="text/javascript">window.addEventListener("message", e => { if ("https://europe-map.vercel.app" !== e.origin) return; let t = e.data; if (t.height) { document.getElementById("euranet-map").height = t.height + "px" } }, !1)</script>
+
+
+
+
+      <!-- <iframe title="Euranet Map" aria-label="Map" id="euranet-map" src="https://europe-map.vercel.app/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="624"></iframe> -->
+
+      
+      <!-- Script normal -->
+      <!-- <script type="text/javascript">
+          window.addEventListener("message", (e) => {
+            if (e.origin !== 'https://europe-map.vercel.app') return; // Change URL to where map is hosted
+            let message = e.data;
+            if (message.height) {
+              let iframe = document.getElementById("euranet-map");
+              iframe.height = message.height + 'px';
+            }
+          }, false);
+      </script> -->
+
+      <!-- Script minified for Production -->
+      <!-- <script type="text/javascript">window.addEventListener("message",e=>{if("https://europe-map.vercel.app"!==e.origin)return;let t=e.data;if(t.height){document.getElementById("euranet-map").height=t.height+"px"}},!1);</script> -->
+
+
+
+      <script type="text/javascript">
+
+          let text = `
+          <iframe title="Euranet Map" aria-label="Map" id="euranet-map" src="https://europe-map.vercel.app/" scrolling="no" frameborder="0"style="width: 0; min-width: 100% !important; border: none;" height="624"></iframe><script type="text/javascript">window.addEventListener("message",e=>{if("https://europe-map.vercel.app"!==e.origin)return;let t=e.data;if(t.height){document.getElementById("euranet-map").height=t.height+"px"}},!1)</sc`+ `ript>`
+
+          document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById('embed-code').value = text.trim();
+          });
+
+      </script>
+
+
+        <div class="text-left">To embed this map, copy the code below:</div>
+        <div class="copy-preview">
+          <input type="text" name="" id="embed-code" class="passive-input" placeholder="gejj">
+        </div>
+    
+
+     
+
+    </section>
+  </div>
+</body>
+</html>
+
+
+<style>
+
+  body {
+  margin: 0;
+  }
+
+  .wrapper {
+    text-align: center;
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 2rem;
+  }
+
+  iframe {
+  overflow: hidden;
+  }
+
+  .copy-preview {
+    position: relative;
+    flex: 1;
+    background: #f5f5f5;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 3rem;
+}
+
+  .passive-input {
+    margin: 0;
+    width: 100%;
+    height: 24px;
+    overflow: hidden;
+    background: transparent;
+    border: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    cursor: text;
+}
+
+.text-left {
+  margin-top: 3rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
+}
+</style>

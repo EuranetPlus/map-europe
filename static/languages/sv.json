@@ -1,0 +1,12 @@
+{
+    "heading": "Militärutgifterna ökar i alla EU-stater",
+    "subheading": "Offentliga utgifter för militärt försvar i procent av BNP i länder i Europeiska unionen 2020",
+    "legend1": "Länder utanför EU",
+    "tooltip1": "% av BNP",
+    "textSourceDescription": "Källa",
+    "textSource": "Eurostat",
+    "textNoteDescription": "Notera",
+    "textNote": "Offentliga utgifter efter COFOG (UNSD-klassificering av statliga funktioner, replikerad i ESA2010) funktion och typ.",
+    "textDataAccess": "Få åtkomst till data",
+    "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=en"
+}

@@ -1,0 +1,12 @@
+{
+    "heading": "Αυξήθηκαν οι στρατιωτικές δαπάνες σε όλα τα κράτη της ΕΕ",
+    "subheading": "Δαπάνες γενικής κυβέρνησης για στρατιωτική άμυνα ως ποσοστό του ΑΕΠ στις χώρες της Ευρωπαϊκής Ένωσης το 2020",
+    "legend1": "Χώρες εκτός ΕΕ",
+    "tooltip1": "% του ΑΕΠ",
+    "textSourceDescription": "Πηγή",
+    "textSource": "Eurostat",
+    "textNoteDescription": "Σημείωση",
+    "textNote": "Κρατικές δαπάνες κατά COFOG (ταξινόμηση UNSD των λειτουργιών της κυβέρνησης, που αναπαράγεται στο ESA2010) λειτουργία και τύπος.",
+    "textDataAccess": "Πρόσβαση στα δεδομένα",
+    "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=en"
+}

@@ -1,0 +1,12 @@
+{
+    "heading": "Spese militari in aumento in tutti gli stati dell'UE",
+    "subheading": "Spesa delle amministrazioni pubbliche per la difesa militare in percentuale del PIL nei paesi dell'Unione Europea nel 2020",
+    "legend1": "Paesi extra UE",
+    "tooltip1": "% del PIL",
+    "textSourceDescription": "Fonte",
+    "textSource": "Eurostat",
+    "textNoteDescription": "Nota",
+    "textNote": "Spesa pubblica per funzione e tipologia COFOG (classificazione UNSD delle funzioni di governo, replicata in ESA2010).",
+    "textDataAccess": "Accedi ai dati",
+    "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=en"
+}
