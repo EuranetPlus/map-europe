@@ -3,10 +3,11 @@
 This is the code repository for an interactive EuranetPlus choropleth map of European countries based on data from a CSV file. The map can be updated with any data set that follows [this csv structure](https://docs.google.com/spreadsheets/d/1fzicMw_LiFGrdtzloXZFbM2FFgVc-GYtavvxPJFZ5Yo/edit?usp=sharing).
 
 To use the map for a new topic and populate it with new texts and data please follow these steps:
-1. Copy this repository: [Copy repository](#copy-repository)
-2. Update map titles, texts and translate: [Updating texts](#updating-text)
-3. Update map with new data: [Updating data](#updating-data)
-4. Publish the new map: [Publish map](#publish-map)
+1. Make a copy of this map template: [Copy repository](#copy-repository)
+2. Update map titles and texts: [Updating texts](#updating-text)
+3. Translate texts into 24 EU languages [Translate texts](#translate-text)
+4. Update map with new data: [Updating data](#updating-data)
+5. Publish the new map: [Publish map](#publish-map)
 
 <img width="602" alt="Bildschirmfoto 2022-04-27 um 15 20 30" src="https://user-images.githubusercontent.com/8008434/165527407-9b04b553-b074-4cbf-bc42-5e947a2fd8c3.png">
 
@@ -26,7 +27,7 @@ To embed the map on any website as a responsive widget, please use the following
 
 ## Copy repository
 
-To make a new map we first need to copy this reposirtory and use a fresh map template. To do this, please use the "Fork" Button on the top right in this window. This will create a so-called fork (a copy) of the exact same code that can be used for a new map. Each new map should have a new repository which should be renamed according to the new topic, using this nomenclature: _map-TOPIC_, e.g. _map-gdp_ or _map-military-spending_. If more than two words are used, separtate them with a hyphen. 
+To make a new map we first need to copy this repository and use a fresh map template. To do this, please use the "Fork" Button on the top right in this window. This will create a so-called fork (a copy) of the exact same code that can be used for a new map. Each new map should have a new repository which should be renamed according to the new topic, using this nomenclature: _map-TOPIC_, e.g. _map-gdp_ or _map-military-spending_. If more than two words are used, separtate them with a dash. 
 
 ## Updating text
 
@@ -43,6 +44,10 @@ This is **not correct** (comma is missing and no quotation marks, i.e. "" enclos
 
 After this, save the changes by entering a title for the commit, e.g. "Create config-text.json" and press the green __Commit changes__ button.
 
+## Translate text
+
+Todo...
+
 ## Updating data
 
 1. To update the map data, please use this [csv template](https://docs.google.com/spreadsheets/d/1fzicMw_LiFGrdtzloXZFbM2FFgVc-GYtavvxPJFZ5Yo/edit?usp=sharing). Please copy the template to your own computer (or Google Drive) and fill in your desired values for each country. Please make sure that values are formatted with dots (.) as comma separators and **not commas**, i.e. 0.45 instead of 0,45. **Warning: Please make sure not to delete any country names or ids. Also make sure the CSV file is formatted with commas (,) as delimiters, not semicolons (;) or other symbols. Otherwise the map will not work**
@@ -56,7 +61,7 @@ Your data should now be updated and after a while show on the map.
 
 ## Publish map
 
-etete..
+ToDo..
 
 ## Changing translations manually
 
