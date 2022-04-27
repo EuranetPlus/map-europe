@@ -1,4 +1,5 @@
 export const config = {
+  "mapTitle": "europe", // can be any title, if more tha one word use hyphens, e.g. "income-europe"
   "datasetType": "values", // values or binary
   "headlineAvailable": true, // true or false
   "subheadlineAvailable": true, // true or false
