@@ -25,7 +25,18 @@ To embed the map on any website as a responsive widget, please use the following
 
 ## Updating text
 
-etete
+To change the map heading, subheading, source and text note, please change the text contents of this [configuration file](https://github.com/EuranetPlus/map-europe/blob/main/src/lib/stores/config-text.json). It contains the entries for all textual elements in English.
+
+Example:  
+To change the text of the heading of the map, change the "heading" entry (text in quotation marks, i.e. "" behind the :). To do this, simply click on the pen symbol on the top right side of the file preview window where it says "Edit this file". **_Warning: Please make sure to always enclose the text elemets with quotation marks and do not forget to add a comma after the entry. Otherwise the file will not be able to be read and the app may brake._**
+
+This is **correct**:  
+``"heading": "Military spending up across all EU states",``
+
+This is **not correct** (comma is missing and no quotation marks, i.e. "" enclosing the text):  
+``"heading": Military spending up across all EU states``
+
+After this, save the changes by entering a title for the commit, e.g. "Create config-text.json" and press the green __Commit changes__ button.
 
 ## Updating data
 
