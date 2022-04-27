@@ -4,6 +4,8 @@ This is the code repository for an interactive EuranetPlus choropleth map of Eur
 
 For more details on how to update the map with new data, please read the section [Updating data](#updating-data)
 
+![_Users_alsino_Desktop_map-europe_preview_index html](https://user-images.githubusercontent.com/8008434/165514332-f783c099-bb19-4b05-bfd5-b3fbe5587d35.png)
+
 ## Live map
 
 The map is hosted on EuranetPlus' Vercel account and can be viewed here:  
