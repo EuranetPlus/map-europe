@@ -84,7 +84,7 @@
 	}
 
 	async function fetchCSV() {
-		const res = await csv('/data/thematic/data-1.csv')
+		const res = await csv('/data/thematic/data.csv')
 			.then(function (data) {
 				// Parse numbers as integers
 				data.forEach(function (d) {
