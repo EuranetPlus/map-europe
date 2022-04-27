@@ -47,6 +47,8 @@ In order to be able to use the automatic translation service by the Google API, 
   "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/maps%40iron-moon-dgdgdgdgg.iam.gserviceaccount.com"
 }
 
+3. **Allow scripts**: 
+By default every new repository is locked for running automated scripts. We need to enable this. Go to the [settings](https://github.com/EuranetPlus/map-europe/settings) tab and select "Actions" and then "General" from the dropdown on the lower left side. Then set the "Workflow permissions" to "Read and write permissions". Now we can change the texts and run the translations.
 
 ```
 
