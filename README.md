@@ -28,10 +28,10 @@ To embed the map on any website as a responsive widget, please use the following
 ## Copy repository
 
 1. **Copy repository**:  
-To make a new map we first need to copy this repository and use a fresh map template. To do this, please use the green "Use this template" button on the top right in this window. This will create a so-called fork (a copy) of the exact same code that can be used for a new map. Each new map should have a new repository which should be renamed according to the new topic, using this nomenclature: _map-TOPIC_, e.g. _map-gdp_ or _map-military-spending_. If more than two words are used, separtate them with a dash. 
+To make a new map we first need to copy this repository and use a fresh map template. To do this, please use the green "Use this template" button on the top right in this window. This will create a copy of the exact same code that can be used for a new map. You will be prompted to name the new repository according to the new topic of the map. Please use this nomenclature: _map-TOPIC_, e.g. _map-gdp_ or _map-generationz_. If more than two words are used, separtate them with a dash like so _map-military-spending_. 
 
 2. **Add Google Credentials**:  
-In order to be able to use the automatic translation service by the Google API, we need to provide the new repository with access to the API key. For this go to the [settings](https://github.com/EuranetPlus/map-europe/settings) tab and select the "secrets" dropdown on the lower right side. Here select "Actions". On the top right press the "New repository secret" button. Name the new secret **"GOOGLE_CREDENTIALS"** and as a value paste in the contents of the service account json file that can be downloaded from the Google Cloud Console. This file looks something like this (This  example below here is fake):
+In order to be able to use the automatic translation service by the Google API, we need to provide the new repository with access to the servica account API key. For this go to the [settings](https://github.com/EuranetPlus/map-europe/settings) tab and select the "Secrets" dropdown on the lower left side. Here select "Actions". On the top right side press the "New repository secret" button. Name the new secret **"GOOGLE_CREDENTIALS"** and as a value paste in the contents of the service account json file that can be downloaded from the Google Cloud Console. This file looks something like this (This example below here is fake and only for illustration):
 
 ```bash
 {
