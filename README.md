@@ -4,7 +4,8 @@ This is the code repository for an interactive EuranetPlus choropleth map of Eur
 
 For more details on how to update the map with new data, please read the section [Updating data](#updating-data).
 
-![_Users_alsino_Desktop_map-europe_preview_index html@2x](https://user-images.githubusercontent.com/8008434/165515127-31a15f5c-61af-419c-b483-1b8bf70c5e2f.png)
+<img width="602" alt="Bildschirmfoto 2022-04-27 um 15 20 30" src="https://user-images.githubusercontent.com/8008434/165527407-9b04b553-b074-4cbf-bc42-5e947a2fd8c3.png">
+
 
 ## Live map
 
