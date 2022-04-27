@@ -18,7 +18,7 @@ console.log(iframe);
 
 let result = `${heading}\n\n ${iframe}`
 
-let test = "```html <div>hello</div> ```"
+let test = "```html\n<div>hello</div>\n```"
 
 writeFile();
 
