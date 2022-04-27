@@ -18,14 +18,12 @@ console.log(iframe);
 
 let result = `${heading}\n\n ${iframe}`
 
-let test = "```html\n<div>hello</div>\n```"
-
 writeFile();
 
 function writeFile(jsonObj) {
   const data = JSON.stringify(jsonObj, null, 2);
 
-  fs.writeFile('./IFRAME.md', test, (err) => {
+  fs.writeFile('./IFRAME.md', result, (err) => {
     // If there is any error in writing to the file, return
     if (err) {
       console.error(err)
