@@ -12,7 +12,7 @@ const url = config.vercelURL;
 const iframe = `<iframe title="Euranet Map" aria-label="Map" id="euranet-map-${mapTitle}" src="${url}/" scrolling="no" frameborder="0"style="width: 0; min-width: 100% !important; border: none;" height="624"></iframe><script type="text/javascript">window.addEventListener("message",e=>{if("${url}"!==e.origin)return;let t=e.data;if(t.height){document.getElementById("euranet-map-${mapTitle}").height=t.height+"px"}},!1)</sc` + `ript>`
 
 let heading = "## Embedding the map";
-let subheading = "To embed the map on any website as a responsive widget, please use the following iframe code:"
+let subheading = "To embed the map on any website as a responsive widget, please use the following **iframe code**:"
 
 let result = `${heading}\n\n${subheading}\n\n ${iframe}`
 
