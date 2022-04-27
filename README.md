@@ -2,7 +2,7 @@
 
 This is the code repository for an interactive EuranetPlus choropleth map of European countries based on data from a CSV file. The map can be updated with any data set that follows [this structure](#).
 
-For more details on how to update the map with new data, please read the section [Updating data](#updating-data)
+For more details on how to update the map with new data, please read the section [Updating data](#updating-data).
 
 ![_Users_alsino_Desktop_map-europe_preview_index html](https://user-images.githubusercontent.com/8008434/165514332-f783c099-bb19-4b05-bfd5-b3fbe5587d35.png)
 
