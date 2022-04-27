@@ -14,21 +14,27 @@ const iframe = `<iframe title="Euranet Map" aria-label="Map" id="euranet-map-${m
 let heading = "## Embedding the map";
 let subheading = "To embed the map on any website as a responsive widget, please use the following **iframe code**:"
 
-let result = `${heading}\n\n${subheading}\n\n ${iframe}`
+let result = `\n\n\n\n${heading}\n\n${subheading}\n\n${iframe}`
 
 writeFile();
 
 function writeFile(jsonObj) {
-  const data = JSON.stringify(jsonObj, null, 2);
 
-  fs.writeFile('./IFRAME.md', result, (err) => {
-    // If there is any error in writing to the file, return
-    if (err) {
-      console.error(err)
-      return
-    }
+  // fs.writeFile('./IFRAME.md', result, (err) => {
+  //   // If there is any error in writing to the file, return
+  //   if (err) {
+  //     console.error(err)
+  //     return
+  //   }
 
-    // Log this message if the file was written to successfully
-    console.log('wrote to file successfully')
-  })
+  //   // Log this message if the file was written to successfully
+  //   console.log('wrote to file successfully')
+  // })
+
+
+  fs.appendFile('./README.md', result, function (err) {
+    if (err) throw err;
+    console.log('Saved!');
+  });
 }
+
