@@ -46,7 +46,8 @@ After this, save the changes by entering a title for the commit, e.g. "Create co
 
 ## Translate text
 
-Todo...
+To translate the texts in the [configuration file](https://github.com/EuranetPlus/map-europe/blob/main/src/lib/stores/config-text.json), you simply need to go to the [Actions](https://github.com/EuranetPlus/map-europe/actions) tab. Here under "workflows" select the "Translate text" workflow and press the "Run workflow" button on the right side and again the green "Run workflow" button from the dropdown menu. This will run the translate script and request the translated 24 language files from the Google API. This process may take several minutes. Once this process has finished sucessfully, you should see a green check mark ✅. 
+
 
 ## Updating data
 
