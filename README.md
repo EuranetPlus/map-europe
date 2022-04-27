@@ -21,11 +21,7 @@ To embed the map on any website as a responsive widget, please use the following
 
 ## Updating data
 
-1. To update the map data, please use this [csv template](https://docs.google.com/spreadsheets/d/1fzicMw_LiFGrdtzloXZFbM2FFgVc-GYtavvxPJFZ5Yo/edit?usp=sharing). Please copy the template to your own computer (or Google Drive) and fill in your desired values for each country. Please make sure that values are formatted with dots(.) as comma separators and **not commas**, i.e. 0.45 instead of 0,45. 
-
-**Warning:**
-**Please make sure not to delete any country names or ids**. 
-**Also make sure the CSV file is formatted with commas as delimiters, not semicolons or tabs.**
+1. To update the map data, please use this [csv template](https://docs.google.com/spreadsheets/d/1fzicMw_LiFGrdtzloXZFbM2FFgVc-GYtavvxPJFZ5Yo/edit?usp=sharing). Please copy the template to your own computer (or Google Drive) and fill in your desired values for each country. Please make sure that values are formatted with dots(.) as comma separators and **not commas**, i.e. 0.45 instead of 0,45. **Warning: Please make sure not to delete any country names or ids. Also make sure the CSV file is formatted with commas as delimiters, not semicolons or tabs.**
 
 2. Once you have updated the values, download the google sheet / excel file as a CSV file under >File > Download > Comma-separated-values (.csv) and copy all the contents of the csv file.
 
