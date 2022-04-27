@@ -7,7 +7,7 @@ jobs:
   run-example-deployment:
     runs-on: ubuntu-18.04
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v2
       - run: git config --global user.name 'EuranetPlus'
       - run: git config --global user.email 'torsten.spies@euranetplus.eu'
 
