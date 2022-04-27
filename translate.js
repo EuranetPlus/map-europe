@@ -93,7 +93,7 @@ languages.languages.forEach((item) => {
 // Write translation result to JSON files
 function writeJSONToFile(jsonObj, target, label) {
   // convert JSON object to string
-  const data = JSON.stringify(jsonObj, null, 4);
+  const data = JSON.stringify(jsonObj, null, 2);
 
   // write JSON string to a file
   fs.writeFile(`./static/languages/${target}.json`, data, (err) => {
