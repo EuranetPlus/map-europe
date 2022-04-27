@@ -10,8 +10,8 @@ jobs:
     steps:
       - name: Check out repo
         uses: actions/checkout@v3
-      - run: git config --global user.name 'alsino'
-      - run: git config --global user.email 'iamahorse@gmail.com'
+      - run: git config --global user.name 'EuranetPlus'
+      - run: git config --global user.email 'torsten.spies@euranetplus.eu'
       - id: 'auth'
         name: 'Authenticate to Google Cloud'
         uses: 'google-github-actions/auth@v0'
@@ -26,5 +26,5 @@ jobs:
       - run: npm install
       - run: npm run translate
       - run: git add .
-      - run: git commit -m "Updated headlines in language json files"
+      - run: git commit -m "Updated text in all language json files"
       - run: git push origin main
