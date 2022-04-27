@@ -1,0 +1,33 @@
+name: Translate text
+on:
+  schedule:
+    # every day at 12:15 CET, this is 10:15 in UTC
+    - cron: '15 10 * * *'
+  workflow_dispatch: {}
+  push:
+    paths:
+      - .github/workflows/tramslate.yml
+jobs:
+  scheduled:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v3
+      - run: git config --global user.name 'alsino'
+      - run: git config --global user.email 'iamahorse@gmail.com'
+      - id: 'auth'
+        name: 'Authenticate to Google Cloud'
+        uses: 'google-github-actions/auth@v0'
+        with:
+          credentials_json: '${{ secrets.GOOGLE_CREDENTIALS }}'
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16.14.0'
+        env:
+          super_secret: ${{ secrets.API_KEY }}
+      - run: npm install
+      - run: npm run translate
+      - run: git add .
+      - run: git commit -m "Updated headlines in language json files"
+      - run: git push origin main

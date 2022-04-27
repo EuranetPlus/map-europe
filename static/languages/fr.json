@@ -1,5 +1,5 @@
 {
-    "heading": "Les dépenses militaires augmentent dans tous les États de l'UE",
+    "heading": "Les dépenses d'éducation augmentent dans tous les États américains",
     "subheading": "Dépenses publiques de défense militaire en pourcentage du PIB dans les pays de l'Union européenne en 2020",
     "legend1": "Pays hors UE",
     "tooltip1": "% du PIB",
@@ -8,5 +8,5 @@
     "textNoteDescription": "Noter",
     "textNote": "Dépenses publiques par COFOG (Classification UNSD des fonctions du gouvernement, reproduite dans le SEC 2010) fonction et type.",
     "textDataAccess": "Accéder aux données",
-    "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=en"
+    "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=fr"
 }
