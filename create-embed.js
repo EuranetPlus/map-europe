@@ -31,7 +31,6 @@ function writeFile(jsonObj) {
     console.log('wrote to file successfully')
   })
 
-
   // fs.appendFile('./README.md', result, function (err) {
   //   if (err) throw err;
   //   console.log('Saved!');
