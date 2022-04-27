@@ -3,9 +3,10 @@
 This is the code repository for an interactive EuranetPlus choropleth map of European countries based on data from a CSV file. The map can be updated with any data set that follows [this csv structure](https://docs.google.com/spreadsheets/d/1fzicMw_LiFGrdtzloXZFbM2FFgVc-GYtavvxPJFZ5Yo/edit?usp=sharing).
 
 To use the map for a new topic and populate it with new texts and data please follow these steps:
-1. How to update map titles, texts and translate: [Updating texts](#updating-text)
-2. How to update the map with new data: [Updating data](#updating-data)
-3. How to publish the new map: [Publish map](#publish-map)
+1. Fork this repository: [Copy repository](#copy-repository)
+2. How to update map titles, texts and translate: [Updating texts](#updating-text)
+3. How to update the map with new data: [Updating data](#updating-data)
+4. How to publish the new map: [Publish map](#publish-map)
 
 <img width="602" alt="Bildschirmfoto 2022-04-27 um 15 20 30" src="https://user-images.githubusercontent.com/8008434/165527407-9b04b553-b074-4cbf-bc42-5e947a2fd8c3.png">
 
@@ -22,6 +23,10 @@ To embed the map on any website as a responsive widget, please use the following
 ```bash
 <iframe title="Euranet Map" aria-label="Map" id="euranet-map-europe" src="https://euranet-map-europe.vercel.app/" scrolling="no"frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="624"></iframe><script type="text/javascript">window.addEventListener("message", e => { if ("https://euranet-map-europe.vercel.app" !== e.origin) return; let t = e.data; if (t.height) { document.getElementById("euranet-map-europe").height = t.height + "px" } }, !1)</script>
 ```
+
+## Copy repository
+
+To make a new map we first need to copy this reposirtory and use a fresh map template. To do this, please use the "Fork" Button on the top right in this window. This will create a so-called fork (a copy) of the exact same code that can be used for a new map. Each new map should have a new repository which should be renamed according to the new topic, using this nomenclature: _map-TOPIC_, e.g. _map-gdp_ or _map-military-spending_. If more than two words are used, separtate them with a hyphen. 
 
 ## Updating text
 
