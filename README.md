@@ -31,7 +31,7 @@ To embed the map on any website as a responsive widget, please use the following
 To make a new map we first need to copy this repository and use a fresh map template. To do this, please use the green "Use this template" button on the top right in this window. This will create a copy of the exact same code that can be used for a new map. You will be prompted to name the new repository according to the new topic of the map. Please use this nomenclature: _map-TOPIC_, e.g. _map-gdp_ or _map-generationz_. If more than two words are used, separtate them with a dash like so _map-military-spending_. 
 
 2. **Add Google Credentials**:  
-In order to be able to use the automatic translation service by the Google API, we need to provide the new repository with access to the servica account API key. For this go to the [settings](https://github.com/EuranetPlus/map-europe/settings) tab and select the "Secrets" dropdown on the lower left side. Here select "Actions". On the top right side press the "New repository secret" button. Name the new secret **"GOOGLE_CREDENTIALS"** and as a value paste in the contents of the service account json file that can be downloaded from the Google Cloud Console. This file looks something like this (This example below here is fake and only for illustration):
+In order to be able to use the automatic translation service by the Google API, we need to provide the new repository with access to the servica account API key. For this go to the **Settings** tab at the top of this repository and select the "Secrets" dropdown on the lower left side. Here select "Actions". On the top right side press the "New repository secret" button. Name the new secret **"GOOGLE_CREDENTIALS"** and as a value paste in the contents of the service account json file that can be downloaded from the Google Cloud Console. This file looks something like this (This example below here is fake and only for illustration):
 
 ```bash
 {
@@ -49,7 +49,7 @@ In order to be able to use the automatic translation service by the Google API, 
 ```
 
 3. **Allow scripts**:  
-By default every new repository is locked for running automated scripts. We need to enable this. Go to the [settings](https://github.com/EuranetPlus/map-europe/settings) tab and select "Actions" and then "General" from the dropdown on the lower left side. Then set the "Workflow permissions" to "Read and write permissions". Now we can change the texts and run the translations.
+By default every new repository is locked for running automated scripts. We need to enable this. Go to the **Settings** tab at the top of this repository and select "Actions" and then "General" from the dropdown on the lower left side. Then set the "Workflow permissions" to "Read and write permissions". Now we can change the texts and run the translations.
 
 
 
