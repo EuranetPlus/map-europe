@@ -1,8 +1,5 @@
 name: Translate text
 on:
-  schedule:
-    # every day at 12:15 CET, this is 10:15 in UTC
-    - cron: '15 10 * * *'
   workflow_dispatch: {}
   push:
     paths:
