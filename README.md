@@ -3,7 +3,7 @@
 This is the code repository for an interactive EuranetPlus choropleth map of European countries based on data from a CSV file. The map can be updated with any data set that follows [this csv structure](https://docs.google.com/spreadsheets/d/1fzicMw_LiFGrdtzloXZFbM2FFgVc-GYtavvxPJFZ5Yo/edit?usp=sharing).
 
 To use the map for a new topic and populate it with new texts and data please follow these steps:
-1. How to update map titles, texts and translate: [Updating texts](#updating-text)
+1. How to update map titles, texts and translate: [Updating texts](https://github.com/EuranetPlus/map-europe/blob/main/README.md#updating-text)
 2. How to update the map with new data: [Updating data](#updating-data)
 3. How to publish the new map: [Publish map](#publish-map)
 
@@ -23,11 +23,11 @@ To embed the map on any website as a responsive widget, please use the following
 <iframe title="Euranet Map" aria-label="Map" id="euranet-map-europe" src="https://euranet-map-europe.vercel.app/" scrolling="no"frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="624"></iframe><script type="text/javascript">window.addEventListener("message", e => { if ("https://euranet-map-europe.vercel.app" !== e.origin) return; let t = e.data; if (t.height) { document.getElementById("euranet-map-europe").height = t.height + "px" } }, !1)</script>
 ```
 
-## 1. Updating text
+## Updating text
 
 etete
 
-## 2. Updating data
+## Updating data
 
 1. To update the map data, please use this [csv template](https://docs.google.com/spreadsheets/d/1fzicMw_LiFGrdtzloXZFbM2FFgVc-GYtavvxPJFZ5Yo/edit?usp=sharing). Please copy the template to your own computer (or Google Drive) and fill in your desired values for each country. Please make sure that values are formatted with dots (.) as comma separators and **not commas**, i.e. 0.45 instead of 0,45. **Warning: Please make sure not to delete any country names or ids. Also make sure the CSV file is formatted with commas (,) as delimiters, not semicolons (;) or other symbols. Otherwise the map will not work**
 
@@ -38,7 +38,7 @@ etete
 After this, save the changes by entering a title for the commit, e.g. "Update data.csv" and press the green **Commit changes** button.  
 Your data should now be updated and after a while show on the map.
 
-## 3. Publish map
+## Publish map
 
 etete..
 
