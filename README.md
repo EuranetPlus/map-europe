@@ -19,11 +19,14 @@ https://euranet-map-europe.vercel.app/
 
 ## Embedding the map
 
-To embed the map on any website as a responsive widget, please use the following iframe code:
+To embed the map on any website as a responsive widget, you need to create an iframe code for this map. This requires three steps:
+1. Add a title for the map in the [feature configuration file](src/lib/stores/config-features.js)
+2. Add the Vercel URL in the in the [feature configuration file](src/lib/stores/config-features.js)
+3. Run the "Create iFrame code" workflow in the Actions tab above
 
-```bash
-<iframe title="Euranet Map" aria-label="Map" id="euranet-map-europe" src="https://euranet-map-europe.vercel.app/" scrolling="no"frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="624"></iframe><script type="text/javascript">window.addEventListener("message", e => { if ("https://euranet-map-europe.vercel.app" !== e.origin) return; let t = e.data; if (t.height) { document.getElementById("euranet-map-europe").height = t.height + "px" } }, !1)</script>
-```
+The correct iframe code can then be copied from the [IFRAME.md](IFRAME.md), which is generated when running the script.
+
+
 
 ## Copy repository
 
@@ -55,7 +58,7 @@ By default every new repository is locked for running automated scripts. We need
 
 ## Updating text
 
-To change the map heading, subheading, source and text note, please change the text contents of this [configuration file](https://github.com/EuranetPlus/map-europe/blob/main/src/lib/stores/config-text.json). It contains the entries for all textual elements in English.
+To change the map heading, subheading, source and text note, please change the text contents of this [text configuration file](src/lib/stores/config-text.js). It contains the entries for all textual elements in English.
 
 Example:  
 To change the text of the heading of the map, change the "heading" entry (text in quotation marks, i.e. "" behind the :). To do this, simply click on the pen symbol on the top right side of the file preview window where it says "Edit this file". **_Warning: Please make sure to always enclose the text elemets with quotation marks and do not forget to add a comma after the entry. Otherwise the file will not be able to be read and the app may brake._**
@@ -70,7 +73,7 @@ After this, save the changes by entering a title for the commit, e.g. "Create co
 
 ## Translate text
 
-To translate the texts in the [configuration file](https://github.com/EuranetPlus/map-europe/blob/main/src/lib/stores/config-text.json), you simply need to go to the [Actions](https://github.com/EuranetPlus/map-europe/actions) tab. Here under "workflows" select the "Translate text" workflow and press the "Run workflow" button on the right side and again the green "Run workflow" button from the dropdown menu. This will run the translate script and request the translated 24 language files from the Google API. This process may take several minutes. Once this process has finished sucessfully, you should see a green check mark ✅. 
+To translate the texts in the [text configuration file](src/lib/stores/config-text.jsn), you simply need to go to the Actions tab above. Here under "workflows" select the "Translate text" workflow and press the "Run workflow" button on the right side and again the green "Run workflow" button from the dropdown menu. This will run the translate script and request the translated 24 language files from the Google API. This process may take several minutes. Once this process has finished sucessfully, you should see a green check mark ✅. 
 
 
 ## Updating data
@@ -79,7 +82,7 @@ To translate the texts in the [configuration file](https://github.com/EuranetPlu
 
 2. Once you have updated the values, download the google sheet / excel file as a CSV file under >File > Download > Comma-separated-values (.csv) and copy all the contents of the csv file.
 
-3. Open this [data file](https://github.com/EuranetPlus/map-europe/blob/main/static/data/thematic/data.csv) and click on the pen symbol on the top right side of the file preview window where it says "Edit this file". Then paste the contents of the CSV file here.
+3. Open this [data file](static/data/thematic/data.csv) and click on the pen symbol on the top right side of the file preview window where it says "Edit this file". Then paste the contents of the CSV file here.
 
 After this, save the changes by entering a title for the commit, e.g. "Update data.csv" and press the green **Commit changes** button.  
 Your data should now be updated and after a while show on the map.
@@ -90,10 +93,10 @@ ToDo..
 
 ## Changing translations manually
 
-All text elements on the map (e.g. country names, heading, subheading, source text, notes, etc.) are automatically translated into the 24 official EU languages using the Google Translate API by running an automated node script. The translations returned by Google are a good first approach, but manual edits of the text in different languages may be necessary. To do this, please go to the [language folder](https://github.com/EuranetPlus/map-ukraine/tree/main/static/languages) and edit the contents of the respective language file.
+All text elements on the map (e.g. country names, heading, subheading, source text, notes, etc.) are automatically translated into the 24 official EU languages using the Google Translate API by running an automated node script. The translations returned by Google are a good first approach, but manual edits of the text in different languages may be necessary. To do this, please go to the [language folder](static/languages) and edit the contents of the respective language file.
 
 Example:  
-To change the text of the subheading of the map in Hungarian, open the [hu.json](https://github.com/EuranetPlus/map-ukraine/blob/main/static/languages/hu.json) file and change the "subheading" entry (text in quotation marks, i.e. "" behind the :). To do this, simply click on the pen symbol on the top right side of the file preview window where it says "Edit this file". **_Warning: Please do not change the headings as these are automatically generated every day, based on the latest data. Also make sure to always enclose the text elemets with quotation marks and do not forget to add a comma after the entry. Otherwise the file will not be able to be read and the app may brake._**
+To change the text of the subheading of the map in Hungarian, open the [hu.json](static/languages/hu.json) file and change the "subheading" entry (text in quotation marks, i.e. "" behind the :). To do this, simply click on the pen symbol on the top right side of the file preview window where it says "Edit this file". **_Warning: Please do not change the headings as these are automatically generated every day, based on the latest data. Also make sure to always enclose the text elemets with quotation marks and do not forget to add a comma after the entry. Otherwise the file will not be able to be read and the app may brake._**
 
 This is **correct**:  
 `"heading": "Már több mint 5,2 millió menekült menekült el Ukrajnából",`
