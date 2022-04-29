@@ -19,12 +19,13 @@ https://euranet-map-europe.vercel.app/
 
 ## Embedding the map
 
-To embed the map on any website as a responsive widget, you need to create an iframe code for this map. This requires three steps:
+To embed the map on any website as a responsive widget, you need to create an iframe code for each map. This iframe code has to be unique, detailing the link where the map is hosted and the title of the map. To create this iframe, please follow these three steps:
+
 1. Change the "mapTitle" for the map in the [feature configuration file](src/lib/stores/config-features.js)
 2. Change the "vercelURL" in the in the [feature configuration file](src/lib/stores/config-features.js)
 3. Run the "Create iFrame code" workflow in the Actions tab above
 
-The correct iframe code can then be copied from the [IFRAME.md](IFRAME.md), which is generated when running the script.
+The correct iframe code can then be copied from the [IFRAME.md](IFRAME.md), which is generated uniquely for each project when running the script. This unique iframe is necessary
 
 
 
