@@ -1,12 +1,12 @@
 {
-    "heading": "Tháinig méadú ar chaiteachas oideachais ar fud thíortha uile an AE",
-    "subheading": "Caiteachas an rialtais ghinearálta ar chosaint mhíleata mar chéatadán den OTI i dtíortha an Aontais Eorpaigh in 2020",
-    "legend1": "Tíortha neamh-AE",
-    "tooltip1": "% de OTI",
-    "textSourceDescription": "Foinse",
-    "textSource": "Eurostat",
-    "textNoteDescription": "Nóta",
-    "textNote": "Caiteachas rialtais de réir feidhme agus cineál COFOG (aicmiú UNSD ar fheidhmeanna an rialtais, arna mhacasamhlú in CCE2010).",
-    "textDataAccess": "Faigh rochtain ar na sonraí",
-    "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=ga"
+  "heading": "Tháinig méadú ar chaiteachas oideachais ar fud thíortha uile an AE",
+  "subheading": "Caiteachas an rialtais ghinearálta ar chosaint mhíleata mar chéatadán den OTI i dtíortha an Aontais Eorpaigh in 2020",
+  "legend1": "Níl aon sonraí ar fáil",
+  "tooltip1": "% de OTI",
+  "textSourceDescription": "Foinse",
+  "textSource": "Eurostat",
+  "textNoteDescription": "Nóta",
+  "textNote": "Caiteachas an rialtais de réir feidhme agus cineál COFOG (aicmiú UNSD ar fheidhmeanna an rialtais, arna mhacasamhlú in CCE2010).",
+  "textDataAccess": "Faigh rochtain ar na sonraí",
+  "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=ga"
 }

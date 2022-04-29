@@ -1,12 +1,12 @@
 {
-    "heading": "Udgifter til uddannelse op i alle EU-lande",
-    "subheading": "Offentlige udgifter til militært forsvar som en procentdel af BNP i lande i Den Europæiske Union i 2020",
-    "legend1": "Ikke-EU lande",
-    "tooltip1": "% af BNP",
-    "textSourceDescription": "Kilde",
-    "textSource": "Eurostat",
-    "textNoteDescription": "Bemærk",
-    "textNote": "Offentlige udgifter efter COFOG (UNSD-klassifikation af offentlige funktioner, gentaget i ESA2010) funktion og type.",
-    "textDataAccess": "Få adgang til dataene",
-    "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=da"
+  "heading": "Udgifter til uddannelse op i alle EU-lande",
+  "subheading": "Offentlige udgifter til militært forsvar som en procentdel af BNP i lande i Den Europæiske Union i 2020",
+  "legend1": "Ingen tilgængelig data",
+  "tooltip1": "% af BNP",
+  "textSourceDescription": "Kilde",
+  "textSource": "Eurostat",
+  "textNoteDescription": "Bemærk",
+  "textNote": "Offentlige udgifter efter COFOG (UNSD-klassifikation af offentlige funktioner, gentaget i ESA2010) funktion og type.",
+  "textDataAccess": "Få adgang til dataene",
+  "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=da"
 }

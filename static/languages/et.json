@@ -1,12 +1,12 @@
 {
-    "heading": "Hariduskulud kõigis ELi riikides",
-    "subheading": "Valitsussektori kulutused sõjalisele kaitsele protsendina SKTst Euroopa Liidu riikides 2020. aastal",
-    "legend1": "ELi mittekuuluvad riigid",
-    "tooltip1": "% SKTst",
-    "textSourceDescription": "Allikas",
-    "textSource": "Eurostat",
-    "textNoteDescription": "Märge",
-    "textNote": "Valitsemissektori kulud COFOG-i (UNSD klassifikatsioon valitsusfunktsioonide klassifikatsioonist, korratud ESA2010-s) funktsiooni ja tüübi järgi.",
-    "textDataAccess": "Juurdepääs andmetele",
-    "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=en"
+  "heading": "Hariduskulud kõigis ELi riikides",
+  "subheading": "Valitsussektori kulutused sõjalisele kaitsele protsendina SKTst Euroopa Liidu riikides 2020. aastal",
+  "legend1": "Andmed puuduvad",
+  "tooltip1": "% SKTst",
+  "textSourceDescription": "Allikas",
+  "textSource": "Eurostat",
+  "textNoteDescription": "Märge",
+  "textNote": "Valitsemissektori kulud COFOG-i (UNSD klassifikatsioon valitsusfunktsioonide klassifikatsioonist, korratud ESA2010-s) funktsiooni ja tüübi järgi.",
+  "textDataAccess": "Juurdepääs andmetele",
+  "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=en"
 }

@@ -1,12 +1,12 @@
 {
-    "heading": "Wzrost wydatków na edukację we wszystkich krajach UE",
-    "subheading": "Wydatki sektora instytucji rządowych i samorządowych na obronę wojskową jako procent PKB w krajach Unii Europejskiej w 2020 roku",
-    "legend1": "Kraje spoza UE",
-    "tooltip1": "% PKB",
-    "textSourceDescription": "Źródło",
-    "textSource": "Eurostat",
-    "textNoteDescription": "Notatka",
-    "textNote": "Wydatki rządowe według COFOG (klasyfikacja funkcji rządu według UNSD, powtórzona w ESA2010) funkcji i rodzaju.",
-    "textDataAccess": "Uzyskaj dostęp do danych",
-    "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=en"
+  "heading": "Wzrost wydatków na edukację we wszystkich krajach UE",
+  "subheading": "Wydatki sektora instytucji rządowych i samorządowych na obronę wojskową jako procent PKB w krajach Unii Europejskiej w 2020 roku",
+  "legend1": "Brak dostępnych danych",
+  "tooltip1": "% PKB",
+  "textSourceDescription": "Źródło",
+  "textSource": "Eurostat",
+  "textNoteDescription": "Notatka",
+  "textNote": "Wydatki rządowe według COFOG (klasyfikacja funkcji rządu według UNSD, powtórzona w ESA2010) funkcji i rodzaju.",
+  "textDataAccess": "Uzyskaj dostęp do danych",
+  "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=en"
 }

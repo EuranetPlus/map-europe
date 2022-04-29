@@ -1,12 +1,12 @@
 {
-    "heading": "Onderwijsuitgaven stijgen in alle EU-landen",
-    "subheading": "Algemene overheidsuitgaven voor militaire defensie als percentage van het BBP in landen van de Europese Unie in 2020",
-    "legend1": "Niet-EU-landen",
-    "tooltip1": "% van het BBP",
-    "textSourceDescription": "Bron",
-    "textSource": "Eurostat",
-    "textNoteDescription": "Opmerking",
-    "textNote": "Overheidsuitgaven volgens COFOG (UNSD-classificatie van overheidsfuncties, gerepliceerd in ESR2010) functie en type.",
-    "textDataAccess": "Toegang tot de gegevens",
-    "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=en"
+  "heading": "Onderwijsuitgaven stijgen in alle EU-landen",
+  "subheading": "Algemene overheidsuitgaven voor militaire defensie als percentage van het BBP in landen van de Europese Unie in 2020",
+  "legend1": "Geen gegevens beschikbaar",
+  "tooltip1": "% van het BBP",
+  "textSourceDescription": "Bron",
+  "textSource": "Eurostat",
+  "textNoteDescription": "Opmerking",
+  "textNote": "Overheidsuitgaven volgens COFOG (UNSD-classificatie van overheidsfuncties, gerepliceerd in ESR2010) functie en type.",
+  "textDataAccess": "Toegang tot de gegevens",
+  "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=en"
 }
