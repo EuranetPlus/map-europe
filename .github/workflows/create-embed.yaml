@@ -1,0 +1,23 @@
+name: Translate text
+on:
+  workflow_dispatch: {}
+  push:
+    paths:
+      - .github/workflows/create-embed.yml
+jobs:
+  scheduled:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v3
+      - run: git config --global user.name 'EuranetPlus'
+      - run: git config --global user.email 'torsten.spies@euranetplus.eu'
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16.14.0'
+      - run: npm install
+      - run: npm run createEmbedCode
+      - run: git add .
+      - run: git commit -m "Added map embed code as IFRAME.md"
+      - run: git push origin main

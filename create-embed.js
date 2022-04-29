@@ -20,7 +20,7 @@ writeFile();
 
 function writeFile(jsonObj) {
 
-  fs.writeFile('./IFRAME-EMBED.md', result, (err) => {
+  fs.writeFile('./IFRAME.md', result, (err) => {
     // If there is any error in writing to the file, return
     if (err) {
       console.error(err)
@@ -30,10 +30,5 @@ function writeFile(jsonObj) {
     // Log this message if the file was written to successfully
     console.log('wrote to file successfully')
   })
-
-  // fs.appendFile('./README.md', result, function (err) {
-  //   if (err) throw err;
-  //   console.log('Saved!');
-  // });
 }
 
