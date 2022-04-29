@@ -2,7 +2,7 @@ country,id,value
 Albania,AL,0.33
 Austria,AT,0.13
 Belgium,BE,0.59
-Bulgaria,BG,0.67
+Bulgaria,BG,null
 Switzerland,CH,0.62
 Cyprus,CY,0.21
 Czechia,CZ,0.78
@@ -18,12 +18,12 @@ Hungary,HU,0.67
 Ireland,IE,0.76
 Iceland,IS,0.44
 Italy,IT,0.92
-Liechtenstein,LI,0.88
+Liechtenstein,LI,null
 Lithuania,LT,0.33
 Luxembourg,LU,0.22
 Latvia,LV,0.11
 Montenegro,ME,0.43
-North Macedonia,MK,0.21
+North Macedonia,MK,null
 Malta,MT,0.35
 Netherlands,NL,0.47
 Norway,NO,0.32
@@ -34,5 +34,5 @@ Serbia,RS,0.67
 Sweden,SE,0.25
 Slovenia,SI,0.45
 Slovakia,SK,0.67
-United Kingdom,UK,0.34
+United Kingdom,UK,null
 Ukraine,UA,0.45

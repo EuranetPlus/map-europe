@@ -126,24 +126,52 @@
 	});
 
 	function getFill(feature) {
-		if (feature.value) {
-			return colorScale(feature.value);
-		} else {
-			if (feature.properties.isEuMember) {
-				return '#CAD1D9';
+		// No data, because country not in Europe: => value: undefined
+		if (feature.value !== undefined) {
+			// No data because not available for this country => value: null
+			if (feature.value !== null) {
+				return colorScale(feature.value);
 			} else {
-				return '#F4F4F4';
+				return '#CAD1D9';
 			}
+		} else {
+			return '#F4F4F4';
 		}
 	}
 
 	function getStroke(feature) {
-		if (feature.value) {
-			return 'white';
+		// No data, because country not in Europe: => value: undefined
+		if (feature.value !== undefined) {
+			// No data because not available for this country => value:
+			if (feature.value !== null) {
+				return 'white';
+			} else {
+				return 'white';
+			}
 		} else {
 			return '#cdcdcd';
 		}
 	}
+
+	// function getFill(feature) {
+	// 	if (feature.value) {
+	// 		return colorScale(feature.value);
+	// 	} else {
+	// 		if (feature.properties.isEuMember) {
+	// 			return '#CAD1D9';
+	// 		} else {
+	// 			return '#F4F4F4';
+	// 		}
+	// 	}
+	// }
+
+	// function getStroke(feature) {
+	// 	if (feature.value) {
+	// 		return 'white';
+	// 	} else {
+	// 		return '#cdcdcd';
+	// 	}
+	// }
 
 	function getClass(feature) {
 		if (feature.value) {
