@@ -1,4 +1,4 @@
-name: Translate text
+name: Create iFrame code
 on:
   workflow_dispatch: {}
   push:
