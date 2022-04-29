@@ -88,7 +88,11 @@
 			.then(function (data) {
 				// Parse numbers as integers
 				data.forEach(function (d) {
-					d['value'] = +d['value'];
+					if (d.value !== 'null') {
+						d['value'] = +d['value'];
+					} else {
+						d['value'] = null;
+					}
 				});
 
 				let extentArray = data.map((item) => {
