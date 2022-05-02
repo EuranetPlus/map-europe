@@ -67,7 +67,9 @@ Once the new repository is set up, you need to connect it to Vercel to deploy th
 
 ## Configure the map
 
-In order to configure the new project, please change the contents of this [map configuration file](src/lib/stores/config-features.js). The configuration has a number of parameters that you should specify:
+In order to configure the new project, please change the contents of this [map configuration file](src/lib/stores/config-features.js). The configuration has a number of parameters that you should specify.
+
+The most important entries that you need to change for each project are the "mapTitle", the "vercelURL" and the "datasetType".
 
 ```js
   "mapTitle": "europe", // The title of the map, if more than one word, separate by dash, e.g. "income-europe"
@@ -86,8 +88,6 @@ In order to configure the new project, please change the contents of this [map c
   "legend3Color": "blue", // Specifies the color of the third round dot in the legend entry
   "legend4Color": "green" // Specifies the color of the fourt round dot in the legend entry
 ```
-
-The most important entries that you need to change are the "mapTitle", the "vercelURL" and the "datasetType".
 
 ## Updating text
 
