@@ -39,7 +39,7 @@ In order to be able to use the automatic translation service by the Google API, 
 3. **Allow scripts**:  
 By default every new repository is locked for running automated scripts. We need to enable this. Go to the **Settings** tab at the top of this repository and select "Actions" and then "General" from the dropdown on the lower left side. Then set the "Workflow permissions" to "Read and write permissions". Now we can change the texts and run the translations.
 
-4. ***Connect to Vercel***:
+4. **Connect to Vercel**:
 Once the new repository is set up, you need to connect it to Vercel to deploy the map to the internet. Please go to https://vercel.com/dashboard, sign in with your GitHub account and do the following steps: 
   - Press the "New Project" Button on the Vercel dashboard
 - Under "Import Git Repository" choose the name of the copied repository
