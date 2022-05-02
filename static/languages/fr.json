@@ -6,7 +6,7 @@
   "textSourceDescription": "La source",
   "textSource": "Eurostat",
   "textNoteDescription": "Noter",
-  "textNote": "Dépenses publiques par COFOG (Classification UNSD des fonctions du gouvernement, reproduite dans le SEC 2010) fonction et type.",
+  "textNote": "Dépenses publiques par COFOG (classification UNSD des fonctions du gouvernement, reproduite dans le SEC 2010) fonction et type.",
   "textDataAccess": "Accéder aux données",
   "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=fr"
 }
