@@ -45,8 +45,7 @@ Once the new repository is set up, you need to connect it to Vercel to deploy th
 - Under "Import Git Repository" choose the name of the copied repository
 - Press the blue "Deploy" button (no need to change any settings here)
 - Press the "Go to Dashboard" button and copy the URL under the "DOMAINS" heading (the url should look something like this: https://map-test-seven.vercel.app/)
-- Go to the [map configuration file](src/lib/stores/config-features.js) and paste the URL. Also change the mapTitle and the datasetType.
-
+- Go to the [map configuration file](src/lib/stores/config-features.js) and paste the URL.
 
 ## Configure the map
 
