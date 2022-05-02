@@ -3,34 +3,17 @@
 This is the code repository for an interactive EuranetPlus choropleth map of European countries based on data from a CSV file. The map can be updated with any data set that follows [this csv structure](https://docs.google.com/spreadsheets/d/1fzicMw_LiFGrdtzloXZFbM2FFgVc-GYtavvxPJFZ5Yo/edit?usp=sharing).
 
 To use the map for a new topic and populate it with new texts and data please follow these steps:
-1. Make a copy of this map template: [Copy repository](#copy-repository)
+1. Make a copy of this map template: [Copy map template](#copy-map-template)
 2. Configure the map: [Configure map](#configure-the-map)
-3. Update map titles and texts: [Updating texts](#updating-text)
-4. Translate texts into 24 EU languages [Translate texts](#translate-text)
-5. Update map with new data: [Updating data](#updating-data)
+3. Update map with new data: [Add or update data](#add-data)
+4. Update map titles and texts: [Updating texts](#updating-text)
+5. Translate texts into 24 EU languages [Translate texts](#translate-text)
 6. Publish the new map: [Publish map](#publish-map)
 
 <img width="602" alt="Bildschirmfoto 2022-04-27 um 15 20 30" src="https://user-images.githubusercontent.com/8008434/165527407-9b04b553-b074-4cbf-bc42-5e947a2fd8c3.png">
 
 
-## Live map
-
-The map is hosted on EuranetPlus' Vercel account and can be viewed here:  
-https://euranet-map-europe.vercel.app/
-
-## Embedding the map
-
-To embed the map on any website as a responsive widget, you need to create an iframe code for each map. This iframe code has to be unique, detailing the link where the map is hosted and the title of the map. To create this iframe, please follow these three steps:
-
-1. Change the "mapTitle" for the map in the [feature configuration file](src/lib/stores/config-features.js)
-2. Change the "vercelURL" in the in the [feature configuration file](src/lib/stores/config-features.js)
-3. Run the "Create iFrame code" workflow in the Actions tab above
-
-The correct iframe code can then be copied from the [IFRAME.md](IFRAME.md), which is generated uniquely for each project when running the script.
-
-
-
-## Copy repository
+## Copy map template
 
 1. **Copy repository**:  
 To make a new map we first need to copy this repository and use a fresh map template. To do this, please use the green "Use this template" button on the top right in this window. This will create a copy of the exact same code that can be used for a new map. You will be prompted to name the new repository according to the new topic of the map. Please use this nomenclature: _map-TOPIC_, e.g. _map-gdp_ or _map-generationz_. If more than two words are used, separtate them with a dash like so _map-military-spending_. 
@@ -89,6 +72,19 @@ The most important entries that you need to change for each project are the "map
   "legend4Color": "green" // Specifies the color of the fourt round dot in the legend entry
 ```
 
+## Add data
+
+1. To add or update the map data, please use this [csv template](https://docs.google.com/spreadsheets/d/1fzicMw_LiFGrdtzloXZFbM2FFgVc-GYtavvxPJFZ5Yo/edit?usp=sharing). Please copy the template to your own computer (or Google Drive) and fill in your desired values for each country. Please make sure that values are formatted with dots (.) as comma separators and **not commas**, i.e. 0.45 instead of 0,45.  
+
+**Warning: Please make sure not to delete any country names or ids. Also make sure the CSV file is formatted with commas (,) as delimiters, not semicolons (;) or other symbols. Otherwise the map will not work.**
+
+2. Once you have updated the values, download the google sheet / excel file as a CSV file under >File > Download > Comma-separated-values (.csv) and copy all the contents of the csv file.
+
+3. Open this [data file](static/data/thematic/data.csv) and click on the pen symbol on the top right side of the file preview window where it says "Edit this file". Then paste the contents of the CSV file here.
+
+After this, save the changes by entering a title for the commit, e.g. "Update data.csv" and press the green **Commit changes** button.  
+Your data should now be updated and after a while show on the map. Check the Vercel URL after a few minutes to see the updated data. 
+
 ## Updating text
 
 To change the map heading, subheading, source and text note, please change the text contents of this [text configuration file](src/lib/stores/config-text.js). It contains the entries for all textual elements in English.
@@ -109,22 +105,15 @@ After this, save the changes by entering a title for the commit, e.g. "Create co
 All text elements in the map are by default in English and are taken from the [text configuration file](src/lib/stores/config-text.json). In order to translate the text into all other EU languages, you simply need to go to the Actions tab above. Here under "workflows" select the "Translate text" workflow and press the "Run workflow" button on the right side and again the green "Run workflow" button from the dropdown menu. This will run the translate script and request the translated 24 language files from the Google API. This process may take several minutes. Once this process has finished sucessfully, you should see a green check mark ✅. 
 
 
-## Updating data
-
-1. To update the map data, please use this [csv template](https://docs.google.com/spreadsheets/d/1fzicMw_LiFGrdtzloXZFbM2FFgVc-GYtavvxPJFZ5Yo/edit?usp=sharing). Please copy the template to your own computer (or Google Drive) and fill in your desired values for each country. Please make sure that values are formatted with dots (.) as comma separators and **not commas**, i.e. 0.45 instead of 0,45.  
-
-**Warning: Please make sure not to delete any country names or ids. Also make sure the CSV file is formatted with commas (,) as delimiters, not semicolons (;) or other symbols. Otherwise the map will not work**
-
-2. Once you have updated the values, download the google sheet / excel file as a CSV file under >File > Download > Comma-separated-values (.csv) and copy all the contents of the csv file.
-
-3. Open this [data file](static/data/thematic/data.csv) and click on the pen symbol on the top right side of the file preview window where it says "Edit this file". Then paste the contents of the CSV file here.
-
-After this, save the changes by entering a title for the commit, e.g. "Update data.csv" and press the green **Commit changes** button.  
-Your data should now be updated and after a while show on the map. Check the Vercel URL after a few minutes to see the updated data. 
-
 ## Publish map
 
-ToDo..
+To embed the map on any website as a responsive widget, you need to create an iFrame code for each map, which then can be shared. The iFrame code has to be unique for each map, bacause it details the title of the map and the Vercel URL where the map is hosted. To create the iFrame code, please follow these three steps:
+
+1. Change the "mapTitle" for the map in the [feature configuration file](src/lib/stores/config-features.js) (only if you have not done so yet in step [2](#configure-the-map))
+2. Change the "vercelURL" in the in the [feature configuration file](src/lib/stores/config-features.js) (only if you have not done so yet in step [2](#configure-the-map))
+3. Run the "Create iFrame code" workflow in the Actions tab above
+
+The correct iframe code can then be copied from this [IFRAME.md file](IFRAME.md), which is generated uniquely for each project when running the script. Share this code to see the map in action on any website.
 
 ## Changing translations manually
 
