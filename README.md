@@ -4,10 +4,11 @@ This is the code repository for an interactive EuranetPlus choropleth map of Eur
 
 To use the map for a new topic and populate it with new texts and data please follow these steps:
 1. Make a copy of this map template: [Copy repository](#copy-repository)
-2. Update map titles and texts: [Updating texts](#updating-text)
-3. Translate texts into 24 EU languages [Translate texts](#translate-text)
-4. Update map with new data: [Updating data](#updating-data)
-5. Publish the new map: [Publish map](#publish-map)
+2. Configure the map according to needs: [Configure map](#configure-map)
+3. Update map titles and texts: [Updating texts](#updating-text)
+4. Translate texts into 24 EU languages [Translate texts](#translate-text)
+5. Update map with new data: [Updating data](#updating-data)
+6. Publish the new map: [Publish map](#publish-map)
 
 <img width="602" alt="Bildschirmfoto 2022-04-27 um 15 20 30" src="https://user-images.githubusercontent.com/8008434/165527407-9b04b553-b074-4cbf-bc42-5e947a2fd8c3.png">
 
@@ -56,6 +57,29 @@ In order to be able to use the automatic translation service by the Google API, 
 By default every new repository is locked for running automated scripts. We need to enable this. Go to the **Settings** tab at the top of this repository and select "Actions" and then "General" from the dropdown on the lower left side. Then set the "Workflow permissions" to "Read and write permissions". Now we can change the texts and run the translations.
 
 
+## Configure the map
+
+In order to configure the new project, please change the contents of this [map configuration file](src/lib/stores/config-features.js). The configuration has a number of parameters that you should specify:
+
+```js
+  "mapTitle": "europe", // The title of the map, if more than one word, separate by dash, e.g. "income-europe"
+  "vercelURL": "https://euranet-map-europe.vercel.app", // The url provided when deploying the map on Vercel
+  "datasetType": "values", // "values" or "binary"; Does the data set contain numerical values or binary (0/1) values for countries?
+  "headlineAvailable": true, // true or false; Should the map have a headline? 
+  "subheadlineAvailable": true, // true or false; Should the map have a subheadline? 
+  "tooltipAvailable": true, // true or false; Should the map show a tooltip when hovering over a country? 
+  "scaleBarAvailable": true, // true or false; Should the map show a scale bar on the top? 
+  "legendAvailable": true, // true or false; Should the map show a legend in the bottom right corner? 
+  "textSourceAvailable": true, // true or false; Should the map show a source text below the map? 
+  "textNoteAvailable": true, // true or false; Should the map show a text note below the map? 
+  "textDataAccessAvailable": true, // true or false; Should the map show a link to the original data source below the map? 
+  "legend1Color": "#cad1d9", // Specifies the color of the first round dot in the legend entry
+  "legend2Color": "red", // Specifies the color of the second round dot in the legend entry
+  "legend3Color": "blue", // Specifies the color of the third round dot in the legend entry
+  "legend4Color": "green" // Specifies the color of the fourt round dot in the legend entry
+```
+
+The most important entries that you need to change are the "mapTitle", the "vercelURL" and the "datasetType".
 
 ## Updating text
 
