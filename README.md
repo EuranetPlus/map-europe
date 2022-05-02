@@ -106,7 +106,7 @@ After this, save the changes by entering a title for the commit, e.g. "Create co
 
 ## Translate text
 
-To translate the texts in the [text configuration file](src/lib/stores/config-text.jsn), you simply need to go to the Actions tab above. Here under "workflows" select the "Translate text" workflow and press the "Run workflow" button on the right side and again the green "Run workflow" button from the dropdown menu. This will run the translate script and request the translated 24 language files from the Google API. This process may take several minutes. Once this process has finished sucessfully, you should see a green check mark ✅. 
+All text elements in the map are by default in English and are taken from the [text configuration file](src/lib/stores/config-text.json). In order to translate the text into all other EU languages, you simply need to go to the Actions tab above. Here under "workflows" select the "Translate text" workflow and press the "Run workflow" button on the right side and again the green "Run workflow" button from the dropdown menu. This will run the translate script and request the translated 24 language files from the Google API. This process may take several minutes. Once this process has finished sucessfully, you should see a green check mark ✅. 
 
 
 ## Updating data
