@@ -57,8 +57,8 @@ In order to be able to use the automatic translation service by the Google API, 
 By default every new repository is locked for running automated scripts. We need to enable this. Go to the **Settings** tab at the top of this repository and select "Actions" and then "General" from the dropdown on the lower left side. Then set the "Workflow permissions" to "Read and write permissions". Now we can change the texts and run the translations.
 
 4. ***Connect to Vercel***:
-Once the new repository is set up, you need to connect it to Vercel to deploy the map to the internet. Please go to https://vercel.com/dashboard and do the following steps: 
-- Press the "New Project" Button on the Vercel dashboard
+Once the new repository is set up, you need to connect it to Vercel to deploy the map to the internet. Please go to https://vercel.com/dashboard, sign in with your GitHub account and do the following steps: 
+  - Press the "New Project" Button on the Vercel dashboard
 - Under "Import Git Repository" choose the name of the copied repository
 - Press the blue "Deploy" button (no need to change any settings here)
 - Press the "Go to Dashboard" button and copy the URL under the "DOMAINS" heading (the url should look something like this: https://map-test-seven.vercel.app/)
@@ -111,14 +111,16 @@ To translate the texts in the [text configuration file](src/lib/stores/config-te
 
 ## Updating data
 
-1. To update the map data, please use this [csv template](https://docs.google.com/spreadsheets/d/1fzicMw_LiFGrdtzloXZFbM2FFgVc-GYtavvxPJFZ5Yo/edit?usp=sharing). Please copy the template to your own computer (or Google Drive) and fill in your desired values for each country. Please make sure that values are formatted with dots (.) as comma separators and **not commas**, i.e. 0.45 instead of 0,45. **Warning: Please make sure not to delete any country names or ids. Also make sure the CSV file is formatted with commas (,) as delimiters, not semicolons (;) or other symbols. Otherwise the map will not work**
+1. To update the map data, please use this [csv template](https://docs.google.com/spreadsheets/d/1fzicMw_LiFGrdtzloXZFbM2FFgVc-GYtavvxPJFZ5Yo/edit?usp=sharing). Please copy the template to your own computer (or Google Drive) and fill in your desired values for each country. Please make sure that values are formatted with dots (.) as comma separators and **not commas**, i.e. 0.45 instead of 0,45.  
+
+**Warning: Please make sure not to delete any country names or ids. Also make sure the CSV file is formatted with commas (,) as delimiters, not semicolons (;) or other symbols. Otherwise the map will not work**
 
 2. Once you have updated the values, download the google sheet / excel file as a CSV file under >File > Download > Comma-separated-values (.csv) and copy all the contents of the csv file.
 
 3. Open this [data file](static/data/thematic/data.csv) and click on the pen symbol on the top right side of the file preview window where it says "Edit this file". Then paste the contents of the CSV file here.
 
 After this, save the changes by entering a title for the commit, e.g. "Update data.csv" and press the green **Commit changes** button.  
-Your data should now be updated and after a while show on the map.
+Your data should now be updated and after a while show on the map. Check the Vercel URL after a few minutes to see the updated data. 
 
 ## Publish map
 
