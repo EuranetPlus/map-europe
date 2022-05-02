@@ -74,13 +74,19 @@ The most important entries that you need to change for each project are the "map
 
 ## Add data
 
-1. To add or update the map data, please use this [csv template](https://docs.google.com/spreadsheets/d/1fzicMw_LiFGrdtzloXZFbM2FFgVc-GYtavvxPJFZ5Yo/edit?usp=sharing). Please copy the template to your own computer (or Google Drive) and fill in your desired values for each country. Please make sure that values are formatted with dots (.) as comma separators and **not commas**, i.e. 0.45 instead of 0,45. **Warning: Please make sure not to delete any country names or ids. Also make sure the CSV file is formatted with commas (,) as delimiters, not semicolons (;) or other symbols. Otherwise the map will not work.**
+To add or update the map data, please first decide whether the data set you are using shows "values", i.e. continous numbers on a color scale or whether it is "binary", i.e. the data shows only a few countries in the same color (0/1). 
 
-2. Once you have updated the values, download the google sheet / excel file as a CSV file under >File > Download > Comma-separated-values (.csv), open it in a text editor (e.g. notepad, textEdit or similar) and copy all the contents of the csv file (as text).
+1. Set the dataset type in the [map configuration file](src/lib/stores/config-features.js) under "datasetType". If your dataset consists of values, please use this [csv values template](https://docs.google.com/spreadsheets/d/1fzicMw_LiFGrdtzloXZFbM2FFgVc-GYtavvxPJFZ5Yo/edit?usp=sharing). If it consists of binary data, please use this [csv binary template](https://docs.google.com/spreadsheets/d/1YL_5aVY9zaaxwhI6-cEgcwO8k01Fzu2FzsPMtvppYfg/edit?usp=sharing)
 
-3. Open this [data file](static/data/thematic/data.csv) and click on the pen symbol on the top right side of the file preview window where it says "Edit this file". Then paste the contents of the CSV file as text here.
+2. Then you need to decide whether the data consists of absolute numbers (i.e. 45 people) or percent values, (i.e. 45% of GDP). In the [map configuration file](src/lib/stores/config-features.js) this can be set under "datasetUnit".
 
-After this, save the changes by entering a title for the commit, e.g. "Update data.csv" and press the green **Commit changes** button.  
+3. Please copy the respective csv template to your own computer (or Google Drive) and fill in your desired values for each country. Please make sure that values are formatted with dots (.) as a comma separator and **not commas**, i.e. 0.45 for percentage values instead of 0,45. In the template, all percentage values are always written as fractions of 1, **i.e. 0.45 and not 45**. **Warning: Please make sure not to delete any country names or ids. Also make sure the CSV file is formatted with commas (,) as delimiters, not semicolons (;) or other symbols. Otherwise the map will not work.**
+
+4. Once you have updated the values, download the google sheet / excel file as a CSV file under >File > Download > Comma-separated-values (.csv), open it in a text editor (e.g. notepad, textEdit or similar) and copy all the contents of the csv file (as text).
+
+5. Open this [data file](static/data/thematic/data.csv) and click on the pen symbol on the top right side of the file preview window where it says "Edit this file". Then paste the contents of the CSV file as text here.
+
+After this, save the changes by pressing the green **Commit changes** button.  
 Your data should now be updated and after a while show on the map. Check the Vercel URL after a few minutes to see the updated data. 
 
 ## Updating text
