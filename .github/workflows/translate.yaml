@@ -26,5 +26,5 @@ jobs:
       - run: npm install
       - run: npm run translate
       - run: git add .
-      - run: git commit -m "Updated text in all language json files"
+      - run: git commit --allow-empty -m "Updated text in all language json files"
       - run: git push origin main

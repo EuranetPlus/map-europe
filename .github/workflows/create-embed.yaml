@@ -19,5 +19,5 @@ jobs:
       - run: npm install
       - run: npm run createEmbedCode
       - run: git add .
-      - run: git commit -m "Added map embed code as IFRAME.md"
+      - run: git commit --allow-empty -m "Added map embed code as IFRAME.md"
       - run: git push origin main
