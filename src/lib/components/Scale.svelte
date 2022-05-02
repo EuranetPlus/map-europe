@@ -1,5 +1,6 @@
 <script>
 	import { formatInt } from '$lib/utils/formatNumbers';
+	import { config } from '$lib/stores/config-features';
 
 	let width;
 
@@ -14,7 +15,11 @@
 
 	function displayDigit(index, number) {
 		if (index == 0 || index == 4) {
-			return formatInt(number * 100);
+			if (config.datasetUnit == 'percent') {
+				return formatInt(number * 100);
+			} else if (config.datasetUnit == 'fullNumbers') {
+				return number;
+			}
 		} else {
 			return '';
 		}

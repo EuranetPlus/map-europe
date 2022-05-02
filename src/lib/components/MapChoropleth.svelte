@@ -277,7 +277,11 @@
 			<div class="tooltip-body space-y-1">
 				{#each tooltip as tip}
 					<div class="values">
-						<span class="font-bold">{formatInt($MOUSE.tooltip.value * 100)}</span>
+						{#if config.datasetUnit == 'percent'}
+							<span class="font-bold">{formatInt($MOUSE.tooltip.value * 100)} %</span>
+						{:else if config.datasetUnit == 'fullNumbers'}
+							<span class="font-bold">{$MOUSE.tooltip.value}</span>
+						{/if}
 						<span>{tip.label}</span>
 					</div>
 				{/each}

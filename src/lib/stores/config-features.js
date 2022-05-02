@@ -2,6 +2,7 @@ export const config = {
   "mapTitle": "europe", // can be any title, if more than one word use dash, e.g. "income-europe"
   "vercelURL": "https://euranet-map-europe.vercel.app", // a url provided by vercel when deploying a repo manually
   "datasetType": "values", // values or binary
+  "datasetUnit": "percent", // "percent" or "fullNumbers"
   "headlineAvailable": true, // true or false
   "subheadlineAvailable": true, // true or false
   "tooltipAvailable": true, // true or false
