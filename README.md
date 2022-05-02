@@ -115,7 +115,7 @@ All text elements in the map are by default in English and are taken from the [t
 
 ## Publish map
 
-To embed the map on any website as a responsive widget, you need to create an iFrame code for each map, which then can be shared. The iFrame code has to be unique for each map, bacause it details the title of the map and the Vercel URL where the map is hosted. To create the iFrame code, please follow these three steps:
+To embed the map on any website as a responsive widget, you need to create an iFrame code, which then can be shared. The iFrame code has to be unique for each map, bacause it details the title of the map and the Vercel URL where the map is hosted. To create the iFrame code, please follow these three steps:
 
 1. Change the "mapTitle" for the map in the [feature configuration file](src/lib/stores/config-features.js) (only if you have not done so yet in step [2](#configure-the-map))
 2. Change the "vercelURL" in the in the [feature configuration file](src/lib/stores/config-features.js) (only if you have not done so yet in step [2](#configure-the-map))
