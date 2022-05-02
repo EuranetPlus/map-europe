@@ -4,7 +4,7 @@ This is the code repository for an interactive EuranetPlus choropleth map of Eur
 
 To use the map for a new topic and populate it with new texts and data please follow these steps:
 1. Make a copy of this map template: [Copy repository](#copy-repository)
-2. Configure the map according: [Configure map](#configure-map)
+2. Configure the map: [Configure map](#configure-map)
 3. Update map titles and texts: [Updating texts](#updating-text)
 4. Translate texts into 24 EU languages [Translate texts](#translate-text)
 5. Update map with new data: [Updating data](#updating-data)
@@ -60,7 +60,7 @@ By default every new repository is locked for running automated scripts. We need
 Once the new repository is set up, you need to connect it to Vercel to deploy the map to the internet. Please go to https://vercel.com/dashboard and do the following steps: 
 - Press the "New Project" Button on the Vercel dashboard
 - Under "Import Git Repository" choose the name of the copied repository
-- Press the blue "Deploy project" button
+- Press the blue "Deploy" button (no need to change any settings here)
 
 
 ## Configure the map
