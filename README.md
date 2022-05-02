@@ -4,7 +4,7 @@ This is the code repository for an interactive EuranetPlus choropleth map of Eur
 
 To use the map for a new topic and populate it with new texts and data please follow these steps:
 1. Make a copy of this map template: [Copy repository](#copy-repository)
-2. Configure the map according to needs: [Configure map](#configure-map)
+2. Configure the map according: [Configure map](#configure-map)
 3. Update map titles and texts: [Updating texts](#updating-text)
 4. Translate texts into 24 EU languages [Translate texts](#translate-text)
 5. Update map with new data: [Updating data](#updating-data)
