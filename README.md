@@ -39,13 +39,13 @@ In order to be able to use the automatic translation service by the Google API, 
 3. **Allow scripts**:  
 By default every new repository is locked for running automated scripts. We need to enable this. Go to the **Settings** tab at the top of this repository and select "Actions" and then "General" from the dropdown on the lower left side. Then set the "Workflow permissions" to "Read and write permissions". Now we can change the texts and run the translations.
 
-4. ***Connect to Vercel***:
+4. **Connect to Vercel**:
 Once the new repository is set up, you need to connect it to Vercel to deploy the map to the internet. Please go to https://vercel.com/dashboard, sign in with your GitHub account and do the following steps: 
   - Press the "New Project" Button on the Vercel dashboard
 - Under "Import Git Repository" choose the name of the copied repository
 - Press the blue "Deploy" button (no need to change any settings here)
 - Press the "Go to Dashboard" button and copy the URL under the "DOMAINS" heading (the url should look something like this: https://map-test-seven.vercel.app/)
-- Go to the [map configuration file](src/lib/stores/config-features.js) and paste the URL.
+- Go to the [map configuration file](src/lib/stores/config-features.js) and paste the URL on [line 3](https://github.com/EuranetPlus/map-europe/blob/e6f63675ae3706bc5337eb755ae58c61c1e27634/src/lib/stores/config-features.js#L3).
 
 ## Configure the map
 
@@ -76,11 +76,15 @@ The most important entries that you need to change for each project are the "map
 
 To add or update the map data, please first decide whether the data set you are using shows "values", i.e. continous numbers on a color scale or whether it is "binary", i.e. the data shows only a few countries in the same color (0/1). 
 
-1. Set the dataset type in the [map configuration file](src/lib/stores/config-features.js) under "datasetType". If your dataset consists of values, please use this [csv values template](https://docs.google.com/spreadsheets/d/1fzicMw_LiFGrdtzloXZFbM2FFgVc-GYtavvxPJFZ5Yo/edit?usp=sharing). If it consists of binary data, please use this [csv binary template](https://docs.google.com/spreadsheets/d/1YL_5aVY9zaaxwhI6-cEgcwO8k01Fzu2FzsPMtvppYfg/edit?usp=sharing)
+1. Set the dataset type in the [map configuration file](src/lib/stores/config-features.js) under "datasetType". If your dataset consists of **values data**, please use this [csv values template](https://docs.google.com/spreadsheets/d/1fzicMw_LiFGrdtzloXZFbM2FFgVc-GYtavvxPJFZ5Yo/edit?usp=sharing). If it consists of **binary data**, please use this [csv binary template](https://docs.google.com/spreadsheets/d/1YL_5aVY9zaaxwhI6-cEgcwO8k01Fzu2FzsPMtvppYfg/edit?usp=sharing)
 
-2. Then you need to decide whether the data consists of absolute numbers (i.e. 45 people) or percent values, (i.e. 45% of GDP). In the [map configuration file](src/lib/stores/config-features.js) this can be set under "datasetUnit".
+2. Then you need to decide whether the data consists of **full numbers** (i.e. 45 people) or **percent values**, (i.e. 45% of GDP). In the [map configuration file](src/lib/stores/config-features.js) this can be set under "datasetUnit".
 
-3. Please copy the respective csv template to your own computer (or Google Drive) and fill in your desired values for each country. Please make sure that values are formatted with dots (.) as a comma separator and **not commas**, i.e. 0.45 for percentage values instead of 0,45. In the template, all percentage values are always written as fractions of 1, **i.e. 0.45 and not 45**. **Warning: Please make sure not to delete any country names or ids. Also make sure the CSV file is formatted with commas (,) as delimiters, not semicolons (;) or other symbols. Otherwise the map will not work.**
+3. Please copy the respective csv template to your own computer (or Google Drive) and fill in the desired data point for each country. Please make sure that values are formatted with dots (.) as a comma separator and **not commas**, i.e. 0.45 for percentage values instead of 0,45. In the template, all percentage values are always written as fractions of 1, **i.e. 0.45 and not 45**.  
+
+**Warning:  
+Please make sure not to delete any country names or ids.  
+Also make sure the CSV file is formatted with commas (,) as delimiters, not semicolons (;) or other symbols. Otherwise the map will not work. Google sheets uses commas by default, so this might be the easiest solution to use.**
 
 4. Once you have updated the values, download the google sheet / excel file as a CSV file under >File > Download > Comma-separated-values (.csv), open it in a text editor (e.g. notepad, textEdit or similar) and copy all the contents of the csv file (as text).
 
@@ -91,7 +95,7 @@ Your data should now be updated and after a while show on the map. Check the Ver
 
 ## Updating text
 
-To change the map heading, subheading, source and text note, please change the text contents of this [text configuration file](src/lib/stores/config-text.js). It contains the entries for all textual elements in English.
+To change the map heading, subheading, source and text note, please change the text contents of this [text configuration file](src/lib/stores/config-text.json). It contains the entries for all textual elements in English.
 
 Example:  
 To change the text of the heading of the map, change the "heading" entry (text in quotation marks, i.e. "" behind the :). To do this, simply click on the pen symbol on the top right side of the file preview window where it says "Edit this file". **_Warning: Please make sure to always enclose the text elemets with quotation marks and do not forget to add a comma after the entry. Otherwise the file will not be able to be read and the app may brake._**
@@ -111,7 +115,7 @@ All text elements in the map are by default in English and are taken from the [t
 
 ## Publish map
 
-To embed the map on any website as a responsive widget, you need to create an iFrame code for each map, which then can be shared. The iFrame code has to be unique for each map, bacause it details the title of the map and the Vercel URL where the map is hosted. To create the iFrame code, please follow these three steps:
+To embed the map on any website as a responsive widget, you need to create an iFrame code, which then can be shared. The iFrame code has to be unique for each map, bacause it details the title of the map and the Vercel URL where the map is hosted. To create the iFrame code, please follow these three steps:
 
 1. Change the "mapTitle" for the map in the [feature configuration file](src/lib/stores/config-features.js) (only if you have not done so yet in step [2](#configure-the-map))
 2. Change the "vercelURL" in the in the [feature configuration file](src/lib/stores/config-features.js) (only if you have not done so yet in step [2](#configure-the-map))
