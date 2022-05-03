@@ -95,7 +95,7 @@ Your data should now be updated and after a while show on the map. Check the Ver
 
 ## Updating text
 
-To change the map heading, subheading, source and text note, please change the text contents of this [text configuration file](src/lib/stores/config-text.js). It contains the entries for all textual elements in English.
+To change the map heading, subheading, source and text note, please change the text contents of this [text configuration file](src/lib/stores/config-text.json). It contains the entries for all textual elements in English.
 
 Example:  
 To change the text of the heading of the map, change the "heading" entry (text in quotation marks, i.e. "" behind the :). To do this, simply click on the pen symbol on the top right side of the file preview window where it says "Edit this file". **_Warning: Please make sure to always enclose the text elemets with quotation marks and do not forget to add a comma after the entry. Otherwise the file will not be able to be read and the app may brake._**
