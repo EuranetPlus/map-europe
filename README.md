@@ -45,7 +45,7 @@ Once the new repository is set up, you need to connect it to Vercel to deploy th
 - Under "Import Git Repository" choose the name of the copied repository
 - Press the blue "Deploy" button (no need to change any settings here)
 - Press the "Go to Dashboard" button and copy the URL under the "DOMAINS" heading (the url should look something like this: https://map-test-seven.vercel.app/)
-- Go to the [map configuration file](src/lib/stores/config-features.js) and paste the URL.
+- Go to the [map configuration file](src/lib/stores/config-features.js) and paste the URL on [line 3](https://github.com/EuranetPlus/map-europe/blob/e6f63675ae3706bc5337eb755ae58c61c1e27634/src/lib/stores/config-features.js#L3).
 
 ## Configure the map
 
