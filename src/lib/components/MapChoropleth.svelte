@@ -75,7 +75,7 @@
 	}
 
 	$: if ($dataReady) {
-		console.log('Country data for map loaded');
+		// console.log('Country data for map loaded');
 		projection.fitExtent(
 			[
 				[paddingMap, paddingMap],
