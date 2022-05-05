@@ -11,7 +11,7 @@
 	export let scaleMax;
 
 	clusters.unshift(0);
-	// console.log(clusters);
+	console.log('classes', classes);
 
 	function displayDigit(index, number) {
 		if (index == 0 || index == 4) {

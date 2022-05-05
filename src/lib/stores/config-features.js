@@ -3,6 +3,7 @@ export const config = {
   "vercelURL": "euranet-map-europe.vercel.app", // The url provided when deploying the map on Vercel
   "datasetType": "values", // "values" or "binary"; Does the data set contain numerical values or binary (0/1) values for countries?
   "datasetUnit": "percent", // "fullNumbers" or "percent"; Is the data in percent (0.25 of GDP) or full numbers (25 people)?
+  "colourScheme": "blue", // one of the following: "blue", "purple-blue", "green-blue", "orange-red"
   "headlineAvailable": true, // true or false; Should the map have a headline? 
   "subheadlineAvailable": true, // true or false; Should the map have a subheadline? 
   "tooltipAvailable": true, // true or false; Should the map show a tooltip when hovering over a country? 
@@ -16,5 +17,3 @@ export const config = {
   "legend3Color": "blue", // Specifies the color of the third round dot in the legend entry
   "legend4Color": "green" // Specifies the color of the fourt round dot in the legend entry
 }
-
- 
