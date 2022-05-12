@@ -122,14 +122,27 @@
 
 	function mergeData() {
 		// Transform csv structure to object style to be better usable
+		// let csvTransformed = $csvData.reduce(
+		// 	(obj, item) => Object.assign(obj, { [item.id]: item.value }),
+		// 	{}
+		// );
+
 		let csvTransformed = $csvData.reduce(
-			(obj, item) => Object.assign(obj, { [item.id]: item.value }),
+			(obj, item) =>
+				Object.assign(obj, {
+					[item.id]: { value: item.value, extraInfo: item.extraInfo.toLowerCase() }
+				}),
 			{}
 		);
+
+		console.log(csvTransformed);
 		// Add values from csv
 		countriesAll.features.map((item) => {
 			item.value = csvTransformed[item.properties.id];
+			// item.extraInfo = true;
 		});
+
+		// console.log(countriesAll);
 
 		$dataReady = true;
 	}
