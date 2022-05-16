@@ -130,7 +130,18 @@
 		let csvTransformed = $csvData.reduce(
 			(obj, item) =>
 				Object.assign(obj, {
-					[item.id]: { value: item.value, extraInfo: item.extraInfo.toLowerCase() }
+					[item.id]: {
+						value: item.value,
+						extraInfo: item.extraInfo.toLowerCase() === 'true',
+						contentText: item['content_text'],
+						linkText: item['link_text'],
+						linkURL: item['link_url'],
+						audioURL1: item['audio_url_1'],
+						audioURL2: item['audio_url_2'],
+						audioURL3: item['audio_url_3'],
+						imageURL: item['image_url'],
+						videoURL: item['video_url']
+					}
 				}),
 			{}
 		);
@@ -138,11 +149,11 @@
 		console.log(csvTransformed);
 		// Add values from csv
 		countriesAll.features.map((item) => {
-			item.value = csvTransformed[item.properties.id];
-			// item.extraInfo = true;
+			// item.value = csvTransformed[item.properties.id];
+			item.csvImport = csvTransformed[item.properties.id];
 		});
 
-		// console.log(countriesAll);
+		console.log(countriesAll);
 
 		$dataReady = true;
 	}

@@ -1,4 +1,4 @@
-country,id,value,extraInfo,text_content,link_text,link_url,soundURL_1,soundURL_2,soundURL_3,imageURL,videoURL
+country,id,value,extraInfo,content_text,link_text,link_url,audio_url_1,audio_url_2,audio_url_3,image_url,video_url
 Albania,AL,0.33,FALSE,,,,,,,,
 Austria,AT,0.13,FALSE,,,,,,,,
 Belgium,BE,0.59,FALSE,,,,,,,,
