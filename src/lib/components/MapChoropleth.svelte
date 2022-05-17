@@ -10,6 +10,8 @@
 	import { MAP_WIDTH } from '$lib/stores/shared';
 	import { selectedLanguage } from '$lib/stores/shared';
 	import { countryNameTranslations } from '$lib/stores/countries';
+	import { countryInfoVisible } from '$lib/stores/shared';
+	import { selectedCountry } from '$lib/stores/shared';
 
 	import { csv } from 'd3-fetch';
 	import { extent } from 'd3-array';
@@ -22,6 +24,7 @@
 
 	import Scale from './Scale.svelte';
 	import Legend from './Legend.svelte';
+	import CountryInfo from './CountryInfo.svelte';
 
 	// Make square dimensions i.e. 600x600 to fill all space
 	let width = 600;
@@ -31,6 +34,14 @@
 	let scaleMin, scaleMax;
 
 	$: countryNames = countryNameTranslations[$selectedLanguage.value];
+
+	$: selectedCountryNameTranslated = countryNames.filter((item) => {
+		if ($selectedCountry != undefined) {
+			return item.id == $selectedCountry.properties.id;
+		} else {
+			return {};
+		}
+	})[0].na;
 
 	export let legend;
 	export let tooltip;
@@ -122,10 +133,6 @@
 
 	function mergeData() {
 		// Transform csv structure to object style to be better usable
-		// let csvTransformed = $csvData.reduce(
-		// 	(obj, item) => Object.assign(obj, { [item.id]: item.value }),
-		// 	{}
-		// );
 
 		let csvTransformed = $csvData.reduce(
 			(obj, item) =>
@@ -133,27 +140,31 @@
 					[item.id]: {
 						value: item.value,
 						extraInfo: item.extraInfo.toLowerCase() === 'true',
-						contentText: item['content_text'],
+						contentText: item['text_content'],
 						linkText: item['link_text'],
-						linkURL: item['link_url'],
+						linkURL: item['link_url_target'],
 						audioURL1: item['audio_url_1'],
 						audioURL2: item['audio_url_2'],
 						audioURL3: item['audio_url_3'],
-						imageURL: item['image_url'],
+						imageSourceURL: item['image_url_source'],
+						imageTargetURL: item['image_url_target'],
 						videoURL: item['video_url']
 					}
 				}),
 			{}
 		);
 
-		console.log(csvTransformed);
+		// console.log(csvTransformed);
+
 		// Add values from csv
 		countriesAll.features.map((item) => {
-			// item.value = csvTransformed[item.properties.id];
-			item.csvImport = csvTransformed[item.properties.id];
+			// Add attributes only for countries included in CSV
+			if (Object.keys(csvTransformed).includes(item.properties.id)) {
+				item.csvImport = csvTransformed[item.properties.id];
+			}
 		});
 
-		console.log(countriesAll);
+		// console.log(countriesAll);
 
 		$dataReady = true;
 	}
@@ -165,13 +176,17 @@
 	});
 
 	function getFill(feature) {
-		// No data, because country not in Europe: => value: undefined
-		if (feature.value !== undefined) {
-			// No data because not available for this country => value: null
-			if (feature.value !== null) {
-				return colorScale(feature.value);
-			} else {
-				return '#CAD1D9';
+		let csvData = feature.csvImport;
+
+		if (csvData) {
+			// No data, because country not in Europe: => value: undefined
+			if (csvData.value !== undefined) {
+				// No data because not available for this country => value: null
+				if (csvData.value !== null) {
+					return colorScale(csvData.value);
+				} else {
+					return '#CAD1D9';
+				}
 			}
 		} else {
 			return '#F4F4F4';
@@ -179,42 +194,37 @@
 	}
 
 	function getStroke(feature) {
-		// No data, because country not in Europe: => value: undefined
-		if (feature.value !== undefined) {
-			// No data because not available for this country => value:
-			if (feature.value !== null) {
-				return 'white';
-			} else {
-				return 'white';
+		let csvData = feature.csvImport;
+
+		if (csvData) {
+			// No data, because country not in Europe: => value: undefined
+			if (csvData.value !== undefined) {
+				// No data because not available for this country => value:
+				if (csvData.value !== null) {
+					if (csvData.extraInfo) {
+						return 'black';
+					} else {
+						// return 'white';
+					}
+					// 	return 'white';
+					// } else {
+					// 	return 'white';
+				}
 			}
 		} else {
 			return '#cdcdcd';
 		}
 	}
 
-	// function getFill(feature) {
-	// 	if (feature.value) {
-	// 		return colorScale(feature.value);
-	// 	} else {
-	// 		if (feature.properties.isEuMember) {
-	// 			return '#CAD1D9';
-	// 		} else {
-	// 			return '#F4F4F4';
-	// 		}
-	// 	}
-	// }
-
-	// function getStroke(feature) {
-	// 	if (feature.value) {
-	// 		return 'white';
-	// 	} else {
-	// 		return '#cdcdcd';
-	// 	}
-	// }
-
 	function getClass(feature) {
-		if (feature.value) {
-			return 'pointer';
+		let csvData = feature.csvImport;
+
+		if (csvData) {
+			if (csvData.value) {
+				return 'pointer';
+			} else {
+				return 'noPointer';
+			}
 		} else {
 			return 'noPointer';
 		}
@@ -255,14 +265,18 @@
 				return c.id == country.properties.id;
 			})[0].na;
 
-			// console.log(countryName);
-			hoveredCountry = {
-				name: countryName,
-				value: country.value
-			};
-
-			if (country.properties.na || country.value) {
+			// set hoveredCountry only if csvImport object is present in data
+			if (country.csvImport) {
 				tooltipVisible = true;
+
+				hoveredCountry = {
+					name: countryName,
+					value: country.csvImport.value
+				};
+			} else {
+				tooltipVisible = false;
+
+				hoveredCountry = {};
 			}
 		}
 	};
@@ -272,6 +286,13 @@
 			tooltipVisible = false;
 		}
 	};
+
+	function handleMouseClick(country) {
+		if (country.csvImport.extraInfo) {
+			$countryInfoVisible = true;
+			$selectedCountry = country;
+		}
+	}
 </script>
 
 {#if $dataReady}
@@ -298,9 +319,12 @@
 					class={getClass(feature)}
 					on:mouseenter={() => handleMouseEnter(feature)}
 					on:mouseleave={() => handleMouseLeave(feature)}
+					on:click={() => handleMouseClick(feature)}
 				/>
 			{/each}
 		</svg>
+
+		<CountryInfo selectedCountry={$selectedCountry} countryName={selectedCountryNameTranslated} />
 
 		<div
 			class="tooltip text-sm p-3 {tooltipVisible ? 'active' : ''}"

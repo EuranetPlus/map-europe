@@ -8,6 +8,10 @@ export const csvData = writable(undefined);
 export const dataReady = writable(false);
 export const selectedLanguage = writable({ value: 'en', label: 'English' });
 
+export const countryInfoVisible = writable(false);
+export const selectedCountry = writable(undefined);
+
+
 export const MOUSE = writable(undefined);
 MOUSE.set({ 
   x: 0, 
