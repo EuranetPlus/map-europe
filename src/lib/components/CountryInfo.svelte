@@ -1,6 +1,7 @@
 <script>
 	import { fly } from 'svelte/transition';
 	import { countryInfoVisible } from '$lib/stores/shared';
+	import CountryMediaComponent from './CountryMediaComponent.svelte';
 
 	export let selectedCountry;
 	export let countryName;
@@ -26,39 +27,8 @@
 			X
 		</div>
 		<div class="font-bold">{countryName}</div>
-		<div class="pt-5">
-			{selectedCountry.csvImport.contentText}
-			<a class="font-bold" target="_blank" href={selectedCountry.csvImport.linkURL}
-				>{selectedCountry.csvImport.linkText} …</a
-			>
-		</div>
-		<div class="pt-5">
-			<iframe
-				style="border-radius:5px"
-				src={selectedCountry.csvImport.audioURL1}
-				width="100%"
-				height="150"
-				frameborder="0"
-				allowfullscreen=""
-				allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-			/>
-		</div>
-		<div class="pt-5">
-			<a href={selectedCountry.csvImport.imageTargetURL} target="_blank">
-				<img src={selectedCountry.csvImport.imageSourceURL} alt="country info image" />
-			</a>
-		</div>
-		<div class="pt-5">
-			<iframe
-				width="100%"
-				height="315"
-				src={selectedCountry.csvImport.videoURL}
-				title="YouTube video player"
-				frameborder="0"
-				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-				allowfullscreen
-			/>
-		</div>
+
+		<CountryMediaComponent {selectedCountry} />
 	</div>
 {/if}
 

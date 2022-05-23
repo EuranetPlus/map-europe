@@ -202,11 +202,11 @@
 				// No data because not available for this country => value:
 				if (csvData.value !== null) {
 					if (csvData.extraInfo) {
-						return 'black';
+						return 'orange';
 					} else {
-						// return 'white';
+						return 'white';
 					}
-					// 	return 'white';
+					return 'white';
 					// } else {
 					// 	return 'white';
 				}
