@@ -36,7 +36,7 @@
 			<iframe
 				style="border-radius:5px"
 				src={selectedCountry.csvImport.audioURL1}
-				width="80%"
+				width="100%"
 				height="150"
 				frameborder="0"
 				allowfullscreen=""
