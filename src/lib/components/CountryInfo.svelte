@@ -12,7 +12,7 @@
 
 {#if $countryInfoVisible}
 	<div
-		class="country-info text-sm absolute top-20 rounded bg-white p-3 border z-10 shadow-xl overflow-auto"
+		class="country-info text-sm absolute top-20 rounded bg-white p-5 border z-10 shadow-xl overflow-auto"
 		bind:clientWidth={width}
 		style={`left: calc(50% - ${width / 2}px);`}
 		transition:fly|local={{ y: 300, duration: 500 }}
@@ -50,7 +50,7 @@
 		</div>
 		<div class="pt-5">
 			<iframe
-				width="560"
+				width="100%"
 				height="315"
 				src={selectedCountry.csvImport.videoURL}
 				title="YouTube video player"
