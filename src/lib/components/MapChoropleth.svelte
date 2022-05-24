@@ -179,9 +179,6 @@
 			features: countriesWithExtraInfo
 		};
 
-		// console.log('countriesAll', countriesAll);
-		// console.log('countriesWithExtraInfo', countriesWithExtraInfo);
-
 		$dataReady = true;
 	}
 
@@ -223,8 +220,6 @@
 						return 'white';
 					}
 					return 'white';
-					// } else {
-					// 	return 'white';
 				}
 			}
 		} else {
@@ -261,7 +256,8 @@
 				tooltip: {
 					name: hoveredCountry.name,
 					value: hoveredCountry.value,
-					valuePercent: hoveredCountry.valuePercent
+					valuePercent: hoveredCountry.valuePercent,
+					extraInfo: hoveredCountry.extraInfo
 				}
 			});
 		}
@@ -287,7 +283,8 @@
 
 				hoveredCountry = {
 					name: countryName,
-					value: country.csvImport.value
+					value: country.csvImport.value,
+					extraInfo: country.csvImport.extraInfo
 				};
 			} else {
 				tooltipVisible = false;
@@ -372,6 +369,9 @@
 						{/if}
 						<span>{tip.label}</span>
 					</div>
+					{#if $MOUSE.tooltip.extraInfo == true}
+						<div class="text-xs">Click for more info</div>
+					{/if}
 				{/each}
 			</div>
 		</div>
