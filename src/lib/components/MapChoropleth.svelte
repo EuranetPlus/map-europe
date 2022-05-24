@@ -46,20 +46,22 @@
 	export let legend;
 	export let tooltip;
 
-	$: if ($CENTER_ON === 'europe') {
-		paddingMap = -60;
-		center = countriesAll;
-	}
-
-	$: tooltipPositionX = $MOUSE.x < $MAP_WIDTH / 2 ? $MOUSE.x : $MOUSE.x - tooltipWidth;
-
 	let tooltipVisible = false;
 	let tooltipHeight;
 	let tooltipWidth;
 
 	let graticules;
 	let countriesAll;
+	let countriesWithCsvImport;
+	let countriesWithExtraInfo;
 	let hoveredCountry;
+
+	$: if ($CENTER_ON === 'europe') {
+		paddingMap = -60;
+		center = countriesAll;
+	}
+
+	$: tooltipPositionX = $MOUSE.x < $MAP_WIDTH / 2 ? $MOUSE.x : $MOUSE.x - tooltipWidth;
 
 	const projection = geoIdentity().reflectY(true);
 	const path = geoPath().projection(projection);
@@ -164,7 +166,21 @@
 			}
 		});
 
-		// console.log(countriesAll);
+		countriesWithCsvImport = countriesAll.features.filter((item) => {
+			return item.csvImport;
+		});
+
+		countriesWithExtraInfo = countriesWithCsvImport.filter((item) => {
+			return item.csvImport.extraInfo == true;
+		});
+
+		countriesWithExtraInfo = {
+			type: 'FeatureCollection',
+			features: countriesWithExtraInfo
+		};
+
+		// console.log('countriesAll', countriesAll);
+		// console.log('countriesWithExtraInfo', countriesWithExtraInfo);
 
 		$dataReady = true;
 	}
@@ -202,7 +218,7 @@
 				// No data because not available for this country => value:
 				if (csvData.value !== null) {
 					if (csvData.extraInfo) {
-						return 'orange';
+						// return 'orange';
 					} else {
 						return 'white';
 					}
@@ -322,6 +338,19 @@
 					on:click={() => handleMouseClick(feature)}
 				/>
 			{/each}
+
+			<!-- countriesWithExtraInfo added for the  -->
+			{#each countriesWithExtraInfo.features as feature, index}
+				<path
+					d={path(feature)}
+					stroke={getStroke(feature)}
+					fill={getFill(feature)}
+					class={'country-extra-info'}
+					on:mouseenter={() => handleMouseEnter(feature)}
+					on:mouseleave={() => handleMouseLeave(feature)}
+					on:click={() => handleMouseClick(feature)}
+				/>
+			{/each}
 		</svg>
 
 		<CountryInfo selectedCountry={$selectedCountry} countryName={selectedCountryNameTranslated} />
@@ -362,7 +391,17 @@
 	svg path {
 		stroke-width: 0.5px;
 		cursor: pointer;
-		transition: all 0.5s;
+		/* transition: all 0.5s; */
+	}
+
+	.country-extra-info {
+		stroke-width: 0.5px;
+		stroke: black;
+	}
+
+	.country-extra-info:hover {
+		stroke: violet;
+		stroke-width: 1px;
 	}
 
 	.noPointer {
