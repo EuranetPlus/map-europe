@@ -11,7 +11,7 @@
 <!-- Text -->
 <div class="pt-5">
 	{selectedCountry.csvImport.contentText}
-	<a class="font-bold" target="_blank" href={selectedCountry.csvImport.linkURL}
+	<a class="font-bold link-text" target="_blank" href={selectedCountry.csvImport.linkURL}
 		>{selectedCountry.csvImport.linkText} …</a
 	>
 </div>
@@ -54,3 +54,13 @@
 		allowfullscreen
 	/>
 </div>
+
+<style>
+	.link-text {
+		transition: all 0.2s;
+	}
+
+	.link-text:hover {
+		color: #51a665;
+	}
+</style>

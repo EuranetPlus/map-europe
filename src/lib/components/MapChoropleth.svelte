@@ -391,17 +391,17 @@
 	svg path {
 		stroke-width: 0.5px;
 		cursor: pointer;
-		/* transition: all 0.5s; */
+		stroke-linecap: round;
 	}
 
 	.country-extra-info {
-		stroke-width: 0.5px;
+		stroke-width: 1px;
 		stroke: black;
+		transition: all 0.3s;
 	}
 
 	.country-extra-info:hover {
-		stroke: violet;
-		stroke-width: 1px;
+		stroke-width: 2px;
 	}
 
 	.noPointer {

@@ -19,7 +19,7 @@
 		transition:fly|local={{ y: 300, duration: 500 }}
 	>
 		<div
-			class="icon-close text-right cursor-pointer static"
+			class="icon-close transition-all text-right cursor-pointer static"
 			on:click={() => {
 				$countryInfoVisible = false;
 			}}
@@ -35,5 +35,13 @@
 		width: 95%;
 		height: 80%;
 		z-index: 1;
+	}
+
+	.icon-close {
+		transition: all 0.2s;
+	}
+
+	.icon-close:hover {
+		color: #51a665;
 	}
 </style>
