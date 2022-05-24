@@ -13,7 +13,7 @@
 
 {#if $countryInfoVisible}
 	<div
-		class="country-info text-sm absolute top-20 rounded bg-white p-5 border z-10 shadow-xl overflow-auto"
+		class="country-info text-sm absolute top-20 rounded bg-white p-5 border shadow-xl overflow-auto"
 		bind:clientWidth={width}
 		style={`left: calc(50% - ${width / 2}px);`}
 		transition:fly|local={{ y: 300, duration: 500 }}
@@ -36,5 +36,6 @@
 	.country-info {
 		width: 95%;
 		height: 80%;
+		z-index: 1;
 	}
 </style>
