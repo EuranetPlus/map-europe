@@ -8,5 +8,6 @@
   "textNoteDescription": "Opomba",
   "textNote": "Državni izdatki po funkciji in vrsti COFOG (UNSD klasifikacija funkcij vlade, ponovljena v ESR 2010).",
   "textDataAccess": "Dostop do podatkov",
-  "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=en"
+  "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=en",
+  "textCountryClick": "Kliknite za več informacij"
 }

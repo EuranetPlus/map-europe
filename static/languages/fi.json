@@ -8,5 +8,6 @@
   "textNoteDescription": "Huomautus",
   "textNote": "Julkiset menot COFOG:n (UNSD:n julkishallinnon toimintojen luokittelu, jäljennetty EKT2010:ssä) toiminnon ja tyypin mukaan.",
   "textDataAccess": "Käytä tietoja",
-  "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=fi"
+  "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=fi",
+  "textCountryClick": "Napsauta saadaksesi lisätietoja"
 }

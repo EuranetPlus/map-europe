@@ -8,5 +8,6 @@
   "textNoteDescription": "Observação",
   "textNote": "Despesas governamentais por COFOG (classificação UNSD das funções do governo, replicada no SEC2010) função e tipo.",
   "textDataAccess": "Acesse os dados",
-  "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=en"
+  "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=en",
+  "textCountryClick": "Clique para mais informações"
 }

@@ -8,5 +8,6 @@
   "textNoteDescription": "jegyzet",
   "textNote": "Kormányzati kiadások COFOG (UNSD Classification of Government Functions, replikálva az ESA2010-ben) funkció és típus szerint.",
   "textDataAccess": "Hozzáférés az adatokhoz",
-  "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=en"
+  "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=en",
+  "textCountryClick": "Kattintson további információkért"
 }

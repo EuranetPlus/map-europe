@@ -8,5 +8,6 @@
   "textNoteDescription": "Bilješka",
   "textNote": "Državni rashodi prema funkciji i vrsti COFOG (UNSD klasifikacija funkcija vlade, replicirana u ESA2010).",
   "textDataAccess": "Pristup podacima",
-  "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=hr"
+  "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=hr",
+  "textCountryClick": "Kliknite za više informacija"
 }

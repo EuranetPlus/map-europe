@@ -8,5 +8,6 @@
   "textNoteDescription": "Nota",
   "textNote": "Nefqa tal-gvern skont il-funzjoni u t-tip tal-COFOG (klassifikazzjoni UNSD tal-funzjonijiet tal-gvern, replikata fl-ESA2010).",
   "textDataAccess": "Aċċessa għad-data",
-  "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=en"
+  "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=en",
+  "textCountryClick": "Ikklikkja għal aktar informazzjoni"
 }

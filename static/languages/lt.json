@@ -8,5 +8,6 @@
   "textNoteDescription": "Pastaba",
   "textNote": "Valdžios išlaidos pagal COFOG (UNSD vyriausybės funkcijų klasifikatorius, pakartotas ESS2010) funkciją ir tipą.",
   "textDataAccess": "Pasiekite duomenis",
-  "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=en"
+  "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=en",
+  "textCountryClick": "Spustelėkite norėdami gauti daugiau informacijos"
 }

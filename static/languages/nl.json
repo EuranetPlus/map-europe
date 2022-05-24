@@ -8,5 +8,6 @@
   "textNoteDescription": "Opmerking",
   "textNote": "Overheidsuitgaven volgens COFOG (UNSD-classificatie van overheidsfuncties, gerepliceerd in ESR2010) functie en type.",
   "textDataAccess": "Toegang tot de gegevens",
-  "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=en"
+  "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=en",
+  "textCountryClick": "Klik voor meer info"
 }

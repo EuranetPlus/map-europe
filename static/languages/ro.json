@@ -8,5 +8,6 @@
   "textNoteDescription": "Notă",
   "textNote": "Cheltuielile guvernamentale după funcția și tipul COFOG (clasificarea UNSD a funcțiilor guvernamentale, replicată în ESA2010).",
   "textDataAccess": "Accesați datele",
-  "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=en"
+  "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=en",
+  "textCountryClick": "Click pentru mai multe informații"
 }

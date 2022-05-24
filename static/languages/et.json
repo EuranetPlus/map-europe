@@ -8,5 +8,6 @@
   "textNoteDescription": "Märge",
   "textNote": "Valitsemissektori kulud COFOG-i (UNSD klassifikatsioon valitsusfunktsioonide klassifikatsioonist, korratud ESA2010-s) funktsiooni ja tüübi järgi.",
   "textDataAccess": "Juurdepääs andmetele",
-  "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=en"
+  "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=en",
+  "textCountryClick": "Lisateabe saamiseks klõpsake"
 }

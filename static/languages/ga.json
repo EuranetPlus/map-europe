@@ -8,5 +8,6 @@
   "textNoteDescription": "Nóta",
   "textNote": "Caiteachas rialtais de réir feidhme agus cineál COFOG (aicmiú UNSD ar fheidhmeanna an rialtais, arna mhacasamhlú in CCE2010).",
   "textDataAccess": "Faigh rochtain ar na sonraí",
-  "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=ga"
+  "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=ga",
+  "textCountryClick": "Cliceáil le haghaidh tuilleadh eolais"
 }

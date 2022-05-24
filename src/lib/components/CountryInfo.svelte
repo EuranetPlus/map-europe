@@ -19,14 +19,12 @@
 		transition:fly|local={{ y: 300, duration: 500 }}
 	>
 		<div
-			class="close text-right cursor-pointer"
+			class="icon-close text-right cursor-pointer static"
 			on:click={() => {
 				$countryInfoVisible = false;
 			}}
-		>
-			X
-		</div>
-		<div class="font-bold">{countryName}</div>
+		/>
+		<div class="font-bold border-b pb-2">{countryName}</div>
 
 		<CountryMediaComponent {selectedCountry} />
 	</div>

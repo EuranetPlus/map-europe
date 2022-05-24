@@ -19,6 +19,7 @@
 	let linkDataAccess;
 	let textNoteDescription;
 	let textNote;
+	let textCountryClick;
 
 	// Send map height to parent window
 	$: {
@@ -45,6 +46,7 @@
 				linkDataAccess = data.linkDataAccess;
 				textNoteDescription = data.textNoteDescription;
 				textNote = data.textNote;
+				textCountryClick = data.textCountryClick;
 
 				// LEGEND // Filter all keys with text "legend"
 				legendEntries = Object.keys(data).filter((item) => {
@@ -69,7 +71,8 @@
 				tooltip = tooltipEntries.map((item) => {
 					return {
 						[item]: data[item],
-						label: data[item]
+						label: data[item],
+						textCountryClick: textCountryClick
 					};
 				});
 				// console.log(tooltip);

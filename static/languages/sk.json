@@ -8,5 +8,6 @@
   "textNoteDescription": "Poznámka",
   "textNote": "Vládne výdavky podľa funkcie a typu COFOG (klasifikácia funkcií verejnej správy OSN, replikovaná v ESA2010).",
   "textDataAccess": "Prístup k údajom",
-  "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=sk"
+  "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=sk",
+  "textCountryClick": "Kliknite pre viac informácií"
 }

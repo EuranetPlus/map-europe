@@ -8,5 +8,6 @@
   "textNoteDescription": "Nota",
   "textNote": "Spesa pubblica per funzione e tipologia COFOG (classificazione UNSD delle funzioni di governo, replicata in ESA2010).",
   "textDataAccess": "Accedi ai dati",
-  "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=en"
+  "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=en",
+  "textCountryClick": "Clicca per maggiori informazioni"
 }

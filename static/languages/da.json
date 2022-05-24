@@ -8,5 +8,6 @@
   "textNoteDescription": "Bemærk",
   "textNote": "Offentlige udgifter efter COFOG (UNSD-klassifikation af offentlige funktioner, gentaget i ESA2010) funktion og type.",
   "textDataAccess": "Få adgang til dataene",
-  "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=da"
+  "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=da",
+  "textCountryClick": "Klik for mere info"
 }
