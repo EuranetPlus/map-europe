@@ -395,13 +395,12 @@
 	}
 
 	.country-extra-info {
-		stroke-width: 1px;
+		stroke-width: 0.5px;
 		stroke: black;
-		transition: all 0.3s;
 	}
 
 	.country-extra-info:hover {
-		stroke-width: 2px;
+		stroke-width: 1.5px;
 	}
 
 	.noPointer {
