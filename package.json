@@ -10,7 +10,8 @@
 		"lint": "prettier --ignore-path .gitignore --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
 		"format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. .",
 		"translate": "node translate.js",
-		"createEmbedCode": "node create-embed.js"
+		"createEmbedCode": "node create-embed.js",
+		"translate2": "node translate2.js"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "next",
@@ -30,6 +31,7 @@
 	"dependencies": {
 		"@google-cloud/translate": "^6.3.1",
 		"chalk": "^5.0.1",
+		"csv-parser": "^3.0.0",
 		"d3-array": "^3.1.1",
 		"d3-fetch": "^3.0.1",
 		"d3-geo": "^3.0.1",

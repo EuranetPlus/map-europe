@@ -1,0 +1,19 @@
+{
+  "heading": "Koulutusmenot kasvavat kaikissa EU-maissa",
+  "subheading": "Julkiset menot sotilaalliseen puolustukseen suhteessa BKT:hen Euroopan unionin maissa vuonna 2020",
+  "legend1": "Tietoja ei ole saatavilla",
+  "tooltip1": "BKT:sta",
+  "textSourceDescription": "Lähde",
+  "textSource": "Eurostat",
+  "textNoteDescription": "Huomautus",
+  "textNote": "Julkiset menot COFOG:n (UNSD:n julkishallinnon toimintojen luokittelu, jäljennetty EKT2010:ssä) toiminnon ja tyypin mukaan.",
+  "textDataAccess": "Käytä tietoja",
+  "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=fi",
+  "textCountryClick": "Napsauta saadaksesi lisätietoja",
+  "extraInfo_DE": "Ei varmaankaan ole sattumaa, että Euroopan komissio ilmoitti vain kaksi päivää myöhemmin ottavansa vihdoin käyttöön ehdollisuusmekanismin, joka yhdistää EU:n varojen maksamisen oikeusvaltioperiaatteen kunnioittamiseen. Budapestia arvostellaan tiedotusvälineiden vapauden rajoituksista, eturistiriidoista ja korruptiosta.",
+  "extraInfo_ES": "Koska yksimielisyyden tarve aiheuttaa byrokraattisen pullonkaulan monilla aloilla, on tietty logiikka siirtyä kohti määräenemmistöäänestystä mahdollisuuksien mukaan. Käytännössä määräenemmistö on, kun 15 27 jäsenvaltiosta äänestää jonkin asian puolesta, kunhan ne yhdessä edustavat yli 65 prosenttia EU:n 450 miljoonasta kansalaisesta.",
+  "extraInfo_IT": "Slovenian ulkoministeriön valtiosihteeri ja konferenssikomitean jäsen Gašper Dovžan sanoo, että Slovenia ei todellakaan pelkää rohkeita päätöksiä tai hylkää mahdollisuutta siirtyä kohti määräenemmistöä. Hän uskoo kuitenkin, että yksimieliselle päätöksenteolle on vielä tilaa.",
+  "extraInfo_LU": "Luxemburgilainen Euroopan parlamentin jäsen Marc Angel on kuitenkin vakuuttunut siitä, että perussopimusten muutokset ovat ehdottoman välttämättömiä – ei pelkästään päätöksentekomenettelyjen vähentämiseksi, vaan myös EU:n toimivallan laajentamiseksi. Hän väittää Luxemburgin kansallisen yleisradioyhtiön 100,7:n haastattelussa, että EU:n kansalaiset pyysivät tätä selvästi konferenssiprosessin aikana.",
+  "extraInfo_PL": "Vilnan yliopiston valtiotieteen professori Liutauras Gudzinskas kertoo Žinių Radijasille, että vaikka Euroopan komission ehdotus tiedotusvälineiden moniarvoisuuden ja riippumattomuuden vahvistamisesta ja sen suojelemisesta poliittiselta tai liiketoiminnalta voisi olla hyödyllinen ehkäisevä väline monissa maissa, se on todennäköistä. liian myöhäistä Unkarille.",
+  "extraInfo_RO": "Vaikka on Maailman lehdistönvapauden päivä 3. toukokuuta, Liettuassa juhlitaan lehdistönvapautta joka vuosi 7. toukokuuta, koska tämä päivämäärä merkitsee tsaarin liettualaisten kirjojen julkaisemista ja jakelua koskevan kiellon päättymistä."
+}

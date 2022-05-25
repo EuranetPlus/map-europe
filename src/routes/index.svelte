@@ -20,6 +20,8 @@
 	let textNoteDescription;
 	let textNote;
 	let textCountryClick;
+	let extraInfoEntries;
+	let extraInfoTexts;
 
 	// Send map height to parent window
 	$: {
@@ -35,7 +37,7 @@
 	});
 
 	async function getLanguage(lang) {
-		const res = await fetch(`/languages/${lang}.json`)
+		const res = await fetch(`/languages2/${lang}.json`)
 			.then((response) => response.json())
 			.then(function (data) {
 				heading = data.heading;
@@ -75,7 +77,22 @@
 						textCountryClick: textCountryClick
 					};
 				});
-				// console.log(tooltip);
+
+				// extraInfo // Filter all keys with text "extraInfo"
+				const asArray = Object.entries(data);
+				extraInfoEntries = asArray.filter(([key, value]) => {
+					return key.includes('extraInfo');
+				});
+
+				// Reduce to get object with country id as key and extraInfo text
+				extraInfoTexts = extraInfoEntries.reduce(
+					(obj, item) =>
+						Object.assign(obj, {
+							// split the name to  get country id as key
+							[item[0].split('_')[1]]: item[1]
+						}),
+					{}
+				);
 			});
 	}
 
@@ -112,7 +129,7 @@
 		</div>
 		<div id="chart-body" class="mt-4">
 			{#if legend && tooltip}
-				<MapChoropleth {legend} {tooltip} />
+				<MapChoropleth {legend} {tooltip} {extraInfoTexts} />
 			{/if}
 		</div>
 	</div>

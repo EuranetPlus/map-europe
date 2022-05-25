@@ -33,6 +33,10 @@
 	let center;
 	let scaleMin, scaleMax;
 
+	export let legend;
+	export let tooltip;
+	export let extraInfoTexts;
+
 	$: countryNames = countryNameTranslations[$selectedLanguage.value];
 
 	$: selectedCountryNameTranslated = countryNames.filter((item) => {
@@ -43,8 +47,19 @@
 		}
 	})[0].na;
 
-	export let legend;
-	export let tooltip;
+	// $: selectedCountryExtraInfo = extraInfoTexts;
+	// $: console.log(extraInfoTexts['PL']);
+	// $: console.log(extraInfoTexts[$selectedCountry.properties.id]);
+	// $: if ($selectedCountry) console.log(extraInfoTexts[$selectedCountry.properties.id]);
+
+	let selectedCountryExtraInfoTextTranslated;
+
+	$: if ($selectedCountry) {
+		selectedCountryExtraInfoTextTranslated = extraInfoTexts[$selectedCountry.properties.id];
+		console.log(selectedCountryExtraInfoTextTranslated);
+	} else {
+		selectedCountryExtraInfoTextTranslated = undefined;
+	}
 
 	let tooltipVisible = false;
 	let tooltipHeight;
@@ -350,7 +365,11 @@
 			{/each}
 		</svg>
 
-		<CountryInfo selectedCountry={$selectedCountry} countryName={selectedCountryNameTranslated} />
+		<CountryInfo
+			selectedCountry={$selectedCountry}
+			countryName={selectedCountryNameTranslated}
+			countryText={selectedCountryExtraInfoTextTranslated}
+		/>
 
 		<div
 			class="tooltip text-sm p-3 {tooltipVisible ? 'active' : ''}"

@@ -1,0 +1,19 @@
+{
+  "heading": "Tháinig méadú ar chaiteachas oideachais ar fud thíortha uile an AE",
+  "subheading": "Caiteachas an rialtais ghinearálta ar chosaint mhíleata mar chéatadán den OTI i dtíortha an Aontais Eorpaigh in 2020",
+  "legend1": "Níl aon sonraí ar fáil",
+  "tooltip1": "de OTI",
+  "textSourceDescription": "Foinse",
+  "textSource": "Eurostat",
+  "textNoteDescription": "Nóta",
+  "textNote": "Caiteachas rialtais de réir feidhme agus cineál COFOG (aicmiú UNSD ar fheidhmeanna an rialtais, arna mhacasamhlú in CCE2010).",
+  "textDataAccess": "Faigh rochtain ar na sonraí",
+  "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=ga",
+  "textCountryClick": "Cliceáil le haghaidh tuilleadh eolais",
+  "extraInfo_DE": "Is dócha nach comhtharlú é, ach dhá lá ina dhiaidh sin, gur fhógair an Coimisiún Eorpach go mbeadh an sásra coinníollachta á chur i bhfeidhm ar deireadh, a nascann íocaíocht chistí an AE le hurraim don smacht reachta. Tá cáineadh i mBúdaipeist faoi shrianta ar shaoirse na meán, coinbhleachtaí leasa agus éilliú.",
+  "extraInfo_ES": "Toisc gur gá aontoilíocht a bheith ina scata maorlathach i go leor réimsí, tá loighic áirithe ann chun bogadh i dtreo vótáil tromlaigh cháilithe nuair is féidir. Go praiticiúil, is éard atá i gceist le tromlach cáilithe ná nuair a vótálann 15 de na 27 mBallstát i bhfabhar rud éigin, chomh fada agus go seasann siad le chéile níos mó ná 65 faoin gcéad de 450 milliún saoránach an AE.",
+  "extraInfo_IT": "Deir Gašper Dovžan, rúnaí stáit ag Aireacht Eachtrach na Slóivéine agus ball de choiste na Comhdhála, nach bhfuil an tSlóivéin cinnte ag cúlú ó chinntí cróga nó ag diúltú don fhéidearthacht bogadh i dtreo tromlaigh cháilithe. Mar sin féin, creideann sé go bhfuil áit ann fós do chinnteoireacht chomhthoil.",
+  "extraInfo_LU": "Ach tá FPE Lucsamburgach Marc Angel lánchinnte go bhfuil fíor-riachtanach athruithe conartha – ní amháin chun nósanna imeachta cinnteoireachta a dhéanamh níos lú achrannaí, ach freisin chun raon inniúlachta an AE a leathnú. Dearbhaíonn sé, in agallamh leis an gcraoltóir náisiúnta Lucsamburg 100,7, gur léir gur iarr saoránaigh an AE é seo le linn phróiseas na Comhdhála.",
+  "extraInfo_PL": "Insíonn Liutauras Gudzinskas, ollamh san eolaíocht pholaitiúil in Ollscoil Vilnius, do Žinių Radijas, cé go bhféadfadh togra an Choimisiúin Eorpaigh iolrachas agus neamhspleáchas na meán a neartú agus é a chosaint ó chur isteach polaitiúil nó gnó a bheith ina uirlis úsáideach coisctheach i go leor tíortha, is dócha. ró-dhéanach don Ungáir.",
+  "extraInfo_RO": "Cé gurb é Lá Domhanda Saoirse an Phreasa é an 3 Bealtaine, ceiliúrann an Liotuáin saoirse an phreasa gach bliain ar 7 Bealtaine – toisc gurb é an dáta seo deireadh le cosc an tsarist ar fhoilsiú agus ar dháileadh leabhar sa Liotuáin."
+}

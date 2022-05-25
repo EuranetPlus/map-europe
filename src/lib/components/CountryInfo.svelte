@@ -5,10 +5,9 @@
 
 	export let selectedCountry;
 	export let countryName;
+	export let countryText;
 
 	let width;
-
-	// $: console.log(selectedCountry);
 </script>
 
 {#if $countryInfoVisible}
@@ -16,7 +15,6 @@
 		class="country-info text-sm absolute top-20 rounded bg-white p-5 border shadow-xl overflow-auto"
 		bind:clientWidth={width}
 		style={`left: calc(50% - ${width / 2}px);`}
-		transition:fly|local={{ y: 300, duration: 500 }}
 	>
 		<div
 			class="icon-close transition-all text-right cursor-pointer static"
@@ -26,7 +24,7 @@
 		/>
 		<div class="font-bold border-b pb-2">{countryName}</div>
 
-		<CountryMediaComponent {selectedCountry} />
+		<CountryMediaComponent {selectedCountry} {countryText} />
 	</div>
 {/if}
 

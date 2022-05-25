@@ -1,5 +1,6 @@
 <script>
 	export let selectedCountry;
+	export let countryText;
 
 	// Filter csvImport for audio pieces
 	const asArray = Object.entries(selectedCountry.csvImport);
@@ -10,7 +11,7 @@
 
 <!-- Text -->
 <div class="pt-5">
-	{selectedCountry.csvImport.contentText}
+	{countryText}
 	<a class="font-bold link-text" target="_blank" href={selectedCountry.csvImport.linkURL}
 		>{selectedCountry.csvImport.linkText} …</a
 	>
