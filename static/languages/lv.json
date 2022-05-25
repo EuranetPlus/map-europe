@@ -9,5 +9,11 @@
   "textNote": "Valdības izdevumi pēc COFOG (UNSD valdības funkciju klasifikācija, replicēta EKS2010) funkcijas un veida.",
   "textDataAccess": "Piekļūstiet datiem",
   "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=en",
-  "textCountryClick": "Noklikšķiniet, lai iegūtu vairāk informācijas"
+  "textCountryClick": "Noklikšķiniet, lai iegūtu vairāk informācijas",
+  "extraInfo_DE": "Iespējams, tā nav nejaušība, ka tikai divas dienas vēlāk Eiropas Komisija paziņoja, ka beidzot iedarbinās nosacījumu mehānismu, kas saista ES fondu maksājumus ar tiesiskuma ievērošanu. Budapešta tiek kritizēta par mediju brīvības ierobežojumiem, interešu konfliktiem un korupciju.",
+  "extraInfo_ES": "Tā kā vajadzība pēc vienprātības daudzās jomās rada birokrātiskus šķēršļus, pastāv zināma loģika, lai pēc iespējas pārietu uz kvalificētu balsu vairākumu. Praksē kvalificēts vairākums ir tad, kad 15 no 27 dalībvalstīm balso par kaut ko, ja vien tās kopā pārstāv vairāk nekā 65 procentus no 450 miljoniem ES pilsoņu.",
+  "extraInfo_IT": "Slovēnijas Ārlietu ministrijas valsts sekretārs un konferences komitejas loceklis Gašpers Dovžans norāda, ka Slovēnija noteikti nevairās no drosmīgiem lēmumiem vai noraida iespēju virzīties uz kvalificētu vairākumu. Tomēr viņš uzskata, ka vēl ir vieta vienprātīgai lēmumu pieņemšanai.",
+  "extraInfo_LU": "Tomēr Luksemburgas EP deputāts Marks Anhels ir pārliecināts, ka līguma izmaiņas ir absolūti nepieciešamas – ne tikai lai padarītu lēmumu pieņemšanas procedūras mazāk apgrūtinošas, bet arī lai paplašinātu ES kompetences sfēru. Viņš intervijā Luksemburgas nacionālajai raidorganizācijai 100,7 apgalvo, ka ES pilsoņi to skaidri prasīja konferences procesa laikā.",
+  "extraInfo_PL": "Viļņas Universitātes politikas zinātnes profesors Liutaurs Gudzinskas portālam Žinių Radijas stāsta, ka, lai gan Eiropas Komisijas priekšlikums stiprināt plašsaziņas līdzekļu plurālismu un neatkarību un aizsargāt tos no politiskās vai biznesa iejaukšanās varētu būt noderīgs preventīvs instruments daudzās valstīs, visticamāk Ungārijai par vēlu.",
+  "extraInfo_RO": "Lai gan 3. maijs ir Pasaules preses brīvības diena, Lietuva preses brīvību katru gadu atzīmē 7. maijā, jo ar šo datumu beidzas cara laika aizliegums izdot un izplatīt grāmatas lietuviešu valodā."
 }

@@ -10,8 +10,7 @@
 		"lint": "prettier --ignore-path .gitignore --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
 		"format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. .",
 		"translate": "node translate.js",
-		"createEmbedCode": "node create-embed.js",
-		"translate2": "node translate2.js"
+		"createEmbedCode": "node create-embed.js"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "next",

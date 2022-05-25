@@ -9,5 +9,11 @@
   "textNote": "Wydatki rządowe według COFOG (klasyfikacja funkcji rządu według UNSD, powtórzona w ESA2010) funkcji i rodzaju.",
   "textDataAccess": "Uzyskaj dostęp do danych",
   "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=en",
-  "textCountryClick": "Kliknij, aby uzyskać więcej informacji"
+  "textCountryClick": "Kliknij, aby uzyskać więcej informacji",
+  "extraInfo_DE": "To chyba nie przypadek, że zaledwie dwa dni później Komisja Europejska ogłosiła, że w końcu uruchomi mechanizm warunkowości, który wiąże wypłatę unijnych środków z poszanowaniem praworządności. Budapeszt spotyka się z krytyką ograniczania wolności mediów, konfliktu interesów i korupcji.",
+  "extraInfo_ES": "Ponieważ potrzeba jednomyślności powoduje biurokratyczne wąskie gardło w wielu obszarach, istnieje pewna logika przechodzenia na głosowanie większością kwalifikowaną tam, gdzie to możliwe. W praktyce większość kwalifikowana ma miejsce wtedy, gdy 15 z 27 państw członkowskich zagłosuje za czymś, o ile razem reprezentują one ponad 65 procent z 450 milionów obywateli UE.",
+  "extraInfo_IT": "Gašper Dovžan, sekretarz stanu w MSZ Słowenii i członek komitetu konferencji, mówi, że Słowenia z pewnością nie stroni od odważnych decyzji ani odrzuca możliwości przejścia w kierunku większości kwalifikowanej. Uważa jednak, że wciąż jest miejsce na podejmowanie decyzji w drodze konsensusu.",
+  "extraInfo_LU": "Jednak luksemburski eurodeputowany Marc Angel jest przekonany, że zmiany traktatowe są absolutnie konieczne – nie tylko po to, by procedury decyzyjne były mniej uciążliwe, ale także po to, by poszerzyć sferę kompetencji UE. Twierdzi on w wywiadzie dla luksemburskiego krajowego nadawcy 100,7, że obywatele UE wyraźnie poprosili o to podczas procesu konferencji.",
+  "extraInfo_PL": "Liutauras Gudzinskas, profesor politologii na Uniwersytecie Wileńskim, powiedział Žinių Radijas, że chociaż propozycja Komisji Europejskiej dotycząca wzmocnienia pluralizmu i niezależności mediów oraz ochrony ich przed ingerencją polityczną lub biznesową może być użytecznym narzędziem zapobiegawczym w wielu krajach, prawdopodobnie za późno na Węgry.",
+  "extraInfo_RO": "Choć 3 maja przypada Światowy Dzień Wolności Prasy, na Litwie wolność prasy jest obchodzona co roku 7 maja – w tym dniu kończy się bowiem carski zakaz wydawania i rozpowszechniania książek w języku litewskim."
 }

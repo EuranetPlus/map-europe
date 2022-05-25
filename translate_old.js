@@ -3,55 +3,7 @@ import fetch from 'node-fetch';
 import { createRequire } from "module";
 import dotenv from 'dotenv'
 import * as fs from 'fs';
-import csv from 'csv-parser';
 dotenv.config()
-
-
-// Step 1: Load text contents of CSV file and filter for countries with extra info
-let countriesWithExtraInfo = [];
-
-fs.createReadStream('./static/data/thematic/data.csv')
-  .pipe(csv())
-  .on('data', (row) => {
-    // Filter only countries with extraInfo
-    if (row.extraInfo == "TRUE") {
-      countriesWithExtraInfo.push(row)
-    }
-  })
-  .on('end', () => {
-    console.log('CSV file successfully processed');
-
-
-      // Open config text file and add country text ("extraInfo") from CSV to be translated
-    fs.readFile(`./src/lib/stores/config-text.json`, function (err, data) {
-        let obj = JSON.parse(data);
-
-        // For each country with extraInfo transform id to lowercase and add text to json
-        countriesWithExtraInfo.forEach(item => {
-          let id = item.id 
-          // let id = item.id = item.id.toLowerCase();
-
-          
-          // Add a dynamic key for each country to config-text.json
-          obj["extraInfo_" + id] = item['text_content']
-
-        })
-
-        // Write file to json again with new data from CSV
-         fs.writeFile("./src/lib/stores/config-text2.json", JSON.stringify(obj, null, 2), (err) => {
-            console.log(chalk.green(`Success!`))
-          })
-    
-      })   
-
-  });
-
-
-  // ---- //
-
-
-
-// Step 2: Translate all contents of the config-text.json into 24 languages
 
 // All language codes: https://cloud.google.com/translate/docs/languages
 console.log(chalk.green('Starting translation process...'));
@@ -59,7 +11,7 @@ console.log(chalk.green('Starting translation process...'));
 // Import data
 const require = createRequire(import.meta.url);
 // const sourceJSON = require("./static/languages/en.json");
-const sourceJSON = require("./src/lib/stores/config-text2.json");
+const sourceJSON = require("./src/lib/stores/config-text.json");
 
 const languages = require("./static/languages/languages.json");
 
@@ -144,7 +96,7 @@ function writeJSONToFile(jsonObj, target, label) {
   const data = JSON.stringify(jsonObj, null, 2);
 
   // write JSON string to a file
-  fs.writeFile(`./static/languages2/${target}.json`, data, (err) => {
+  fs.writeFile(`./static/languages/${target}.json`, data, (err) => {
     if (err) {
       console.log(chalk.red("Something went wrong!", err))
     }

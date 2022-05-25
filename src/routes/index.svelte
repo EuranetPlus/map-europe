@@ -37,7 +37,7 @@
 	});
 
 	async function getLanguage(lang) {
-		const res = await fetch(`/languages2/${lang}.json`)
+		const res = await fetch(`/languages/${lang}.json`)
 			.then((response) => response.json())
 			.then(function (data) {
 				heading = data.heading;
