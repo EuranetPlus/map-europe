@@ -20,8 +20,8 @@
 	let textNoteDescription;
 	let textNote;
 	let textCountryClick;
-	let extraInfoEntries;
 	let extraInfoTexts;
+	let extraInfoLinks;
 
 	// Send map height to parent window
 	$: {
@@ -78,21 +78,31 @@
 					};
 				});
 
-				// extraInfo // Filter all keys with text "extraInfo"
-				const asArray = Object.entries(data);
-				extraInfoEntries = asArray.filter(([key, value]) => {
-					return key.includes('extraInfo');
-				});
+				// Get objects of language files with keys for only "extraInfoText" or "extraInfoLink" and turn them into a nice usable object
+				extraInfoTexts = filterAndReduceExtraInfo('extraInfoText');
+				extraInfoLinks = filterAndReduceExtraInfo('extraInfoLink');
 
-				// Reduce to get object with country id as key and extraInfo text
-				extraInfoTexts = extraInfoEntries.reduce(
-					(obj, item) =>
-						Object.assign(obj, {
-							// split the name to  get country id as key
-							[item[0].split('_')[1]]: item[1]
-						}),
-					{}
-				);
+				function filterAndReduceExtraInfo(filterTerm) {
+					// 1. Filter all keys with text "extraInfoText" or "extraInfoLink"
+					let extraInfoEntries;
+					const asArray = Object.entries(data);
+					extraInfoEntries = asArray.filter(([key, value]) => {
+						return key.includes(filterTerm);
+					});
+
+					// 2. Reduce to get object with country id as key and "extraInfoText" or "extraInfoLink"
+					let result;
+					result = extraInfoEntries.reduce(
+						(obj, item) =>
+							Object.assign(obj, {
+								// split the name to  get country id as key
+								[item[0].split('_')[1]]: item[1]
+							}),
+						{}
+					);
+
+					return result;
+				}
 			});
 	}
 
@@ -129,7 +139,7 @@
 		</div>
 		<div id="chart-body" class="mt-4">
 			{#if legend && tooltip}
-				<MapChoropleth {legend} {tooltip} {extraInfoTexts} />
+				<MapChoropleth {legend} {tooltip} {extraInfoTexts} {extraInfoLinks} />
 			{/if}
 		</div>
 	</div>

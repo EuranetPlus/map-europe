@@ -36,6 +36,7 @@
 	export let legend;
 	export let tooltip;
 	export let extraInfoTexts;
+	export let extraInfoLinks;
 
 	$: countryNames = countryNameTranslations[$selectedLanguage.value];
 
@@ -47,18 +48,16 @@
 		}
 	})[0].na;
 
-	// $: selectedCountryExtraInfo = extraInfoTexts;
-	// $: console.log(extraInfoTexts['PL']);
-	// $: console.log(extraInfoTexts[$selectedCountry.properties.id]);
-	// $: if ($selectedCountry) console.log(extraInfoTexts[$selectedCountry.properties.id]);
-
 	let selectedCountryExtraInfoTextTranslated;
+	let selectedCountryExtraInfoLinkTranslated;
 
 	$: if ($selectedCountry) {
 		selectedCountryExtraInfoTextTranslated = extraInfoTexts[$selectedCountry.properties.id];
-		console.log(selectedCountryExtraInfoTextTranslated);
+		selectedCountryExtraInfoLinkTranslated = extraInfoLinks[$selectedCountry.properties.id];
+		// console.log(selectedCountryExtraInfoTextTranslated);
 	} else {
 		selectedCountryExtraInfoTextTranslated = undefined;
+		selectedCountryExtraInfoLinkTranslated = undefined;
 	}
 
 	let tooltipVisible = false;
@@ -369,6 +368,7 @@
 			selectedCountry={$selectedCountry}
 			countryName={selectedCountryNameTranslated}
 			countryText={selectedCountryExtraInfoTextTranslated}
+			countryLink={selectedCountryExtraInfoLinkTranslated}
 		/>
 
 		<div

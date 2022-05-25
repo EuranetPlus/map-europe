@@ -1,6 +1,6 @@
 {
   "heading": "Udgifter til uddannelse op i alle EU-lande",
-  "subheading": "Offentlige udgifter til militært forsvar i procent af BNP i lande i Den Europæiske Union i 2020",
+  "subheading": "Offentlige udgifter til militært forsvar som en procentdel af BNP i lande i Den Europæiske Union i 2020",
   "legend1": "Ingen tilgængelig data",
   "tooltip1": "af BNP",
   "textSourceDescription": "Kilde",
@@ -10,10 +10,16 @@
   "textDataAccess": "Få adgang til dataene",
   "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=da",
   "textCountryClick": "Klik for mere info",
-  "extraInfo_DE": "Det er formentlig ikke tilfældigt, at EU-Kommissionen blot to dage senere meddelte, at den endelig ville udløse konditionalitetsmekanismen, som forbinder udbetalingen af EU-midler med respekten for retsstaten. Budapest er udsat for kritik over begrænsninger af mediefrihed, interessekonflikter og korruption.",
-  "extraInfo_ES": "Da behovet for enstemmighed forårsager en bureaukratisk flaskehals på mange områder, er der en vis logik i at gå hen imod afstemning med kvalificeret flertal, hvor det er muligt. I praksis er et kvalificeret flertal, når 15 af de 27 medlemslande stemmer for noget, så længe de tilsammen repræsenterer mere end 65 procent af EU’s 450 millioner borgere.",
-  "extraInfo_IT": "Gašper Dovžan, statssekretær i Sloveniens udenrigsministerium og medlem af konferencekomitéen, siger, at Slovenien bestemt ikke viger tilbage for modige beslutninger eller afviser muligheden for et skridt mod kvalificeret flertal. Han mener dog, at der stadig er plads til konsensusbeslutninger.",
-  "extraInfo_LU": "Alligevel er den luxembourgske MEP Marc Angel overbevist om, at traktatændringer er absolut nødvendige - ikke kun for at gøre beslutningsprocedurer mindre besværlige, men også for at udvide EU's kompetenceområde. Han hævder i et interview med Luxembourgs nationale tv-selskab 100,7, at EU-borgere tydeligt bad om dette under konferenceprocessen.",
-  "extraInfo_PL": "Liutauras Gudzinskas, professor i statskundskab ved Vilnius Universitet, siger til Žinių Radijas, at selvom Europa-Kommissionens forslag om at styrke mediernes pluralisme og uafhængighed og beskytte dem mod politisk eller erhvervsmæssig indblanding kan være et nyttigt forebyggende værktøj i mange lande, er det sandsynligt. for sent for Ungarn.",
-  "extraInfo_RO": "Selvom det er verdens pressefrihedsdag den 3. maj, fejrer Litauen pressefriheden hvert år den 7. maj – fordi denne dato markerer afslutningen på det zaristiske forbud mod udgivelse og distribution af bøger på litauisk."
+  "extraInfoText_DE": "Det er formentlig ikke tilfældigt, at EU-Kommissionen blot to dage senere meddelte, at den endelig ville udløse konditionalitetsmekanismen, som forbinder udbetaling af EU-midler med respekt for retsstaten. Budapest er udsat for kritik for begrænsninger af mediefrihed, interessekonflikter og korruption.",
+  "extraInfoLink_DE": "Læs mere",
+  "extraInfoText_ES": "Da behovet for enstemmighed forårsager en bureaukratisk flaskehals på mange områder, er der en vis logik i at gå hen imod afstemning med kvalificeret flertal, hvor det er muligt. I praksis er et kvalificeret flertal, når 15 af de 27 medlemslande stemmer for noget, så længe de tilsammen repræsenterer mere end 65 procent af EU’s 450 millioner borgere.",
+  "extraInfoLink_ES": "Se artiklen",
+  "extraInfoText_IT": "Gašper Dovžan, statssekretær i Sloveniens udenrigsministerium og medlem af konferencekomitéen, siger, at Slovenien bestemt ikke viger tilbage for modige beslutninger eller afviser muligheden for et skridt mod kvalificeret flertal. Han mener dog, at der stadig er plads til konsensusbeslutninger.",
+  "extraInfoLink_IT": "Mere info",
+  "extraInfoText_LU": "Alligevel er den luxembourgske MEP Marc Angel overbevist om, at traktatændringer er absolut nødvendige - ikke kun for at gøre beslutningsprocedurer mindre besværlige, men også for at udvide EU's kompetenceområde. Han hævder i et interview med Luxembourgs nationale tv-selskab 100,7, at EU-borgere tydeligt bad om dette under konferenceprocessen.",
+  "extraInfoLink_LU": "Læs mere",
+  "extraInfoText_PL": "Liutauras Gudzinskas, professor i statskundskab ved Vilnius Universitet, siger til Žinių Radijas, at selv om Europa-Kommissionens forslag om at styrke mediernes pluralisme og uafhængighed og beskytte dem mod politisk eller erhvervsmæssig indblanding kan være et nyttigt forebyggende værktøj i mange lande, er det sandsynligt. for sent for Ungarn.",
+  "extraInfoLink_PL": "Mere information",
+  "extraInfoText_RO": "Selvom det er verdens pressefrihedsdag den 3. maj, fejrer Litauen pressefriheden hvert år den 7. maj – fordi denne dato markerer afslutningen på det zaristiske forbud mod udgivelse og distribution af bøger på litauisk.",
+  "extraInfoLink_RO": "Tjek det her"
 }

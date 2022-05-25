@@ -32,7 +32,8 @@ fs.createReadStream('./static/data/thematic/data.csv')
           
           // Add a dynamic key for each country to config-text.json
           // obj["extraInfo_" + id] = item['text_content'];
-          obj["extraInfo_" + id] = item['text_content']
+          obj["extraInfoText_" + id] = item['text_content'];
+          obj["extraInfoLink_" + id] = item['link_text']
 
         })
 

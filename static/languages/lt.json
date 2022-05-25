@@ -10,10 +10,16 @@
   "textDataAccess": "Pasiekite duomenis",
   "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=en",
   "textCountryClick": "Spustelėkite norėdami gauti daugiau informacijos",
-  "extraInfo_DE": "Tikriausiai neatsitiktinai, praėjus vos dviem dienoms, Europos Komisija paskelbė pagaliau pradėsianti taikyti sąlygų mechanizmą, susiejantį ES lėšų išmokėjimą su teisinės valstybės principų laikymusi. Budapeštas sulaukia kritikos dėl žiniasklaidos laisvės apribojimų, interesų konfliktų ir korupcijos.",
-  "extraInfo_ES": "Kadangi vienbalsiškumo poreikis sukelia biurokratinę kliūtį daugelyje sričių, yra tam tikra logika, kai įmanoma, pereinant prie kvalifikuotos balsų daugumos balsavimo. Praktiškai kvalifikuota balsų dauguma yra tada, kai 15 iš 27 valstybių narių balsuoja už ką nors, kol jos kartu atstovauja daugiau nei 65 procentus iš 450 mln. ES piliečių.",
-  "extraInfo_IT": "Slovėnijos užsienio reikalų ministerijos valstybės sekretorius ir Konferencijos komiteto narys Gašperas Dovžanas sako, kad Slovėnija tikrai nevengia drąsių sprendimų ir neatmeta galimybės pereiti prie kvalifikuotos daugumos. Tačiau jis mano, kad dar yra kur priimti bendrus sprendimus.",
-  "extraInfo_LU": "Tačiau europarlamentaras iš Liuksemburgo Marcas Angelas yra įsitikinęs, kad sutarties pakeitimai yra būtini – ne tik tam, kad sprendimų priėmimo procedūros būtų mažiau sudėtingos, bet ir išplėstų ES kompetencijos sritį. Interviu Liuksemburgo nacionaliniam transliuotojui 100,7 jis tvirtina, kad ES piliečiai to aiškiai prašė konferencijos metu.",
-  "extraInfo_PL": "Vilniaus universiteto politikos mokslų profesorius Liutauras Gudzinskas „Žinių radijui“ sako, kad nors Europos Komisijos siūlymas stiprinti žiniasklaidos pliuralizmą ir nepriklausomybę bei apsaugoti ją nuo politinio ar verslo kišimosi galėtų būti naudinga prevencinė priemonė daugelyje šalių, tikėtina, kad per vėlu Vengrijai.",
-  "extraInfo_RO": "Nors Pasaulinė spaudos laisvės diena minima gegužės 3 d., Lietuva spaudos laisvę mini kasmet gegužės 7 d., nes šia data baigiasi carinis draudimas leisti ir platinti knygas lietuvių kalba."
+  "extraInfoText_DE": "Tikriausiai neatsitiktinai, praėjus vos dviem dienoms, Europos Komisija paskelbė pagaliau pradėsianti taikyti sąlygų mechanizmą, susiejantį ES lėšų išmokėjimą su teisinės valstybės principų laikymusi. Budapeštas sulaukia kritikos dėl žiniasklaidos laisvės apribojimų, interesų konfliktų ir korupcijos.",
+  "extraInfoLink_DE": "Skaityti daugiau",
+  "extraInfoText_ES": "Kadangi vienbalsiškumo poreikis sukelia biurokratinę kliūtį daugelyje sričių, yra tam tikra logika, kai įmanoma, pereinant prie kvalifikuotos balsų daugumos balsavimo. Praktiškai kvalifikuota balsų dauguma yra tada, kai 15 iš 27 valstybių narių balsuoja už ką nors, kol jos kartu atstovauja daugiau nei 65 procentus iš 450 mln. ES piliečių.",
+  "extraInfoLink_ES": "Žiūrėti straipsnį",
+  "extraInfoText_IT": "Slovėnijos užsienio reikalų ministerijos valstybės sekretorius ir Konferencijos komiteto narys Gašperas Dovžanas sako, kad Slovėnija tikrai nevengia drąsių sprendimų ir neatmeta galimybės pereiti prie kvalifikuotos daugumos. Tačiau jis mano, kad dar yra kur priimti bendrus sprendimus.",
+  "extraInfoLink_IT": "Daugiau informacijos",
+  "extraInfoText_LU": "Tačiau europarlamentaras iš Liuksemburgo Marcas Angelas yra įsitikinęs, kad sutarties pakeitimai yra būtini – ne tik tam, kad sprendimų priėmimo procedūros būtų mažiau sudėtingos, bet ir išplėstų ES kompetencijos sritį. Interviu Liuksemburgo nacionaliniam transliuotojui 100,7 jis tvirtina, kad ES piliečiai to aiškiai prašė konferencijos metu.",
+  "extraInfoLink_LU": "Skaityti daugiau",
+  "extraInfoText_PL": "Vilniaus universiteto politikos mokslų profesorius Liutauras Gudzinskas „Žinių radijui“ sako, kad nors Europos Komisijos siūlymas stiprinti žiniasklaidos pliuralizmą ir nepriklausomybę bei apsaugoti ją nuo politinio ar verslo kišimosi galėtų būti naudinga prevencinė priemonė daugelyje šalių, tikėtina, kad per vėlu Vengrijai.",
+  "extraInfoLink_PL": "Daugiau informacijos",
+  "extraInfoText_RO": "Nors Pasaulinė spaudos laisvės diena minima gegužės 3 d., Lietuva spaudos laisvę mini kasmet gegužės 7 d., nes šia data baigiasi carinis draudimas leisti ir platinti knygas lietuvių kalba.",
+  "extraInfoLink_RO": "Patikrinti tai"
 }

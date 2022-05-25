@@ -10,10 +10,16 @@
   "textDataAccess": "Pristup podacima",
   "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=hr",
   "textCountryClick": "Kliknite za više informacija",
-  "extraInfo_DE": "Vjerojatno nije slučajno što je samo dva dana kasnije Europska komisija objavila da će konačno pokrenuti mehanizam uvjetovanja koji isplatu EU fondova povezuje s poštovanjem vladavine prava. Budimpešta se suočava s kritikama zbog ograničenja slobode medija, sukoba interesa i korupcije.",
-  "extraInfo_ES": "S obzirom na potrebu jednoglasnosti koja uzrokuje birokratsko usko grlo u mnogim područjima, postoji određena logika u prelasku na glasovanje kvalificiranom većinom gdje je to moguće. U praksi, kvalificirana većina je kada 15 od 27 država članica glasa za nešto, sve dok zajedno predstavljaju više od 65 posto od 450 milijuna građana EU-a.",
-  "extraInfo_IT": "Gašper Dovžan, državni tajnik u slovenskom ministarstvu vanjskih poslova i član odbora Konferencije, kaže da Slovenija zasigurno ne bježi od hrabrih odluka niti odbacuje mogućnost prijelaza na kvalificiranu većinu. No, smatra da još uvijek ima mjesta za konsenzusno odlučivanje.",
-  "extraInfo_LU": "Ipak, luksemburški europarlamentarac Marc Angel uvjeren je da su promjene ugovora apsolutno potrebne - ne samo kako bi se postupci donošenja odluka učinili manje glomaznim, već i kako bi se proširila sfera nadležnosti EU-a. On tvrdi, u intervjuu za luksemburšku nacionalnu televizijsku kuću 100,7, da su građani EU-a to jasno tražili tijekom procesa konferencije.",
-  "extraInfo_PL": "Liutauras Gudzinskas, profesor političkih znanosti na Sveučilištu u Vilniusu, kaže Žiniųu Radijasu da, iako bi prijedlog Europske komisije za jačanje pluralizma i neovisnosti medija i zaštitu od političkog ili poslovnog uplitanja mogao biti koristan preventivni alat u mnogim zemljama, vjerojatno prekasno za Mađarsku.",
-  "extraInfo_RO": "Iako je 3. svibnja Svjetski dan slobode tiska, Litva svake godine slavi slobodu tiska 7. svibnja – jer ovaj datum označava kraj carske zabrane izdavanja i distribucije knjiga na litavskom."
+  "extraInfoText_DE": "Vjerojatno nije slučajno što je samo dva dana kasnije Europska komisija objavila da će konačno pokrenuti mehanizam uvjetovanja koji isplatu EU fondova povezuje s poštovanjem vladavine prava. Budimpešta se suočava s kritikama zbog ograničenja slobode medija, sukoba interesa i korupcije.",
+  "extraInfoLink_DE": "Čitaj više",
+  "extraInfoText_ES": "S obzirom na potrebu jednoglasnosti koja uzrokuje birokratsko usko grlo u mnogim područjima, postoji određena logika u prelasku na glasovanje kvalificiranom većinom gdje je to moguće. U praksi, kvalificirana većina je kada 15 od 27 država članica glasa za nešto, sve dok zajedno predstavljaju više od 65 posto od 450 milijuna građana EU-a.",
+  "extraInfoLink_ES": "Vidi članak",
+  "extraInfoText_IT": "Gašper Dovžan, državni tajnik u slovenskom ministarstvu vanjskih poslova i član odbora Konferencije, kaže da Slovenija zasigurno ne bježi od hrabrih odluka niti odbacuje mogućnost prijelaza na kvalificiranu većinu. No, smatra da još uvijek ima mjesta za konsenzusno odlučivanje.",
+  "extraInfoLink_IT": "Više informacija",
+  "extraInfoText_LU": "Ipak, luksemburški europarlamentarac Marc Angel uvjeren je da su promjene ugovora apsolutno potrebne - ne samo kako bi se postupci donošenja odluka učinili manje glomaznim, već i kako bi se proširila sfera nadležnosti EU-a. On tvrdi, u intervjuu za luksemburšku nacionalnu televizijsku kuću 100,7, da su građani EU-a to jasno tražili tijekom procesa konferencije.",
+  "extraInfoLink_LU": "Čitaj više",
+  "extraInfoText_PL": "Liutauras Gudzinskas, profesor političkih znanosti na Sveučilištu u Vilniusu, kaže Žiniųu Radijasu da, iako bi prijedlog Europske komisije za jačanje pluralizma i neovisnosti medija i zaštitu od političkog ili poslovnog uplitanja mogao biti koristan preventivni alat u mnogim zemljama, vjerojatno prekasno za Mađarsku.",
+  "extraInfoLink_PL": "Više informacija",
+  "extraInfoText_RO": "Iako je 3. svibnja Svjetski dan slobode tiska, Litva svake godine slavi slobodu tiska 7. svibnja – jer ovaj datum označava kraj carske zabrane izdavanja i distribucije knjiga na litavskom.",
+  "extraInfoLink_RO": "Provjeri ovo"
 }

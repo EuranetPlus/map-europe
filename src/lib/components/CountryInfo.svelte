@@ -6,6 +6,7 @@
 	export let selectedCountry;
 	export let countryName;
 	export let countryText;
+	export let countryLink;
 
 	let width;
 </script>
@@ -24,7 +25,7 @@
 		/>
 		<div class="font-bold border-b pb-2">{countryName}</div>
 
-		<CountryMediaComponent {selectedCountry} {countryText} />
+		<CountryMediaComponent {selectedCountry} {countryText} {countryLink} />
 	</div>
 {/if}
 
