@@ -10,10 +10,14 @@
   "textDataAccess": "Toegang tot de gegevens",
   "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=en",
   "textCountryClick": "Klik voor meer info",
+  "extraInfoText_BE": "Aangezien unanimiteit op veel gebieden tot een bureaucratisch knelpunt leidt, is er een zekere logica om waar mogelijk naar gekwalificeerde meerderheid te gaan. In de praktijk is er sprake van een gekwalificeerde meerderheid wanneer 15 van de 27 lidstaten ergens voor stemmen, zolang ze samen meer dan 65 procent van de 450 miljoen EU-burgers vertegenwoordigen.",
+  "extraInfoLink_BE": "Lees verder",
   "extraInfoText_DE": "Het is waarschijnlijk geen toeval dat de Europese Commissie slechts twee dagen later aankondigde dat zij eindelijk het conditionaliteitsmechanisme in werking zou stellen, dat de betaling van EU-middelen koppelt aan eerbiediging van de rechtsstaat. Boedapest wordt geconfronteerd met kritiek op beperkingen van de mediavrijheid, belangenverstrengeling en corruptie.",
   "extraInfoLink_DE": "Lees verder",
-  "extraInfoText_ES": "Aangezien unanimiteit op veel gebieden tot een bureaucratisch knelpunt leidt, is er een zekere logica om waar mogelijk naar gekwalificeerde meerderheid te gaan. In de praktijk is er sprake van een gekwalificeerde meerderheid wanneer 15 van de 27 lidstaten ergens voor stemmen, zolang ze samen meer dan 65 procent van de 450 miljoen EU-burgers vertegenwoordigen.",
-  "extraInfoLink_ES": "Zie artikel",
+  "extraInfoText_ES": "",
+  "extraInfoLink_ES": "",
+  "extraInfoText_FR": "In dit verband heeft de Bulgaarse regering een nieuwe eenheid voor mediamonitoring opgericht. De nieuwe eenheid is ontworpen om alle vormen van media te controleren op gerichte desinformatie, maar heeft – in tegenstelling tot de onafhankelijke Council for Electronic Media van het land – niet de bevoegdheid om te reguleren of sancties op te leggen. En dat mag ook niet, benadrukt Bozhanov in een interview met de Bulgaarse Nationale Radio.",
+  "extraInfoLink_FR": "",
   "extraInfoText_IT": "Gašper Dovžan, staatssecretaris bij het Sloveense ministerie van Buitenlandse Zaken en lid van de Conferentiecommissie, zegt dat Slovenië zeker niet schuwt moedige beslissingen of de mogelijkheid van een stap naar gekwalificeerde meerderheden afwijst. Toch is er volgens hem nog ruimte voor consensusbesluitvorming.",
   "extraInfoLink_IT": "Meer informatie",
   "extraInfoText_LU": "Toch is het Luxemburgse Europarlementariër Marc Angel ervan overtuigd dat verdragswijzigingen absoluut noodzakelijk zijn – niet alleen om de besluitvormingsprocedures minder omslachtig te maken, maar ook om de bevoegdheden van de EU te verbreden. Hij stelt in een interview met de Luxemburgse nationale omroep 100,7 dat EU-burgers hier tijdens het conferentieproces duidelijk om hebben gevraagd.",
@@ -21,5 +25,7 @@
   "extraInfoText_PL": "Liutauras Gudzinskas, hoogleraar politieke wetenschappen aan de universiteit van Vilnius, vertelt Žinių Radijas dat hoewel het voorstel van de Europese Commissie om het pluralisme en de onafhankelijkheid van de media te versterken en deze te beschermen tegen politieke of zakelijke inmenging in veel landen een nuttig preventief instrument kan zijn, het waarschijnlijk te laat voor Hongarije.",
   "extraInfoLink_PL": "Meer informatie",
   "extraInfoText_RO": "Hoewel het op 3 mei Werelddag voor de persvrijheid is, viert Litouwen de persvrijheid elk jaar op 7 mei – omdat deze datum het einde markeert van het tsaristische verbod op het uitgeven en verspreiden van boeken in het Litouws.",
-  "extraInfoLink_RO": "Controleer dit"
+  "extraInfoLink_RO": "Controleer dit",
+  "extraInfoText_SE": "",
+  "extraInfoLink_SE": ""
 }

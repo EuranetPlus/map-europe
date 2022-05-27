@@ -10,10 +10,14 @@
   "textDataAccess": "Access the data",
   "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=en",
   "textCountryClick": "Click for more info",
+  "extraInfoText_BE": "With the need for unanimity causing a bureaucratic bottleneck in many areas, there is a certain logic to moving towards qualified majority voting where possible. In practice, a qualified majority is when 15 of the 27 member states votes in favour of something, as long as together they represent more than 65 per cent of the EU’s 450 million citizens.",
+  "extraInfoLink_BE": "Read more",
   "extraInfoText_DE": "It is probably no coincidence that, just two days later, the European Commission announced that it would finally be triggering the conditionality mechanism, which links the payment of EU funds to respect for the rule of law. Budapest is facing criticism over restrictions on media freedom, conflicts of interest and corruption.",
   "extraInfoLink_DE": "Read more",
-  "extraInfoText_ES": "With the need for unanimity causing a bureaucratic bottleneck in many areas, there is a certain logic to moving towards qualified majority voting where possible. In practice, a qualified majority is when 15 of the 27 member states votes in favour of something, as long as together they represent more than 65 per cent of the EU’s 450 million citizens.",
-  "extraInfoLink_ES": "See article",
+  "extraInfoText_ES": "",
+  "extraInfoLink_ES": "",
+  "extraInfoText_FR": "In this context, the Bulgarian government has set up a new media monitoring unit. The new unit is designed to monitor all forms of media for targeted misinformation but – unlike the country’s independent Council for Electronic Media – does not have the power to regulate or sanction. And nor should it, Bozhanov stresses in a Bulgarian National Radio interview.",
+  "extraInfoLink_FR": "",
   "extraInfoText_IT": "Gašper Dovžan, state secretary at Slovenia’s foreign ministry and a member of the Conference committee, says that Slovenia is certainly not shying away from brave decisions or rejecting the possibility of a move towards qualified majorities. However, he believes that there is still a place for consensus decision-making.",
   "extraInfoLink_IT": "More info",
   "extraInfoText_LU": "Yet Luxembourgish MEP Marc Angel is convinced that treaty changes are absolutely required – not only to make decision-making procedures less cumbersome, but also to widen the EU’s sphere of competency. He asserts, in an interview with Luxembourg’s national broadcaster 100,7, that EU citizens clearly asked for this during the Conference process.",
@@ -21,5 +25,7 @@
   "extraInfoText_PL": "Liutauras Gudzinskas, a political science professor at Vilnius University, tells Žinių Radijas that although the European Commission’s proposal to strengthen the pluralism and independence of the media and protect it from political or business interference could be a useful preventive tool in many countries, it is likely too late for Hungary.",
   "extraInfoLink_PL": "More information",
   "extraInfoText_RO": "Although it is World Press Freedom Day on 3 May, Lithuania celebrates the freedom of the press each year on 7 May – because this date marks the end of the tsarist ban on the publishing and distribution of books in Lithuanian.",
-  "extraInfoLink_RO": "Check this"
+  "extraInfoLink_RO": "Check this",
+  "extraInfoText_SE": "",
+  "extraInfoLink_SE": ""
 }

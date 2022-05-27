@@ -24,14 +24,27 @@ fs.createReadStream('./static/data/thematic/data.csv')
 
       // Open config text file and add country text ("extraInfo") from CSV to be translated
     fs.readFile(`./src/lib/stores/config-text.json`, function (err, data) {
-        let obj = JSON.parse(data);
+      let obj = JSON.parse(data);
+      
+        // First clean json to remove all extraInfoText first before adding new entries
+          let extraInfoEntries;
+					const asArray = Object.entries(obj);
+					extraInfoEntries = asArray.filter(([key, value]) => {
+						return key.includes('extraInfo');
+          });
+
+        extraInfoEntries.forEach(item => {
+          let entry = item[0];
+          delete obj[entry];
+        })
+          // console.log(obj)
+          // -- Clean END --
 
         // For each country with extraInfo transform id to lowercase and add text to json
         countriesWithExtraInfo.forEach(item => {
           let id = item.id 
           
           // Add a dynamic key for each country to config-text.json
-          // obj["extraInfo_" + id] = item['text_content'];
           obj["extraInfoText_" + id] = item['text_content'];
           obj["extraInfoLink_" + id] = item['link_text']
 
