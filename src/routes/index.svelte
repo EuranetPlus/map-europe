@@ -1,7 +1,7 @@
 <script>
 	import { config } from '$lib/stores/config-features';
 	import { onMount } from 'svelte';
-	import { APP_HEIGHT } from '$lib/stores/shared';
+	import { APP_HEIGHT, mobileSize, isMobile } from '$lib/stores/shared';
 	import { selectedLanguage } from '$lib/stores/shared';
 	import { languageNameTranslations } from '$lib/stores/languages';
 	import MapChoropleth from '$lib/components/MapChoropleth.svelte';
@@ -22,6 +22,7 @@
 	let textCountryClick;
 	let extraInfoTexts;
 	let extraInfoLinks;
+	let innerWidth;
 
 	// Send map height to parent window
 	$: {
@@ -31,6 +32,8 @@
 	}
 
 	$: dropdownLanguages = languageNameTranslations['en'];
+
+	$: $isMobile = innerWidth <= $mobileSize;
 
 	onMount(async () => {
 		await getLanguage($selectedLanguage.value);
@@ -113,7 +116,9 @@
 	}
 </script>
 
-<div id="euranet-map" bind:clientHeight={$APP_HEIGHT}>
+<!-- <svelte:window bind:innerWidth /> -->
+
+<div id="euranet-map" bind:clientHeight={$APP_HEIGHT} bind:clientWidth={innerWidth}>
 	<header>
 		<div class="logo">
 			<img

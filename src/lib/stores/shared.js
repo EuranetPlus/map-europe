@@ -1,4 +1,4 @@
-import { writable } from 'svelte/store';
+import { writable, readable } from 'svelte/store';
 
 export const APP_HEIGHT = writable(undefined);
 export const MAP_WIDTH = writable(undefined);
@@ -10,6 +10,9 @@ export const selectedLanguage = writable({ value: 'en', label: 'English' });
 
 export const countryInfoVisible = writable(false);
 export const selectedCountry = writable(undefined);
+
+export const mobileSize = readable(1024);
+export let isMobile = writable(true);
 
 
 export const MOUSE = writable(undefined);
