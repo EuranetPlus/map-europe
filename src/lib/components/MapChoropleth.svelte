@@ -10,6 +10,9 @@
 	import { MAP_WIDTH } from '$lib/stores/shared';
 	import { selectedLanguage } from '$lib/stores/shared';
 	import { countryNameTranslations } from '$lib/stores/countries';
+	import { countryInfoVisible } from '$lib/stores/shared';
+	import { selectedCountry } from '$lib/stores/shared';
+	import { isMobile } from '$lib/stores/shared';
 
 	import { csv } from 'd3-fetch';
 	import { extent } from 'd3-array';
@@ -22,6 +25,7 @@
 
 	import Scale from './Scale.svelte';
 	import Legend from './Legend.svelte';
+	import CountryInfo from './CountryInfo.svelte';
 
 	// Make square dimensions i.e. 600x600 to fill all space
 	let width = 600;
@@ -30,17 +34,32 @@
 	let center;
 	let scaleMin, scaleMax;
 
-	$: countryNames = countryNameTranslations[$selectedLanguage.value];
-
 	export let legend;
 	export let tooltip;
+	export let extraInfoTexts;
+	export let extraInfoLinks;
 
-	$: if ($CENTER_ON === 'europe') {
-		paddingMap = -60;
-		center = countriesAll;
+	$: countryNames = countryNameTranslations[$selectedLanguage.value];
+
+	$: selectedCountryNameTranslated = countryNames.filter((item) => {
+		if ($selectedCountry != undefined) {
+			return item.id == $selectedCountry.properties.id;
+		} else {
+			return {};
+		}
+	})[0].na;
+
+	let selectedCountryExtraInfoTextTranslated;
+	let selectedCountryExtraInfoLinkTranslated;
+
+	$: if ($selectedCountry) {
+		selectedCountryExtraInfoTextTranslated = extraInfoTexts[$selectedCountry.properties.id];
+		selectedCountryExtraInfoLinkTranslated = extraInfoLinks[$selectedCountry.properties.id];
+		// console.log(selectedCountryExtraInfoTextTranslated);
+	} else {
+		selectedCountryExtraInfoTextTranslated = undefined;
+		selectedCountryExtraInfoLinkTranslated = undefined;
 	}
-
-	$: tooltipPositionX = $MOUSE.x < $MAP_WIDTH / 2 ? $MOUSE.x : $MOUSE.x - tooltipWidth;
 
 	let tooltipVisible = false;
 	let tooltipHeight;
@@ -48,7 +67,16 @@
 
 	let graticules;
 	let countriesAll;
+	let countriesWithCsvImport;
+	let countriesWithExtraInfo;
 	let hoveredCountry;
+
+	$: if ($CENTER_ON === 'europe') {
+		paddingMap = -60;
+		center = countriesAll;
+	}
+
+	$: tooltipPositionX = $MOUSE.x < $MAP_WIDTH / 2 ? $MOUSE.x : $MOUSE.x - tooltipWidth;
 
 	const projection = geoIdentity().reflectY(true);
 	const path = geoPath().projection(projection);
@@ -122,14 +150,49 @@
 
 	function mergeData() {
 		// Transform csv structure to object style to be better usable
+
 		let csvTransformed = $csvData.reduce(
-			(obj, item) => Object.assign(obj, { [item.id]: item.value }),
+			(obj, item) =>
+				Object.assign(obj, {
+					[item.id]: {
+						value: item.value,
+						extraInfo: item.extraInfo.toLowerCase() === 'true',
+						contentText: item['text_content'],
+						linkText: item['link_text'],
+						linkURL: item['link_url_target'],
+						audioURL1: item['audio_url_1'],
+						audioURL2: item['audio_url_2'],
+						audioURL3: item['audio_url_3'],
+						imageSourceURL: item['image_url_source'],
+						imageTargetURL: item['image_url_target'],
+						videoURL: item['video_url']
+					}
+				}),
 			{}
 		);
+
+		// console.log(csvTransformed);
+
 		// Add values from csv
 		countriesAll.features.map((item) => {
-			item.value = csvTransformed[item.properties.id];
+			// Add attributes only for countries included in CSV
+			if (Object.keys(csvTransformed).includes(item.properties.id)) {
+				item.csvImport = csvTransformed[item.properties.id];
+			}
 		});
+
+		countriesWithCsvImport = countriesAll.features.filter((item) => {
+			return item.csvImport;
+		});
+
+		countriesWithExtraInfo = countriesWithCsvImport.filter((item) => {
+			return item.csvImport.extraInfo == true;
+		});
+
+		countriesWithExtraInfo = {
+			type: 'FeatureCollection',
+			features: countriesWithExtraInfo
+		};
 
 		$dataReady = true;
 	}
@@ -141,13 +204,17 @@
 	});
 
 	function getFill(feature) {
-		// No data, because country not in Europe: => value: undefined
-		if (feature.value !== undefined) {
-			// No data because not available for this country => value: null
-			if (feature.value !== null) {
-				return colorScale(feature.value);
-			} else {
-				return '#CAD1D9';
+		let csvData = feature.csvImport;
+
+		if (csvData) {
+			// No data, because country not in Europe: => value: undefined
+			if (csvData.value !== undefined) {
+				// No data because not available for this country => value: null
+				if (csvData.value !== null) {
+					return colorScale(csvData.value);
+				} else {
+					return '#CAD1D9';
+				}
 			}
 		} else {
 			return '#F4F4F4';
@@ -155,42 +222,35 @@
 	}
 
 	function getStroke(feature) {
-		// No data, because country not in Europe: => value: undefined
-		if (feature.value !== undefined) {
-			// No data because not available for this country => value:
-			if (feature.value !== null) {
-				return 'white';
-			} else {
-				return 'white';
+		let csvData = feature.csvImport;
+
+		if (csvData) {
+			// No data, because country not in Europe: => value: undefined
+			if (csvData.value !== undefined) {
+				// No data because not available for this country => value:
+				if (csvData.value !== null) {
+					if (csvData.extraInfo) {
+						// return 'orange';
+					} else {
+						return 'white';
+					}
+					return 'white';
+				}
 			}
 		} else {
 			return '#cdcdcd';
 		}
 	}
 
-	// function getFill(feature) {
-	// 	if (feature.value) {
-	// 		return colorScale(feature.value);
-	// 	} else {
-	// 		if (feature.properties.isEuMember) {
-	// 			return '#CAD1D9';
-	// 		} else {
-	// 			return '#F4F4F4';
-	// 		}
-	// 	}
-	// }
-
-	// function getStroke(feature) {
-	// 	if (feature.value) {
-	// 		return 'white';
-	// 	} else {
-	// 		return '#cdcdcd';
-	// 	}
-	// }
-
 	function getClass(feature) {
-		if (feature.value) {
-			return 'pointer';
+		let csvData = feature.csvImport;
+
+		if (csvData) {
+			if (csvData.value) {
+				return 'pointer';
+			} else {
+				return 'noPointer';
+			}
 		} else {
 			return 'noPointer';
 		}
@@ -211,7 +271,8 @@
 				tooltip: {
 					name: hoveredCountry.name,
 					value: hoveredCountry.value,
-					valuePercent: hoveredCountry.valuePercent
+					valuePercent: hoveredCountry.valuePercent,
+					extraInfo: hoveredCountry.extraInfo
 				}
 			});
 		}
@@ -231,14 +292,19 @@
 				return c.id == country.properties.id;
 			})[0].na;
 
-			// console.log(countryName);
-			hoveredCountry = {
-				name: countryName,
-				value: country.value
-			};
-
-			if (country.properties.na || country.value) {
+			// set hoveredCountry only if csvImport object is present in data
+			if (country.csvImport) {
 				tooltipVisible = true;
+
+				hoveredCountry = {
+					name: countryName,
+					value: country.csvImport.value,
+					extraInfo: country.csvImport.extraInfo
+				};
+			} else {
+				tooltipVisible = false;
+
+				hoveredCountry = {};
 			}
 		}
 	};
@@ -248,6 +314,18 @@
 			tooltipVisible = false;
 		}
 	};
+
+	function handleMouseClick(country) {
+		if (country.csvImport.extraInfo) {
+			$countryInfoVisible = true;
+			$selectedCountry = country;
+
+			// on mobile close tooltip when clicked on country with extra info
+			if ($isMobile) {
+				tooltipVisible = false;
+			}
+		}
+	}
 </script>
 
 {#if $dataReady}
@@ -274,10 +352,35 @@
 					class={getClass(feature)}
 					on:mouseenter={() => handleMouseEnter(feature)}
 					on:mouseleave={() => handleMouseLeave(feature)}
+					on:click={() => handleMouseClick(feature)}
+				/>
+			{/each}
+
+			<!-- countriesWithExtraInfo added for the  -->
+			{#each countriesWithExtraInfo.features as feature, index}
+				<path
+					d={path(feature)}
+					stroke={getStroke(feature)}
+					fill={getFill(feature)}
+					class={'country-extra-info'}
+					on:mouseenter={() => handleMouseEnter(feature)}
+					on:mouseleave={() => handleMouseLeave(feature)}
+					on:click={() => handleMouseClick(feature)}
+					on:touchstart={() => handleMouseClick(feature)}
 				/>
 			{/each}
 		</svg>
 
+		<CountryInfo
+			selectedCountry={$selectedCountry}
+			countryName={selectedCountryNameTranslated}
+			countryText={selectedCountryExtraInfoTextTranslated}
+			countryLink={selectedCountryExtraInfoLinkTranslated}
+			{tooltip}
+		/>
+
+		<!-- only show tooltip for countries with no extraInfo -->
+		<!-- {#if $MOUSE.tooltip.extraInfo == false} -->
 		<div
 			class="tooltip text-sm p-3 {tooltipVisible ? 'active' : ''}"
 			style="top: {$MOUSE.y - tooltipHeight}px; left:{tooltipPositionX}px;"
@@ -289,15 +392,20 @@
 				{#each tooltip as tip}
 					<div class="values">
 						{#if config.datasetUnit == 'percent'}
-							<span class="font-bold">{formatInt($MOUSE.tooltip.value * 100)} %</span>
+							<span class="font-bold">{formatInt($MOUSE.tooltip.value * 100)}%</span>
 						{:else if config.datasetUnit == 'fullNumbers'}
 							<span class="font-bold">{$MOUSE.tooltip.value}</span>
 						{/if}
 						<span>{tip.label}</span>
 					</div>
+					{#if $MOUSE.tooltip.extraInfo == true}
+						<div class="text-xs"><span class="icon-tap" />{tooltip[0].textCountryClick}</div>
+					{/if}
 				{/each}
 			</div>
 		</div>
+
+		<!-- {/if} -->
 	</div>
 {/if}
 
@@ -314,7 +422,16 @@
 	svg path {
 		stroke-width: 0.5px;
 		cursor: pointer;
-		transition: all 0.5s;
+		stroke-linecap: round;
+	}
+
+	.country-extra-info {
+		stroke-width: 1px;
+		stroke: black;
+	}
+
+	.country-extra-info:hover {
+		stroke-width: 2px;
 	}
 
 	.noPointer {

@@ -1,38 +1,38 @@
-country,id,value
-Albania,AL,0.33
-Austria,AT,0.13
-Belgium,BE,0.59
-Bulgaria,BG,null
-Switzerland,CH,0.62
-Cyprus,CY,0.21
-Czechia,CZ,0.78
-Germany,DE,0.82
-Denmark,DK,0.56
-Estonia,EE,0.83
-Greece,EL,0.32
-Spain,ES,0.45
-Finland,FI,0.21
-France,FR,0.24
-Croatia,HR,0.45
-Hungary,HU,0.67
-Ireland,IE,0.76
-Iceland,IS,0.44
-Italy,IT,0.92
-Liechtenstein,LI,null
-Lithuania,LT,0.33
-Luxembourg,LU,0.22
-Latvia,LV,0.11
-Montenegro,ME,0.43
-North Macedonia,MK,null
-Malta,MT,0.35
-Netherlands,NL,0.47
-Norway,NO,0.32
-Poland,PL,0.24
-Portugal,PT,0.64
-Romania,RO,0.32
-Serbia,RS,0.67
-Sweden,SE,0.25
-Slovenia,SI,0.45
-Slovakia,SK,0.67
-United Kingdom,UK,null
-Ukraine,UA,0.45
+country,id,value,extraInfo,text_content,link_text,link_url_target,audio_url_1,audio_url_2,audio_url_3,image_url_source,image_url_target,video_url
+Albania,AL,0.33,FALSE,,,,,,,,,
+Austria,AT,0.13,FALSE,,,,,,,,,
+Belgium,BE,0.59,TRUE,"With the need for unanimity causing a bureaucratic bottleneck in many areas, there is a certain logic to moving towards qualified majority voting where possible. In practice, a qualified majority is when 15 of the 27 member states votes in favour of something, as long as together they represent more than 65 per cent of the EU’s 450 million citizens.",Read more,,,,,,,
+Bulgaria,BG,null,FALSE,,,,,,,,,
+Switzerland,CH,0.62,FALSE,,,,,,,,,
+Cyprus,CY,0.21,FALSE,,,,,,,,,
+Czechia,CZ,0.78,FALSE,,,,,,,,,
+Germany,DE,0.82,TRUE,"It is probably no coincidence that, just two days later, the European Commission announced that it would finally be triggering the conditionality mechanism, which links the payment of EU funds to respect for the rule of law. Budapest is facing criticism over restrictions on media freedom, conflicts of interest and corruption.",Read more,https://euranetplus-inside.eu/,,,,https://euranetplus-inside.eu/wp-content/uploads/2022/05/2-kuku.png,https://www.100komma7.lu/article/aktualiteit/49-propose-mat-326-mesuren-fir-eng-besser-eu,
+Denmark,DK,0.56,FALSE,,,,,,,,,
+Estonia,EE,0.83,FALSE,,,,,,,,,
+Greece,EL,0.32,FALSE,,,,,,,,,
+Spain,ES,0.45,TRUE,,,,,,,,,https://www.youtube.com/embed/asWW2pvhaJQ
+Finland,FI,0.21,FALSE,,,,,,,,,
+France,FR,0.24,TRUE,"In this context, the Bulgarian government has set up a new media monitoring unit. The new unit is designed to monitor all forms of media for targeted misinformation but – unlike the country’s independent Council for Electronic Media – does not have the power to regulate or sanction. And nor should it, Bozhanov stresses in a Bulgarian National Radio interview.",,,,,,,,
+Croatia,HR,0.45,FALSE,,,,,,,,,
+Hungary,HU,0.67,FALSE,,,,,,,,,
+Ireland,IE,0.76,FALSE,,,,,,,,,
+Iceland,IS,0.44,FALSE,,,,,,,,,
+Italy,IT,0.92,TRUE,"Gašper Dovžan, state secretary at Slovenia’s foreign ministry and a member of the Conference committee, says that Slovenia is certainly not shying away from brave decisions or rejecting the possibility of a move towards qualified majorities. However, he believes that there is still a place for consensus decision-making.",More info,https://euranetplus-inside.eu/,,https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1250156527&color=%232c2e73&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true,,https://euranetplus-inside.eu/wp-content/uploads/2022/05/2-bnr.png,https://www.100komma7.lu/article/aktualiteit/49-propose-mat-326-mesuren-fir-eng-besser-eu,https://www.youtube.com/embed/asWW2pvhaJQ
+Liechtenstein,LI,null,FALSE,,,,,,,,,
+Lithuania,LT,0.33,FALSE,,,,,,,,,
+Luxembourg,LU,0.22,TRUE,"Yet Luxembourgish MEP Marc Angel is convinced that treaty changes are absolutely required – not only to make decision-making procedures less cumbersome, but also to widen the EU’s sphere of competency. He asserts, in an interview with Luxembourg’s national broadcaster 100,7, that EU citizens clearly asked for this during the Conference process.",Read more,https://euranetplus-inside.eu/,https://open.spotify.com/embed/episode/37AK0KI06D6027Pwv96Bvk?utm_source=generator,,,,,
+Latvia,LV,0.11,FALSE,,,,,,,,,
+Montenegro,ME,0.43,FALSE,,,,,,,,,
+North Macedonia,MK,null,FALSE,,,,,,,,,
+Malta,MT,0.35,FALSE,,,,,,,,,
+Netherlands,NL,0.47,FALSE,,,,,,,,,
+Norway,NO,0.32,FALSE,,,,,,,,,
+Poland,PL,0.24,TRUE,"Liutauras Gudzinskas, a political science professor at Vilnius University, tells Žinių Radijas that although the European Commission’s proposal to strengthen the pluralism and independence of the media and protect it from political or business interference could be a useful preventive tool in many countries, it is likely too late for Hungary.",More information,https://euranetplus-inside.eu/,https://open.spotify.com/embed/episode/182CCZEHC6nf9x546WdNVO?utm_source=generator,,https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1250156527&color=%232c2e73&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true,https://euranetplus-inside.eu/wp-content/uploads/2022/05/2-bnr.png,https://www.100komma7.lu/article/aktualiteit/49-propose-mat-326-mesuren-fir-eng-besser-eu,https://www.youtube.com/embed/asWW2pvhaJQ
+Portugal,PT,0.64,FALSE,,,,,,,,,
+Romania,RO,0.32,TRUE,"Although it is World Press Freedom Day on 3 May, Lithuania celebrates the freedom of the press each year on 7 May – because this date marks the end of the tsarist ban on the publishing and distribution of books in Lithuanian.",Check this,https://euranetplus-inside.eu/,,,,https://euranetplus-inside.eu/wp-content/uploads/2022/05/2-kuku.png,https://www.100komma7.lu/article/aktualiteit/49-propose-mat-326-mesuren-fir-eng-besser-eu,
+Serbia,RS,0.67,FALSE,,,,,,,,,
+Sweden,SE,0.25,TRUE,,,,https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1250156527&color=%232c2e73&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true,,,,,
+Slovenia,SI,0.45,FALSE,,,,,,,,,
+Slovakia,SK,0.67,FALSE,,,,,,,,,
+United Kingdom,UK,null,FALSE,,,,,,,,,
+Ukraine,UA,0.45,FALSE,,,,,,,,,

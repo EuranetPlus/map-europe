@@ -1,7 +1,7 @@
 <script>
 	import { config } from '$lib/stores/config-features';
 	import { onMount } from 'svelte';
-	import { APP_HEIGHT } from '$lib/stores/shared';
+	import { APP_HEIGHT, mobileSize, isMobile } from '$lib/stores/shared';
 	import { selectedLanguage } from '$lib/stores/shared';
 	import { languageNameTranslations } from '$lib/stores/languages';
 	import MapChoropleth from '$lib/components/MapChoropleth.svelte';
@@ -19,6 +19,10 @@
 	let linkDataAccess;
 	let textNoteDescription;
 	let textNote;
+	let textCountryClick;
+	let extraInfoTexts;
+	let extraInfoLinks;
+	let innerWidth;
 
 	// Send map height to parent window
 	$: {
@@ -28,6 +32,8 @@
 	}
 
 	$: dropdownLanguages = languageNameTranslations['en'];
+
+	$: $isMobile = innerWidth <= $mobileSize;
 
 	onMount(async () => {
 		await getLanguage($selectedLanguage.value);
@@ -45,6 +51,7 @@
 				linkDataAccess = data.linkDataAccess;
 				textNoteDescription = data.textNoteDescription;
 				textNote = data.textNote;
+				textCountryClick = data.textCountryClick;
 
 				// LEGEND // Filter all keys with text "legend"
 				legendEntries = Object.keys(data).filter((item) => {
@@ -69,10 +76,36 @@
 				tooltip = tooltipEntries.map((item) => {
 					return {
 						[item]: data[item],
-						label: data[item]
+						label: data[item],
+						textCountryClick: textCountryClick
 					};
 				});
-				// console.log(tooltip);
+
+				// Get objects of language files with keys for only "extraInfoText" or "extraInfoLink" and turn them into a nice usable object
+				extraInfoTexts = filterAndReduceExtraInfo('extraInfoText');
+				extraInfoLinks = filterAndReduceExtraInfo('extraInfoLink');
+
+				function filterAndReduceExtraInfo(filterTerm) {
+					// 1. Filter all keys with text "extraInfoText" or "extraInfoLink"
+					let extraInfoEntries;
+					const asArray = Object.entries(data);
+					extraInfoEntries = asArray.filter(([key, value]) => {
+						return key.includes(filterTerm);
+					});
+
+					// 2. Reduce to get object with country id as key and "extraInfoText" or "extraInfoLink"
+					let result;
+					result = extraInfoEntries.reduce(
+						(obj, item) =>
+							Object.assign(obj, {
+								// split the name to  get country id as key
+								[item[0].split('_')[1]]: item[1]
+							}),
+						{}
+					);
+
+					return result;
+				}
 			});
 	}
 
@@ -83,7 +116,9 @@
 	}
 </script>
 
-<div id="euranet-map" bind:clientHeight={$APP_HEIGHT}>
+<!-- <svelte:window bind:innerWidth /> -->
+
+<div id="euranet-map" bind:clientHeight={$APP_HEIGHT} bind:clientWidth={innerWidth}>
 	<header>
 		<div class="logo">
 			<img
@@ -109,7 +144,7 @@
 		</div>
 		<div id="chart-body" class="mt-4">
 			{#if legend && tooltip}
-				<MapChoropleth {legend} {tooltip} />
+				<MapChoropleth {legend} {tooltip} {extraInfoTexts} {extraInfoLinks} />
 			{/if}
 		</div>
 	</div>
