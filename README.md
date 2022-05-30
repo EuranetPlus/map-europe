@@ -83,6 +83,17 @@ To add or update the map data, please first decide whether the data set you are 
 
 3. Please copy the respective csv template to your own computer (or Google Drive) and fill in the desired data point for each country. Please make sure that values are formatted with dots (.) as a comma separator and **not commas**, i.e. 0.45 for percentage values instead of 0,45. In the template, all percentage values are always written as fractions of 1, **i.e. 0.45 and not 45**.  
 
+4. For any country you can add additional content information (i.e. text, audio, image and video) that will show up once you click on a country. If you want to do this, set the value in the column "extraInfo" to **TRUE**, otherwise to **FALSE**. If set to **TRUE** the following content types can be added:
+  - **text_content**: A text for each country 
+  - **link_text**: The text of a link that redirects to an outside resource. Usually this text would be something like "Read more" or "Link to article" 
+  - **link_url_target**: The URL to which the link should refer to (e.g. https://euranetplus-inside.eu/exodus-education-and-elections/)
+  - **audio_url_1**: The link to the first audio resource (spotify or soundcloud) (in the format https://open.spotify.com/embed/episode/37AK0KI06D6027Pwv96Bvk?utm_source=generator)
+  - **audio_url_2**: The link to the second audio resource (spotify or soundcloud) (in the format https://open.spotify.com/embed/episode/37AK0KI06D6027Pwv96Bvk?utm_source=generator)
+  - **audio_url_3**: The link to the third audio resource (spotify or soundcloud) (in the format https://open.spotify.com/embed/episode/37AK0KI06D6027Pwv96Bvk?utm_source=generator)
+  - **image_url_source**: The URL to an image that should be displayed (e.g. in the format https://euranetplus-inside.eu/wp-content/uploads/2022/05/2-kuku.png)
+  - **image_url_target**: The URL that the above image should point to as a link when clicking on it (e.g. in the format https://www.100komma7.lu/article/aktualiteit/49-propose-mat-326-mesuren-fir-eng-besser-eu)
+  - **video_url**: The URL to a video that should be displayed (e.g. in the format https://www.youtube.com/embed/asWW2pvhaJQ)
+
 **Warning:  
 Please make sure not to delete any country names or ids.  
 Also make sure the CSV file is formatted with commas (,) as delimiters, not semicolons (;) or other symbols. Otherwise the map will not work. Google sheets uses commas by default, so this might be the easiest solution to use.**
