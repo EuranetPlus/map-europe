@@ -366,6 +366,7 @@
 					on:mouseenter={() => handleMouseEnter(feature)}
 					on:mouseleave={() => handleMouseLeave(feature)}
 					on:click={() => handleMouseClick(feature)}
+					on:touchstart={() => handleMouseClick(feature)}
 				/>
 			{/each}
 		</svg>
