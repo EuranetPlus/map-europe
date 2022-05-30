@@ -85,7 +85,7 @@ To add or update the map data, please first decide whether the data set you are 
 
 4. For any country you can add additional content information (i.e. text, audio, image and video) that will show up once you click on a country. If you want to do this for a specific country, set the value in the column "extraInfo" to **TRUE**, otherwise to **FALSE**. If set to **TRUE** the following content types can be added:
 
-| Coulmn Name      | Description |
+| Column Name      | Description |
 | :----------- | :----------- |
 | **text_content**     | A text for each country. Should ideally not be more than 1 small to medium-sized paragraph       |
 | **link_text**   | The text of a link that redirects to an outside resource. Usually this text would be something like "Read more" or "Link to article" |
