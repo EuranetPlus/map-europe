@@ -369,31 +369,35 @@
 			countryName={selectedCountryNameTranslated}
 			countryText={selectedCountryExtraInfoTextTranslated}
 			countryLink={selectedCountryExtraInfoLinkTranslated}
+			{tooltip}
 		/>
 
-		<div
-			class="tooltip text-sm p-3 {tooltipVisible ? 'active' : ''}"
-			style="top: {$MOUSE.y - tooltipHeight}px; left:{tooltipPositionX}px;"
-			bind:clientHeight={tooltipHeight}
-			bind:clientWidth={tooltipWidth}
-		>
-			<div class="tooltip-head font-bold">{$MOUSE.tooltip.name}</div>
-			<div class="tooltip-body space-y-1">
-				{#each tooltip as tip}
-					<div class="values">
-						{#if config.datasetUnit == 'percent'}
-							<span class="font-bold">{formatInt($MOUSE.tooltip.value * 100)} %</span>
-						{:else if config.datasetUnit == 'fullNumbers'}
-							<span class="font-bold">{$MOUSE.tooltip.value}</span>
+		<!-- only show tooltip for countries with no extraInfo -->
+		{#if $MOUSE.tooltip.extraInfo == false}
+			<div
+				class="tooltip text-sm p-3 {tooltipVisible ? 'active' : ''}"
+				style="top: {$MOUSE.y - tooltipHeight}px; left:{tooltipPositionX}px;"
+				bind:clientHeight={tooltipHeight}
+				bind:clientWidth={tooltipWidth}
+			>
+				<div class="tooltip-head font-bold">{$MOUSE.tooltip.name}</div>
+				<div class="tooltip-body space-y-1">
+					{#each tooltip as tip}
+						<div class="values">
+							{#if config.datasetUnit == 'percent'}
+								<span class="font-bold">{formatInt($MOUSE.tooltip.value * 100)}%</span>
+							{:else if config.datasetUnit == 'fullNumbers'}
+								<span class="font-bold">{$MOUSE.tooltip.value}</span>
+							{/if}
+							<span>{tip.label}</span>
+						</div>
+						{#if $MOUSE.tooltip.extraInfo == true}
+							<div class="text-xs"><span class="icon-tap" />{tooltip[0].textCountryClick}</div>
 						{/if}
-						<span>{tip.label}</span>
-					</div>
-					{#if $MOUSE.tooltip.extraInfo == true}
-						<div class="text-xs"><span class="icon-tap" />{tooltip[0].textCountryClick}</div>
-					{/if}
-				{/each}
+					{/each}
+				</div>
 			</div>
-		</div>
+		{/if}
 	</div>
 {/if}
 

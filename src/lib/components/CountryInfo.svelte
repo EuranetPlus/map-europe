@@ -1,14 +1,26 @@
 <script>
+	import { config } from '$lib/stores/config-features';
 	import { fly } from 'svelte/transition';
 	import { countryInfoVisible } from '$lib/stores/shared';
 	import CountryMediaComponent from './CountryMediaComponent.svelte';
+	import { MOUSE } from '$lib/stores/shared';
+	import { formatInt } from '$lib/utils/formatNumbers';
 
 	export let selectedCountry;
 	export let countryName;
 	export let countryText;
 	export let countryLink;
+	export let tooltip;
 
 	let width;
+
+	$: console.log('tooltip', tooltip);
+
+	$: countryValue =
+		config.datasetUnit == 'percent' ? formatInt($MOUSE.tooltip.value * 100) : $MOUSE.tooltip.value;
+
+	$: countryUnit = config.datasetUnit == 'percent' ? '%' : '';
+	$: countryLabel = tooltip[0].label;
 </script>
 
 {#if $countryInfoVisible}
@@ -23,7 +35,11 @@
 				$countryInfoVisible = false;
 			}}
 		/>
-		<div class="font-bold border-b pb-2">{countryName}</div>
+		<div class="border-b pb-2">
+			<span class="font-bold">{countryName}</span>
+			<span>–</span>
+			<span class="font-bold">{countryValue}{countryUnit}</span> <span>{countryLabel}</span>
+		</div>
 
 		<CountryMediaComponent {selectedCountry} {countryText} {countryLink} />
 	</div>
