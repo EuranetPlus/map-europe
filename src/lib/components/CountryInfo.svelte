@@ -37,7 +37,7 @@
 		/>
 		<div class="border-b pb-2">
 			<span class="font-bold">{countryName}</span>
-			{#if countryValue}
+			{#if $MOUSE.tooltip.value}
 				<span>–</span>
 				<span class="font-bold">{countryValue}{countryUnit}</span> <span>{countryLabel}</span>
 			{/if}
