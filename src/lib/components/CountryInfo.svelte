@@ -35,8 +35,10 @@
 		/>
 		<div class="border-b pb-2">
 			<span class="font-bold">{countryName}</span>
-			<span>–</span>
-			<span class="font-bold">{countryValue}{countryUnit}</span> <span>{countryLabel}</span>
+			{#if countryValue}
+				<span>–</span>
+				<span class="font-bold">{countryValue}{countryUnit}</span> <span>{countryLabel}</span>
+			{/if}
 		</div>
 
 		<CountryMediaComponent {selectedCountry} {countryText} {countryLink} />
