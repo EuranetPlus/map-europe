@@ -14,6 +14,8 @@
 
 	let width;
 
+	$: console.log($MOUSE.tooltip);
+
 	$: countryValue =
 		config.datasetUnit == 'percent' ? formatInt($MOUSE.tooltip.value * 100) : $MOUSE.tooltip.value;
 

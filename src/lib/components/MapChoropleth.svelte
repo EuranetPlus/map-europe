@@ -326,6 +326,11 @@
 			}
 		}
 	}
+
+	$: handleTouchStart = function (country) {
+		handleMouseEnter(country);
+		handleMouseClick(country);
+	};
 </script>
 
 {#if $dataReady}
@@ -366,7 +371,7 @@
 					on:mouseenter={() => handleMouseEnter(feature)}
 					on:mouseleave={() => handleMouseLeave(feature)}
 					on:click={() => handleMouseClick(feature)}
-					on:touchstart={() => handleMouseClick(feature)}
+					on:touchstart={() => handleTouchStart(feature)}
 				/>
 			{/each}
 		</svg>
