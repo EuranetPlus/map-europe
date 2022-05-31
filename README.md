@@ -13,7 +13,8 @@ To use the map for a new topic and populate it with new data and text please fol
 
 ![Screenshot](https://user-images.githubusercontent.com/8008434/171234651-268c6ed6-c62b-4f1f-b01f-a5009d922f19.png)
 
-
+_Left: Map with **"values"** data_  
+_Right: Map with **"binary"** data_
 
 ## Copy map template
 
