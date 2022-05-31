@@ -78,7 +78,7 @@ The most important entries that you need to change for each project are the "map
 
 To add or update the map data, please first decide whether the data set you are using shows "values", i.e. continous numbers on a color scale or whether it is "binary", i.e. the map shows only a few countries in the same color ("dark blue") as a category (0 = there is no data for this country, 1 = there is data for this country). 
 
-1. Set the dataset type in the [map configuration file](src/lib/stores/config-features.js) (Folder: src -> lib -> stores -> config-features.js) under "datasetType". If your dataset consists of **values data**, please use this [csv values template](https://docs.google.com/spreadsheets/d/1fzicMw_LiFGrdtzloXZFbM2FFgVc-GYtavvxPJFZ5Yo/edit?usp=sharing). If it consists of **binary data**, please use this [csv binary template](https://docs.google.com/spreadsheets/d/1YL_5aVY9zaaxwhI6-cEgcwO8k01Fzu2FzsPMtvppYfg/edit?usp=sharing)
+1. Set the dataset type in the [map configuration file](src/lib/stores/config-features.js) (Folder: src -> lib -> stores -> config-features.js) under "datasetType". If your dataset consists of **values data**, please use this [csv values template](https://docs.google.com/spreadsheets/d/1fzicMw_LiFGrdtzloXZFbM2FFgVc-GYtavvxPJFZ5Yo/edit?usp=sharing). If it consists of **binary data**, please use this [csv binary template](https://docs.google.com/spreadsheets/d/1YL_5aVY9zaaxwhI6-cEgcwO8k01Fzu2FzsPMtvppYfg/edit?usp=sharing).
 
 2. Then you need to decide whether the data consists of **full numbers** (i.e. 45 people) or **percent values**, (i.e. 45% of GDP). In the [map configuration file](src/lib/stores/config-features.js) (Folder: src -> lib -> stores -> config-features.js) this can be set under "datasetUnit".
 
