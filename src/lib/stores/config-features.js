@@ -7,7 +7,7 @@ export const config = {
   "headlineAvailable": true, // true or false; Should the map have a headline? 
   "subheadlineAvailable": true, // true or false; Should the map have a subheadline? 
   "tooltipAvailable": true, // true or false; Should the map show a tooltip when hovering over a country? 
-  "scaleBarAvailable": false, // true or false; Should the map show a scale bar on the top? 
+  "scaleBarAvailable": true, // true or false; Should the map show a scale bar on the top? 
   "legendAvailable": true, // true or false; Should the map show a legend in the bottom right corner? 
   "textSourceAvailable": true, // true or false; Should the map show a source text below the map? 
   "textNoteAvailable": true, // true or false; Should the map show a text note below the map? 
