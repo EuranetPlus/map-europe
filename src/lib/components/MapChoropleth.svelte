@@ -88,7 +88,7 @@
 		colorScale = scaleQuantile();
 	} else if (config.datasetType == 'binary') {
 		colorScale = function (value) {
-			return value == 1 ? '#67A36B' : '';
+			return value == 1 ? '#2B3163' : '#F4F4F4';
 		};
 	}
 
@@ -140,10 +140,12 @@
 				csvData.set(data);
 
 				// Set color scale domain and range
-				colorScale.domain(extent(extentArray)).range(colorScheme);
-				clusters = colorScale.quantiles();
-				scaleMin = min(extentArray);
-				scaleMax = max(extentArray);
+				if (config.datasetType == 'values') {
+					colorScale.domain(extent(extentArray)).range(colorScheme);
+					clusters = colorScale.quantiles();
+					scaleMin = min(extentArray);
+					scaleMax = max(extentArray);
+				}
 			})
 			.catch((error) => console.error('error', error));
 	}
@@ -232,7 +234,7 @@
 					if (csvData.extraInfo) {
 						// return 'orange';
 					} else {
-						return 'white';
+						return '#cdcdcd';
 					}
 					return 'white';
 				}
@@ -367,7 +369,9 @@
 					d={path(feature)}
 					stroke={getStroke(feature)}
 					fill={getFill(feature)}
-					class={'country-extra-info'}
+					class={config.datasetType == 'values'
+						? 'country-extra-info-values'
+						: 'country-extra-info-binary'}
 					on:mouseenter={() => handleMouseEnter(feature)}
 					on:mouseleave={() => handleMouseLeave(feature)}
 					on:click={() => handleMouseClick(feature)}
@@ -395,14 +399,16 @@
 			<div class="tooltip-head font-bold">{$MOUSE.tooltip.name}</div>
 			<div class="tooltip-body space-y-1">
 				{#each tooltip as tip}
-					<div class="values">
-						{#if config.datasetUnit == 'percent'}
-							<span class="font-bold">{formatInt($MOUSE.tooltip.value * 100)}%</span>
-						{:else if config.datasetUnit == 'fullNumbers'}
-							<span class="font-bold">{$MOUSE.tooltip.value}</span>
-						{/if}
-						<span>{tip.label}</span>
-					</div>
+					{#if config.datasetType == 'values'}
+						<div class="values">
+							{#if config.datasetUnit == 'percent'}
+								<span class="font-bold">{formatInt($MOUSE.tooltip.value * 100)}%</span>
+							{:else if config.datasetUnit == 'fullNumbers'}
+								<span class="font-bold">{$MOUSE.tooltip.value}</span>
+							{/if}
+							<span>{tip.label}</span>
+						</div>
+					{/if}
 					{#if $MOUSE.tooltip.extraInfo == true}
 						<div class="text-xs"><span class="icon-tap" />{tooltip[0].textCountryClick}</div>
 					{/if}
@@ -430,13 +436,17 @@
 		stroke-linecap: round;
 	}
 
-	.country-extra-info {
+	.country-extra-info-values {
 		stroke-width: 1px;
 		stroke: black;
 	}
 
-	.country-extra-info:hover {
+	.country-extra-info-values:hover {
 		stroke-width: 2px;
+	}
+
+	.country-extra-info-binary {
+		stroke: white;
 	}
 
 	.noPointer {
