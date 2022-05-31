@@ -165,8 +165,8 @@ After this, save the changes by entering a title for the commit, e.g. "Create hu
 
 To locally develop this map on your computer, please do the following steps in your terminal/command line:
 
-1. Clone the repo: `git clone https://github.com/EuranetPlus/map-ukraine.git`
-2. Open cloned folder: `cd map-ukraine`
+1. Clone the repo: `git clone https://github.com/EuranetPlus/map-europe.git`
+2. Open cloned folder: `cd map-europe`
 3. Install all dependencies: `npm install`
 4. Start a local development server:
 
