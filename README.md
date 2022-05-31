@@ -10,7 +10,8 @@ To use the map for a new topic and populate it with new data and text please fol
 5. Translate texts into 24 EU languages [Translate texts](#translate-text)
 6. Publish the new map: [Publish map](#publish-map)
 
-<img width="620" alt="Bildschirmfoto 2022-05-30 um 12 45 48" src="https://user-images.githubusercontent.com/8008434/170976598-1ec84e45-b72f-4b6b-88ed-3409714749d0.png">
+
+![Screenshot](https://user-images.githubusercontent.com/8008434/171234651-268c6ed6-c62b-4f1f-b01f-a5009d922f19.png)
 
 
 
