@@ -1,6 +1,6 @@
 ## About this project
 
-This is the code repository for an interactive EuranetPlus choropleth map of European countries based on data from a CSV file. The map can be updated with any data set from a csv file. For more info see section [3. Update map with new data](#add-data).
+This is the code repository for an interactive EuranetPlus choropleth map of European countries. The map can be updated with any data set from a CSV file. For more info see section [3. Update map with new data](#add-data).
 
 To use the map for a new topic and populate it with new data and text please follow these steps:
 1. Make a copy of this map template: [Copy map template](#copy-map-template)
