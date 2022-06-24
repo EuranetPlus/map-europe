@@ -39,6 +39,9 @@
 	export let extraInfoTexts;
 	export let extraInfoLinks;
 
+	// $: console.log('selectedCountryNameTranslated', selectedCountryNameTranslated);
+	$: console.log('selectedCountryExtraInfoTextTranslated', selectedCountryExtraInfoTextTranslated);
+
 	$: countryNames = countryNameTranslations[$selectedLanguage.value];
 
 	$: selectedCountryNameTranslated = countryNames.filter((item) => {
@@ -446,7 +449,7 @@
 	}
 
 	.country-extra-info-binary {
-		stroke: white;
+		stroke: green;
 	}
 
 	.noPointer {

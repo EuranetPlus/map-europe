@@ -548,7 +548,7 @@ export const countryNameTranslations = {
         },
         {
             "id": "TR",
-            "na": "Krocan"
+            "na": "Turecko"
         },
         {
             "id": "UA",
@@ -1144,7 +1144,7 @@ export const countryNameTranslations = {
         },
         {
             "id": "TR",
-            "na": "Truthahn"
+            "na": "Türkei"
         },
         {
             "id": "UA",
@@ -1708,7 +1708,7 @@ export const countryNameTranslations = {
         },
         {
             "id": "MD",
-            "na": "Moldavia"
+            "na": "Moldova"
         },
         {
             "id": "ME",
@@ -2006,7 +2006,7 @@ export const countryNameTranslations = {
         },
         {
             "id": "MD",
-            "na": "Moldavia"
+            "na": "Moldova"
         },
         {
             "id": "ME",
@@ -2038,7 +2038,7 @@ export const countryNameTranslations = {
         },
         {
             "id": "TR",
-            "na": "Pavo"
+            "na": "Turquía"
         },
         {
             "id": "UA",
@@ -4092,7 +4092,7 @@ export const countryNameTranslations = {
         },
         {
             "id": "MD",
-            "na": "Moldavia"
+            "na": "Moldova"
         },
         {
             "id": "ME",
@@ -4986,7 +4986,7 @@ export const countryNameTranslations = {
         },
         {
             "id": "MD",
-            "na": "Moldavia"
+            "na": "Moldova"
         },
         {
             "id": "ME",
@@ -5912,7 +5912,7 @@ export const countryNameTranslations = {
         },
         {
             "id": "TR",
-            "na": "Peru"
+            "na": "Turquia"
         },
         {
             "id": "UA",
@@ -6210,7 +6210,7 @@ export const countryNameTranslations = {
         },
         {
             "id": "TR",
-            "na": "Curcan"
+            "na": "Turcia"
         },
         {
             "id": "UA",
@@ -6806,7 +6806,7 @@ export const countryNameTranslations = {
         },
         {
             "id": "TR",
-            "na": "Puran"
+            "na": "Turčija"
         },
         {
             "id": "UA",
@@ -7104,7 +7104,7 @@ export const countryNameTranslations = {
         },
         {
             "id": "TR",
-            "na": "Kalkon"
+            "na": "Turkiet"
         },
         {
             "id": "UA",
