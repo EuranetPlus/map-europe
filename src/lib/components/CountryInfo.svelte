@@ -49,8 +49,9 @@
 <style>
 	.country-info {
 		width: 95%;
-		height: 80%;
+		max-height: 80%;
 		z-index: 1;
+		top: 1rem;
 	}
 
 	.icon-close {
