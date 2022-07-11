@@ -86,7 +86,7 @@ To add or update the map data, please first decide whether the data set you are 
 
 3. Please copy the respective csv template to your own computer (or Google Drive) and fill in the desired data point for each country. Please make sure that values are formatted with dots (.) as a comma separator and **not commas**, i.e. 0.45 for percentage values instead of 0,45. In the template, all percentage values are always written as fractions of 1, **i.e. 0.45 and not 45**.  
 
-4. For any country you can add additional content information (i.e. text, audio, image and video) that will show up once you click on a country. If you want to do this for a specific country, set the value in the column "extraInfo" to **TRUE**, otherwise to **FALSE**. If set to **TRUE** the following content types can be added. ***Important: The column "extraInfo" needs to be included in every data set and either be set to TRUE or FALSE for each country. Otherwise the map will not work. The following coloumns only need to contain content if extraInfo is set to TRUE***.
+4. For any country you can add additional content information (i.e. text, audio, image and video) that will show up once you click on a country. If you want to do this for a specific country, set the value in the column "extraInfo" to **TRUE**, otherwise to **FALSE**. ***Important: The column "extraInfo" needs to be included in every data set and either be set to TRUE or FALSE for each country. Otherwise the map will not work. The following columns only need to contain content if extraInfo is set to TRUE:***.
 
 | Column Name      | Description |
 | :----------- | :----------- |
