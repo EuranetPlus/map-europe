@@ -38,7 +38,7 @@
 		"d3-scale-chromatic": "^3.0.0",
 		"d3-scale-cluster": "^2.0.1",
 		"dotenv": "^16.0.0",
-		"node-fetch": "^3.2.3",
+		"node-fetch": "^3.2.10",
 		"svelte-select": "^4.4.7",
 		"topojson-client": "^3.1.0"
 	}
