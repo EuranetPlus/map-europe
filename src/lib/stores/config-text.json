@@ -1,13 +1,23 @@
 {
-  "heading": "Media & News Survey 2022",
-  "subheading": "Percentage of people across the EU countries that have used social media platforms and blogs the most to access news and information.",
+  "heading": "Education spending up across all EU countries",
+  "subheading": "General government expenditure on military defense as a percentage of GDP in countries of the European Union in 2020",
   "legend1": "No data available",
-  "tooltip1": "of interviewees",
+  "tooltip1": "of GDP",
   "textSourceDescription": "Source",
   "textSource": "Eurostat",
   "textNoteDescription": "Note",
   "textNote": "Government expenditure by COFOG (UNSD classification of functions of government, replicated in ESA2010) function and type.",
   "textDataAccess": "Access the data",
   "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=en",
-  "textCountryClick": "Click for more info"
+  "textCountryClick": "Click for more info",
+  "extraInfoText_AL": "Candidate country since 2003",
+  "extraInfoLink_AL": "",
+  "extraInfoText_ME": "Candidate country since 2010",
+  "extraInfoLink_ME": "",
+  "extraInfoText_MK": "Candidate country since 2005",
+  "extraInfoLink_MK": "",
+  "extraInfoText_RS": "Candidate country since 2003",
+  "extraInfoLink_RS": "",
+  "extraInfoText_UA": "Candidate country since 2003",
+  "extraInfoLink_UA": ""
 }
