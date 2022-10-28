@@ -3,8 +3,6 @@
 	export let countryText;
 	export let countryLink;
 
-	$: console.log(countryText)
-
 	// Filter csvImport for audio pieces
 	const asArray = Object.entries(selectedCountry.csvImport);
 	const audioPieces = asArray.filter(([key, value]) => {

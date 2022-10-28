@@ -13,9 +13,15 @@
 	export let tooltip;
 
 	let width;
+	let countryValue;
 
-	$: countryValue =
-		config.datasetUnit == 'percent' ? formatInt($MOUSE.tooltip.value * 100) : $MOUSE.tooltip.value;
+	// $: countryValue =
+	// 	config.datasetUnit == 'percent' ? formatInt($MOUSE.tooltip.value * 100) : $MOUSE.tooltip.value;
+	$: if(selectedCountry){
+		countryValue = config.datasetUnit == 'percent' ? formatInt(selectedCountry.csvImport.value * 100) : selectedCountry.csvImport.value;
+		// console.log(countryValue)
+	}
+
 	$: countryUnit = config.datasetUnit == 'percent' ? '%' : '';
 	$: countryLabel = tooltip[0].label;
 </script>
