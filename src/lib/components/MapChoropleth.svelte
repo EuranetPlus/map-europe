@@ -437,12 +437,12 @@
 	}
 
 	.country-extra-info-values {
-		stroke-width: 1px;
+		/* stroke-width: 1px; */
 		stroke: black;
 	}
 
 	.country-extra-info-values:hover {
-		stroke-width: 2px;
+		stroke-width: 1px;
 	}
 
 	.country-extra-info-binary {
