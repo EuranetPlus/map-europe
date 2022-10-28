@@ -55,7 +55,7 @@
 	$: if ($selectedCountry) {
 		selectedCountryExtraInfoTextTranslated = extraInfoTexts[$selectedCountry.properties.id];
 		selectedCountryExtraInfoLinkTranslated = extraInfoLinks[$selectedCountry.properties.id];
-		console.log(extraInfoTexts);
+		// console.log(selectedCountryExtraInfoTextTranslated);
 	} else {
 		selectedCountryExtraInfoTextTranslated = undefined;
 		selectedCountryExtraInfoLinkTranslated = undefined;
