@@ -102,27 +102,27 @@ async function translateJSON(target, label) {
 
     // For keys languages and countries
     // Get translations
-    // let objectArray = sourceJSON[key];
+    let objectArray = sourceJSON[key];
       
-    // console.log(objectArray)
+    console.log(objectArray)
       
-    //  translations = await Promise.all(
-    //    objectArray.map(async (item) => {
-    //      let [trans] = await googleClient.translate(item.na, target);
-    //      return {
-    //        id: item.id,
-    //        na: capitalizeFirstLetter(trans)
-    //       }
-    //     })
-    //  )
-      // console.log(translations)
+     translations = await Promise.all(
+       objectArray.map(async (item) => {
+         let [trans] = await googleClient.translate(item.na, target);
+         return {
+           id: item.id,
+           na: capitalizeFirstLetter(trans)
+          }
+        })
+     )
+      console.log(translations)
       
       // Write translations to object
-      // let arr = [];
-      // desktopTranslated[key] = arr;
-      // translations.forEach((translation, i) => {
-      //   arr.push(translation);
-      // });
+      let arr = [];
+      desktopTranslated[key] = arr;
+      translations.forEach((translation, i) => {
+        arr.push(translation);
+      });
 
     } else {
 
