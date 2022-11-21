@@ -402,7 +402,11 @@
 					{#if config.datasetType == 'values'}
 						<div class="values">
 							{#if config.datasetUnit == 'percent'}
-								<span class="font-bold">{formatInt($MOUSE.tooltip.value * 100)}%</span>
+								{#if config.percentRounded == true}
+									<span class="font-bold">{formatInt($MOUSE.tooltip.value * 100)}%</span>
+								{:else if config.percentRounded == false}
+									<span class="font-bold">{$MOUSE.tooltip.value * 100}%</span>
+								{/if}
 							{:else if config.datasetUnit == 'fullNumbers'}
 								<span class="font-bold">{$MOUSE.tooltip.value}</span>
 							{/if}
