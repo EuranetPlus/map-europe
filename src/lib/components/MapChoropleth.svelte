@@ -21,7 +21,7 @@
 	import { scaleQuantile, scaleSequential, scaleSequentialQuantile } from 'd3-scale';
 	import { schemeBlues, schemePuBu, schemeGnBu, schemeOrRd } from 'd3-scale-chromatic';
 
-	import { formatInt } from '$lib/utils/formatNumbers';
+	import { formatInt, formatPercent } from '$lib/utils/formatNumbers';
 
 	import Scale from './Scale.svelte';
 	import Legend from './Legend.svelte';
@@ -405,7 +405,7 @@
 								{#if config.percentRounded == true}
 									<span class="font-bold">{formatInt($MOUSE.tooltip.value * 100)}%</span>
 								{:else if config.percentRounded == false}
-									<span class="font-bold">{$MOUSE.tooltip.value * 100}%</span>
+									<span class="font-bold">{formatPercent($MOUSE.tooltip.value)}</span>
 								{/if}
 							{:else if config.datasetUnit == 'fullNumbers'}
 								<span class="font-bold">{$MOUSE.tooltip.value}</span>
