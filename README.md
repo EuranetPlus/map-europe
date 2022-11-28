@@ -62,7 +62,7 @@ The most important entries that you need to change for each project are the "map
   "vercelURL": "https://euranet-map-europe.vercel.app", // The url provided when deploying the map on Vercel
   "datasetType": "values", // "values" or "binary"; Does the data set contain numerical values or binary (0/1) values for countries?
   "datasetUnit": "percent", // "fullNumbers" or "percent"; Is the data in percent (0.25 of GDP) or full numbers (25 people)?
-  "percentRounded": false, // true or false; Should the percent values be rounded to full numbers (i.e. 26%) or 1-decimal place (i.e. 25.9%)
+  "percentRounded": false, // true or false; Should the percent values be rounded to full numbers (i.e. 26%, false) or 1-decimal place (i.e. 25.9%, true)
   "colourScheme": "blue", // one of the following: "blue", "purple-blue", "green-blue", "orange-red"
   "headlineAvailable": true, // true or false; Should the map have a headline?
   "subheadlineAvailable": true, // true or false; Should the map have a subheadline?
