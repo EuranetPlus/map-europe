@@ -39,6 +39,8 @@
 	export let extraInfoTexts;
 	export let extraInfoLinks;
 
+	$: console.log('value', $MOUSE.tooltip.value);
+
 	$: countryNames = countryNameTranslations[$selectedLanguage.value];
 
 	$: selectedCountryNameTranslated = countryNames.filter((item) => {
@@ -404,8 +406,8 @@
 							{#if config.datasetUnit == 'percent'}
 								{#if config.percentRounded == true}
 									<span class="font-bold">{formatInt($MOUSE.tooltip.value * 100)}%</span>
-								{:else if config.percentRounded == false}	
-									<span class="font-bold">{$MOUSE.tooltip.value * 100}%</span>
+								{:else if config.percentRounded == false}
+									<span class="font-bold">{Math.round($MOUSE.tooltip.value * 1000) / 10}%</span>
 								{/if}
 							{:else if config.datasetUnit == 'fullNumbers'}
 								<span class="font-bold">{$MOUSE.tooltip.value}</span>
