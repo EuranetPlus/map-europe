@@ -19,7 +19,7 @@
 	import { min, max } from 'd3-array';
 
 	import { scaleQuantile, scaleSequential, scaleSequentialQuantile } from 'd3-scale';
-	import { schemeBlues, schemePuBu, schemeGnBu, schemeOrRd } from 'd3-scale-chromatic';
+	import { schemeBlues, schemePuBu, schemeGnBu, schemeOrRd, schemeYlGn } from 'd3-scale-chromatic';
 
 	import { formatInt } from '$lib/utils/formatNumbers';
 
@@ -102,6 +102,8 @@
 		colorScheme = schemeGnBu[5];
 	} else if (config.colourScheme == 'orange-red') {
 		colorScheme = schemeOrRd[5];
+	} else if (config.colourScheme == 'yellow-green') {
+		colorScheme = schemeYlGn[5];
 	}
 
 	$: if ($dataReady) {
