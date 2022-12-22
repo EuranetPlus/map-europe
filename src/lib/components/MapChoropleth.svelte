@@ -20,6 +20,7 @@
 
 	import { scaleQuantile, scaleSequential, scaleSequentialQuantile } from 'd3-scale';
 	import { schemeBlues, schemePuBu, schemeGnBu, schemeOrRd, schemeYlGn } from 'd3-scale-chromatic';
+	import { PuBlueDarker } from '$lib/utils/customColorPalettes';
 
 	import { formatInt } from '$lib/utils/formatNumbers';
 
@@ -38,8 +39,6 @@
 	export let tooltip;
 	export let extraInfoTexts;
 	export let extraInfoLinks;
-
-	$: console.log('value', $MOUSE.tooltip.value);
 
 	$: countryNames = countryNameTranslations[$selectedLanguage.value];
 
@@ -97,7 +96,8 @@
 	$: if (config.colourScheme == 'blue') {
 		colorScheme = schemeBlues[5];
 	} else if (config.colourScheme == 'purple-blue') {
-		colorScheme = schemePuBu[5];
+		// colorScheme = schemePuBu[5];
+		colorScheme = PuBlueDarker;
 	} else if (config.colourScheme == 'green-blue') {
 		colorScheme = schemeGnBu[5];
 	} else if (config.colourScheme == 'orange-red') {
