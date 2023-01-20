@@ -149,6 +149,8 @@
 					clusters = colorScale.quantiles();
 					scaleMin = min(extentArray);
 					scaleMax = max(extentArray);
+				} else {
+					clusters = [];
 				}
 			})
 			.catch((error) => console.error('error', error));
@@ -341,9 +343,12 @@
 
 {#if $dataReady}
 	<div id="map" class="relative" on:mousemove={handleMouseMove} bind:clientHeight={$MAP_WIDTH}>
-		{#if config.scaleBarAvailable}
-			<Scale classes={colorScheme} {clusters} {scaleMin} {scaleMax} />
+		{#if config.datasetType == 'values'}
+			{#if config.scaleBarAvailable}
+				<Scale classes={colorScheme} {clusters} {scaleMin} {scaleMax} />
+			{/if}
 		{/if}
+
 		{#if config.legendAvailable}
 			<Legend {legend} />
 		{/if}
