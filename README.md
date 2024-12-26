@@ -67,8 +67,8 @@ The most important entries that you need to change for each project are the "map
 'colourScheme': 'red-blue', // 1) one of the following "sequential" color schemes: "blue", "green", "gray", "orange", "purple", "red", "blue-green", "blue-purple", "green-blue", "orange-red", "purple-blue-green", "purple-blue", "purple-blue-darker", "purple-red", "red-purple", "yellow-green-blue", "yellow-green", "yellow-orange-brown", "yellow-orange-red" --- OR: 2) one of the following "diverging" color schemes: "brown-blue-green", "purple-green", "pink-yellow-green", "purple-orange", "red-blue", "red-gray", "red-yellow-blue", "red-yellow-green", "spectral"
 'colourSchemeClasses': 5, // for sequential scales: from 3 to 9; for diverging scales: from 5 to 11
 'colourSchemeReverse': false, // true or false; Should the order of the color scheme be reversed?
-'colorBarFirstValue': undefined, // If set (example: 0), overwrites the minimum value of the color bar, else set to colorBarFirstValue: undefined
-'colorBarLastValue': undefined, // If set (example: 100), overwrites the maximum value of the color bar, else set to colorBarLastValue: undefined
+'colorBarFirstValue': undefined, // If set (example: 0), overwrites the minimum value of the color bar, else set to: 'colorBarFirstValue': undefined
+'colorBarLastValue': undefined, // If set (example: 100), overwrites the maximum value of the color bar, else set to: 'colorBarLastValue': undefined
 'headlineAvailable': true, // true or false; Should the map have a headline?
 'subheadlineAvailable': true, // true or false; Should the map have a subheadline?
 'tooltipAvailable': true, // true or false; Should the map show a tooltip when hovering over a country?
