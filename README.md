@@ -55,7 +55,7 @@ _Right: Map with **"binary"** data_
 
 In order to configure the new project, please change the contents of this [map configuration file](src/lib/stores/config-features.js) (Folder: src -> lib -> stores -> config-features.js). The configuration has a number of parameters that you should specify.
 
-The most important entries that you need to change for each project are the "mapTitle", the "vercelURL", "datasetType", "datasetUnit" and "colourScheme":
+The most important entries that you need to change for each project are the "mapTitle", the "vercelURL", "datasetType", "datasetUnit", "colourSchemeType" and "colourScheme":
 
 ```js
 'mapTitle': 'employment-tertiary-attainment', // The title of the map, if more than one word, separate by dash, e.g. "income-europe"
