@@ -3,7 +3,7 @@ on:
   workflow_dispatch: {}
   push:
     paths:
-      - .github/workflows/tramslate.yml
+      - .github/workflows/translate.yaml
 jobs:
   scheduled:
     runs-on: ubuntu-latest
@@ -18,9 +18,9 @@ jobs:
         with:
           credentials_json: '${{ secrets.GOOGLE_CREDENTIALS }}'
       - name: Setup node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: '16.14.0'
+          node-version: '20'
         env:
           super_secret: ${{ secrets.API_KEY }}
       - run: npm install

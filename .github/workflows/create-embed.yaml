@@ -3,7 +3,7 @@ on:
   workflow_dispatch: {}
   push:
     paths:
-      - .github/workflows/create-embed.yml
+      - .github/workflows/create-embed.yaml
 jobs:
   scheduled:
     runs-on: ubuntu-latest
@@ -13,9 +13,9 @@ jobs:
       - run: git config --global user.name 'EuranetPlus'
       - run: git config --global user.email 'torsten.spies@euranetplus.eu'
       - name: Setup node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: '16.14.0'
+          node-version: '20'
       - run: npm install
       - run: npm run createEmbedCode
       - run: git add .
