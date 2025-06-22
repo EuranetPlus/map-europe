@@ -80,7 +80,7 @@ const languages = require("./static/languages/languages.json");
 const { Translate } = require('@google-cloud/translate').v2;
 
 // Instantiates a client
-const googleClient = new Translate({ key: process.env.API_KEY });
+const googleClient = new Translate();
 
 console.log(chalk.yellow(`Getting translations from Google API for the following ${languages.languages.length} languages:`));
 languages.languages.forEach((lang,i) => {

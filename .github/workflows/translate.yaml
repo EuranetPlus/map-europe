@@ -21,8 +21,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-        env:
-          super_secret: ${{ secrets.API_KEY }}
       - run: npm install
       - run: npm run translate
       - run: git add .
