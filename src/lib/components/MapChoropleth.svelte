@@ -18,10 +18,40 @@
 	import { extent } from 'd3-array';
 	import { min, max } from 'd3-array';
 
-	import { scaleQuantile, scaleSequential, scaleSequentialQuantile } from 'd3-scale';
-	import { schemeBlues, schemePuBu, schemeGnBu, schemeOrRd, schemeYlGn } from 'd3-scale-chromatic';
-	import { PuBlueDarker } from '$lib/utils/customColorPalettes';
+	import { scaleQuantile } from 'd3-scale';
+	import {
+		// sequential
+		schemeBlues, // blue
+		schemeGreens, // green
+		schemeGreys, // gray
+		schemeOranges, // orange
+		schemePurples, // purple
+		schemeReds, // red
+		schemeBuGn, // blue-green
+		schemeBuPu, // blue-purple
+		schemeGnBu, // green-blue
+		schemeOrRd, // orange-red
+		schemePuBuGn, // purple-blue-green
+		schemePuBu, // purple-blue
+		schemePuRd, //purple-red
+		schemeRdPu, // red-purple
+		schemeYlGnBu, // yellow-green-blue
+		schemeYlGn, // yellow-green
+		schemeYlOrBr, // yellow-orange-brown
+		schemeYlOrRd, // yellow-orange-red
+		// diverging
+		schemeBrBG, // brown-bluegreen
+		schemePRGn, // purple-green
+		schemePiYG, // pink-yellowgreen
+		schemePuOr, // purple-orange
+		schemeRdBu, // red-blue
+		schemeRdGy, // red-gray
+		schemeRdYlBu, // red-yellow-blue
+		schemeRdYlGn, // red-yellow-green
+		schemeSpectral // spectral
+	} from 'd3-scale-chromatic';
 
+	import { PuBlueDarker } from '$lib/utils/customColorPalettes';
 	import { formatInt } from '$lib/utils/formatNumbers';
 
 	import Scale from './Scale.svelte';
@@ -93,18 +123,60 @@
 		};
 	}
 
-	$: if (config.colourScheme == 'blue') {
-		colorScheme = schemeBlues[5];
-	} else if (config.colourScheme == 'purple-blue') {
-		// colorScheme = schemePuBu[5];
-		colorScheme = PuBlueDarker;
-	} else if (config.colourScheme == 'green-blue') {
-		colorScheme = schemeGnBu[5];
-	} else if (config.colourScheme == 'orange-red') {
-		colorScheme = schemeOrRd[5];
-	} else if (config.colourScheme == 'yellow-green') {
-		colorScheme = schemeYlGn[5];
-	}
+	// Reactive declarations
+	$: colorScaleType = config.colourSchemeType;
+	$: n = config.colourSchemeClasses;
+
+	// Validate and select color scheme based on config
+	$: colorScheme =
+		colorScaleType !== 'unknown' &&
+		colorSchemeMap[colorScaleType] &&
+		colorSchemeMap[colorScaleType][config.colourScheme]
+			? // Check if the color scheme should be reversed
+			  config.colourSchemeReverse
+				? colorSchemeMap[colorScaleType][config.colourScheme].reverse() // Reverse the color scheme
+				: colorSchemeMap[colorScaleType][config.colourScheme] // Use the color scheme as is
+			: (console.warn(
+					`Invalid colourSchemeType: ${colorScaleType}. Defaulting to 'sequential' type.`
+			  ),
+			  console.warn(`Invalid colourScheme: ${config.colourScheme}. Defaulting to 'red' scheme.`),
+			  colorSchemeMap['sequential'] ? colorSchemeMap['sequential'].red : null);
+
+	// Color scheme map, with a fallback for missing classes (fallback to 5 classes)
+	$: colorSchemeMap = {
+		sequential: {
+			blue: schemeBlues[n] || schemeBlues[5], // Fallback to 5 classes if 'n' is out of range
+			green: schemeGreens[n] || schemeGreens[5],
+			gray: schemeGreys[n] || schemeGreys[5],
+			orange: schemeOranges[n] || schemeOranges[5],
+			purple: schemePurples[n] || schemePurples[5],
+			red: schemeReds[n] || schemeReds[5],
+			'blue-green': schemeBuGn[n] || schemeBuGn[5],
+			'blue-purple': schemeBuPu[n] || schemeBuPu[5],
+			'green-blue': schemeGnBu[n] || schemeGnBu[5],
+			'orange-red': schemeOrRd[n] || schemeOrRd[5],
+			'purple-blue-green': schemePuBuGn[n] || schemePuBuGn[5],
+			'purple-blue': schemePuBu[n] || schemePuBu[5],
+			'purple-blue-darker': PuBlueDarker, // Fallback already set
+			'purple-red': schemePuRd[n] || schemePuRd[5],
+			'red-purple': schemeRdPu[n] || schemeRdPu[5],
+			'yellow-green-blue': schemeYlGnBu[n] || schemeYlGnBu[5],
+			'yellow-green': schemeYlGn[n] || schemeYlGn[5],
+			'yellow-orange-brown': schemeYlOrBr[n] || schemeYlOrBr[5],
+			'yellow-orange-red': schemeYlOrRd[n] || schemeYlOrRd[5]
+		},
+		diverging: {
+			'brown-blue-green': schemeBrBG[n] || schemeBrBG[5],
+			'purple-green': schemePRGn[n] || schemePRGn[5],
+			'pink-yellow-green': schemePiYG[n] || schemePiYG[5],
+			'purple-orange': schemePuOr[n] || schemePuOr[5],
+			'red-blue': schemeRdBu[n] || schemeRdBu[5],
+			'red-gray': schemeRdGy[n] || schemeRdGy[5],
+			'red-yellow-blue': schemeRdYlBu[n] || schemeRdYlBu[5],
+			'red-yellow-green': schemeRdYlGn[n] || schemeRdYlGn[5],
+			spectral: schemeSpectral[n] || schemeSpectral[5]
+		}
+	};
 
 	$: if ($dataReady) {
 		// console.log('Country data for map loaded');

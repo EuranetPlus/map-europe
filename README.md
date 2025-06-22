@@ -55,34 +55,39 @@ _Right: Map with **"binary"** data_
 
 In order to configure the new project, please change the contents of this [map configuration file](src/lib/stores/config-features.js) (Folder: src -> lib -> stores -> config-features.js). The configuration has a number of parameters that you should specify.
 
-The most important entries that you need to change for each project are the "mapTitle", the "vercelURL", "datasetType", "datasetUnit" and "colourScheme":
+The most important entries that you need to change for each project are the "mapTitle", the "vercelURL", "datasetType", "datasetUnit", "colourSchemeType" and "colourScheme":
 
 ```js
-  "mapTitle": "europe", // The title of the map, if more than one word, separate by dash, e.g. "income-europe"
-  "vercelURL": "https://euranet-map-europe.vercel.app", // The url provided when deploying the map on Vercel
-  "datasetType": "values", // "values" or "binary"; Does the data set contain numerical values or binary (0/1) values for countries?
-  "datasetUnit": "percent", // "fullNumbers" or "percent"; Is the data in percent (0.25 of GDP) or full numbers (25 people)?
-  "percentRounded": false, // true or false; Should the percent values be rounded to full numbers (i.e. 26%, false) or 1-decimal place (i.e. 25.9%, true)
-  "colourScheme": "blue",  // one of the following: "blue", "purple-blue", "green-blue", "orange-red", "yellow-green"
-  "headlineAvailable": true, // true or false; Should the map have a headline?
-  "subheadlineAvailable": true, // true or false; Should the map have a subheadline?
-  "tooltipAvailable": true, // true or false; Should the map show a tooltip when hovering over a country?
-  "scaleBarAvailable": true, // true or false; Should the map show a scale bar on the top?
-  "legendAvailable": true, // true or false; Should the map show a legend in the bottom right corner?
-  "textSourceAvailable": true, // true or false; Should the map show a source text below the map?
-  "textNoteAvailable": true, // true or false; Should the map show a text note below the map?
-  "textDataAccessAvailable": true, // true or false; Should the map show a link to the original data source below the map?
-  "legend1Color": "#cad1d9", // Specifies the color of the first round dot in the legend entry
-  "legend2Color": "red", // Specifies the color of the second round dot in the legend entry
-  "legend3Color": "blue", // Specifies the color of the third round dot in the legend entry
-  "legend4Color": "green" // Specifies the color of the fourt round dot in the legend entry
+'mapTitle': 'employment-tertiary-attainment', // The title of the map, if more than one word, separate by dash, e.g. "income-europe"
+'vercelURL': 'map-employment-tertiary-attainment.vercel.app', // The url provided when deploying the map on Vercel
+'datasetType': 'values', // "values" or "binary"; Does the data set contain numerical values or binary (0/1) values for countries?
+'datasetUnit': 'percent', // "fullNumbers" or "percent"; Is the data in percent (0.25 of GDP) or full numbers (25 people)?
+'percentRounded': false, // true or false; Should the percent values be rounded to full numbers (i.e. 26%) or 1-decimal place (i.e. 25.9%)
+'colourSchemeType': 'diverging', // one of the following: "sequential", "diverging",
+'colourScheme': 'red-blue', // 1) one of the following "sequential" color schemes: "blue", "green", "gray", "orange", "purple", "red", "blue-green", "blue-purple", "green-blue", "orange-red", "purple-blue-green", "purple-blue", "purple-blue-darker", "purple-red", "red-purple", "yellow-green-blue", "yellow-green", "yellow-orange-brown", "yellow-orange-red" --- OR: 2) one of the following "diverging" color schemes: "brown-blue-green", "purple-green", "pink-yellow-green", "purple-orange", "red-blue", "red-gray", "red-yellow-blue", "red-yellow-green", "spectral"
+'colourSchemeClasses': 5, // for sequential scales: from 3 to 9; for diverging scales: from 5 to 11
+'colourSchemeReverse': false, // true or false; Should the order of the color scheme be reversed?
+'colorBarFirstValue': undefined, // If set (example: 0), overwrites the minimum value of the color bar, else set to: 'colorBarFirstValue': undefined
+'colorBarLastValue': undefined, // If set (example: 100), overwrites the maximum value of the color bar, else set to: 'colorBarLastValue': undefined
+'headlineAvailable': true, // true or false; Should the map have a headline?
+'subheadlineAvailable': true, // true or false; Should the map have a subheadline?
+'tooltipAvailable': true, // true or false; Should the map show a tooltip when hovering over a country?
+'scaleBarAvailable': true, // true or false; Should the map show a scale bar on the top?
+'legendAvailable': true, // true or false; Should the map show a legend in the bottom right corner?
+'textSourceAvailable': true, // true or false; Should the map show a source text below the map?
+'textNoteAvailable': true, // true or false; Should the map show a text note below the map?
+'textDataAccessAvailable': true, // true or false; Should the map show a link to the original data source below the map?
+'legend1Color': '#F4F4F4', // Specifies the color of the first round dot in the legend entry
+'legend2Color': 'red', // Specifies the color of the second round dot in the legend entry
+'legend3Color': 'blue', // Specifies the color of the third round dot in the legend entry
+'legend4Color': 'green' // Specifies the color of the fourt round dot in the legend entry
 ```
 
 ## Add data
 
 To add or update the map data, please first decide whether the data set you are using shows "values", i.e. continous numbers on a color scale or whether it is "binary", i.e. the map shows only a few countries in the same color ("dark blue") as a category (0 = there is no data for this country, 1 = there is data for this country).
 
-1. Set the dataset type in the [map configuration file](src/lib/stores/config-features.js) (Folder: src -> lib -> stores -> config-features.js) under "datasetType". If your dataset consists of **values data**, please use this [csv values template](https://docs.google.com/spreadsheets/d/1fzicMw_LiFGrdtzloXZFbM2FFgVc-GYtavvxPJFZ5Yo/edit?usp=sharing). If it consists of **binary data**, please use this [csv binary template](https://docs.google.com/spreadsheets/d/1YL_5aVY9zaaxwhI6-cEgcwO8k01Fzu2FzsPMtvppYfg/edit?usp=sharing).
+1. Set the dataset type in the [map configuration file](src/lib/stores/config-features.js) (Folder: src -> lib -> stores -> config-features.js) under "datasetType". If your dataset consists of **values data**, please use this [csv values template](https://docs.google.com/spreadsheets/d/1N7cKYXA-YnrqBI4Na7EehTbtELH2IGUDAe9wWQiPLDo/edit?usp=sharing). If it consists of **binary data**, please use this [csv binary template](https://docs.google.com/spreadsheets/d/1ff0l6IJ9ATcZZu3Ti-wQd5horS7m_XY6XgRJBGeyOZQ/edit?usp=sharing).
 
 2. Then you need to decide whether the data consists of **full numbers** (i.e. 45 people) or **percent values**, (i.e. 45% of GDP). In the [map configuration file](src/lib/stores/config-features.js) (Folder: src -> lib -> stores -> config-features.js) this can be set under "datasetUnit".
 

@@ -4,6 +4,8 @@
 	import { countryInfoVisible } from '$lib/stores/shared';
 	import CountryMediaComponent from './CountryMediaComponent.svelte';
 	import { MOUSE } from '$lib/stores/shared';
+	import { APP_HEIGHT, mobileSize, isMobile } from '$lib/stores/shared';
+
 	import { formatInt } from '$lib/utils/formatNumbers';
 
 	export let selectedCountry;
@@ -12,13 +14,19 @@
 	export let countryLink;
 	export let tooltip;
 
-	let width;
+	let width, height;
 	let countryValue;
+	let duration = 1000;
+
+	// $: infoBoxPositionX = $MOUSE.x < $MAP_WIDTH / 2 ? $MOUSE.x : $MOUSE.x - width;
 
 	// $: countryValue =
 	// 	config.datasetUnit == 'percent' ? formatInt($MOUSE.tooltip.value * 100) : $MOUSE.tooltip.value;
-	$: if(selectedCountry){
-		countryValue = config.datasetUnit == 'percent' ? formatInt(selectedCountry.csvImport.value * 100) : selectedCountry.csvImport.value;
+	$: if (selectedCountry) {
+		countryValue =
+			config.datasetUnit == 'percent'
+				? formatInt(selectedCountry.csvImport.value * 100)
+				: selectedCountry.csvImport.value;
 		// console.log(countryValue)
 	}
 
@@ -28,9 +36,11 @@
 
 {#if $countryInfoVisible}
 	<div
-		class="country-info text-sm absolute top-20 rounded bg-white p-5 border shadow-xl overflow-auto"
+		class="country-info text-sm rounded absolute bg-white p-5 border shadow-xl overflow-auto"
 		bind:clientWidth={width}
-		style={`left: calc(50% - ${width / 2}px);`}
+		bind:clientHeight={height}
+		in:fly={{ y: $APP_HEIGHT / 2, duration: duration, opacity: 1 }}
+		out:fly={{ y: $APP_HEIGHT / 2, duration: duration, opacity: 1 }}
 	>
 		<div
 			class="icon-close transition-all text-right cursor-pointer static"
@@ -54,10 +64,10 @@
 
 <style>
 	.country-info {
-		width: 95%;
-		max-height: 80%;
+		width: 100%;
+		max-height: 50%;
 		z-index: 1;
-		top: 1rem;
+		bottom: 0;
 	}
 
 	.icon-close {
