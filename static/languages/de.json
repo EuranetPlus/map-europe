@@ -1,17 +1,17 @@
 {
-  "heading": "Ist ein höherer Bildungsabschluss eine Jobgarantie?",
-  "subheading": "Im Jahr 2023 lag die Beschäftigungsquote der Bevölkerung mit Hochschulabschluss bei 86,3 %.",
+  "heading": "Dies ist das BIP-Wachstum in der EU-27",
+  "subheading": "Dies ist das BIP in den EU-Ländern im Jahr 2025",
   "legend1": "Keine Daten verfügbar",
   "tooltip1": "",
   "textSourceDescription": "Quelle",
   "textSource": "Eurostat",
   "textNoteDescription": "Notiz",
-  "textNote": "Die Beschäftigungsquote wird für Personen im Alter zwischen 20 und 64 Jahren mit hohem Bildungsniveau berechnet. Die Hochschulbildung entspricht den ISCED-Stufen 5 bis 8. Für ein niedriges Bildungsniveau (ISCED-Stufen 0 bis 2) beträgt die Quote 58,3 %; für ein mittleres Bildungsniveau (ISCED-Stufen 3 bis 4) beträgt sie 74,6 %.",
+  "textNote": "Dies ist eine Testnotiz",
   "textDataAccess": "Zugriff auf die Daten",
   "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/lfsi_educ_a__custom_14246763/default/table?lang=en",
   "textCountryClick": "Klicken Sie hier für weitere Informationen",
-  "extraInfoText_DE": "Die Straße 99 führt von der nordisraelischen Stadt Kirjat Schmona über Madschdal Schams, einen von syrischen Drusen bewohnten Ort direkt am Berg Hermon, hin auf die von Israel besetzten Golanhöhen: Bis vor wenigen Wochen war diese Strecke militärisches Sperrgebiet. Sie führt entlang der Grenze zum Libanon und bis hoch an die Grenze zu Syrien. Von hier aus verschoss die Terrormiliz Hisbollah die meisten ihrer Raketen und Drohnen. ",
-  "extraInfoLink_DE": "Mehr lesen",
-  "extraInfoText_SE": "Schweden – Ich bin sehr zufrieden mit dem Kunden, ich bin sehr zufrieden mit dem Kundenservice. Aeneans Glück braucht Schmerz. Jasminmasse. Zusammen mit ihren Gefährten werden die Berge Federn und große Stöße gebären, und eine lächerliche Maus wird geboren. Bis dahin, wie viele Katzen, Ultricies und nicht, der Kinderfußball, der Preis wer, Sem. Es gibt keinen Masseneffekt für irgendjemanden. Bis der Fuß gerade, Fringilla oder Aliquet noch Vulputate braucht, Arcu.",
+  "extraInfoText_DE": "",
+  "extraInfoLink_DE": "",
+  "extraInfoText_SE": "",
   "extraInfoLink_SE": ""
 }

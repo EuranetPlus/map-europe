@@ -10,8 +10,8 @@
   "textDataAccess": "Access the data",
   "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/lfsi_educ_a__custom_14246763/default/table?lang=en",
   "textCountryClick": "Click for more info",
-  "extraInfoText_DE": "",
-  "extraInfoLink_DE": "",
-  "extraInfoText_SE": "",
+  "extraInfoText_DE": "Die Straße 99 führt von der nordisraelischen Stadt Kirjat Schmona über Madschdal Schams, einen von syrischen Drusen bewohnten Ort direkt am Berg Hermon, hin auf die von Israel besetzten Golanhöhen: Bis vor wenigen Wochen war diese Strecke militärisches Sperrgebiet. Sie führt entlang der Grenze zum Libanon und bis hoch an die Grenze zu Syrien. Von hier aus verschoss die Terrormiliz Hisbollah die meisten ihrer Raketen und Drohnen. ",
+  "extraInfoLink_DE": "Read more",
+  "extraInfoText_SE": "Sweden - Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.",
   "extraInfoLink_SE": ""
 }

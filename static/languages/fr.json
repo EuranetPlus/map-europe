@@ -1,17 +1,17 @@
 {
-  "heading": "Un meilleur niveau d’éducation est-il une garantie d’emploi ?",
-  "subheading": "En 2023, le taux d’emploi de la population possédant un diplôme de l’enseignement supérieur a atteint 86,3%.",
+  "heading": "Il s'agit de la croissance du PIB dans l'UE-27",
+  "subheading": "En 2025, voici le PIB des pays de l'UE",
   "legend1": "Aucune donnée disponible",
   "tooltip1": "",
   "textSourceDescription": "Source",
   "textSource": "Eurostat",
   "textNoteDescription": "Note",
-  "textNote": "Le taux d'emploi est calculé pour les personnes âgées de 20 à 64 ans ayant un niveau d'éducation élevé. L'enseignement supérieur correspond aux niveaux CITE 5 à 8. Pour un niveau d'éducation faible (niveaux CITE 0 à 2), le taux est de 58,3 % ; pour un niveau moyen (niveaux CITE 3 à 4), il est de 74,6 %.",
+  "textNote": "Ceci est une note de test",
   "textDataAccess": "Accéder aux données",
   "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/lfsi_educ_a__custom_14246763/default/table?lang=fr",
   "textCountryClick": "Cliquez pour plus d'informations",
-  "extraInfoText_DE": "La route 99 mène de la ville de Kiryat Shmona, au nord d'Israël, via Majdal Shams, une ville habitée par des Druzes syriens directement sur le mont Hermon, jusqu'aux hauteurs du Golan occupées par Israël : jusqu'à il y a quelques semaines, cette route était une zone militaire restreinte. Il longe la frontière avec le Liban et jusqu'à la frontière avec la Syrie. C'est à partir d'ici que la milice terroriste Hezbollah a tiré la plupart de ses roquettes et de ses drones. ",
-  "extraInfoLink_DE": "En savoir plus",
-  "extraInfoText_SE": "Suède - Il est très important que le client soit attentif à ses besoins. La bonne fortune d'Énée a besoin de douleur. Masse de jasmin. Avec leurs compagnons, les montagnes donneront naissance à des plumes et de grands coups, et une souris ridicule naîtra. Jusque-là, combien de chats, ultricies et non, le football des enfants, le prix qui, sem. Il n’y a d’effet de masse pour personne. Jusqu'à ce que le pied soit juste, fringilla ou, aliquet ni, vulputé, arcu.",
+  "extraInfoText_DE": "",
+  "extraInfoLink_DE": "",
+  "extraInfoText_SE": "",
   "extraInfoLink_SE": ""
 }

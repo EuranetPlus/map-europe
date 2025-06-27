@@ -1,17 +1,17 @@
 {
-  "heading": "Is a better level of education a job guarantee?",
-  "subheading": "In 2023, the employment rate of the population with a higher education qualification reached 86.3%.",
+  "heading": "This is GDP growth across the EU-27",
+  "subheading": "In 2025, this is the GDP in EU countries",
   "legend1": "No data available",
   "tooltip1": "",
   "textSourceDescription": "Source",
   "textSource": "Eurostat",
   "textNoteDescription": "Note",
-  "textNote": "The employment rate is calculated for people aged between 20 and 64 with a high level of education. Tertiary education corresponds to ISCED levels 5-8. For a low level of education (ISCED levels 0-2), the rate is 58.3%.; for a medium level (ISCED levels 3-4) it is 74.6%.",
+  "textNote": "This is a test note",
   "textDataAccess": "Access the data",
   "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/lfsi_educ_a__custom_14246763/default/table?lang=en",
   "textCountryClick": "Click for more info",
-  "extraInfoText_DE": "Road 99 leads from the northern Israeli town of Kiryat Shmona via Majdal Shams, a town inhabited by Syrian Druze directly on Mount Hermon, to the Israeli-occupied Golan Heights: Until a few weeks ago, this stretch was a military restricted area. It runs along the border with Lebanon and up to the border with Syria. It was from here that the terrorist militia Hezbollah fired most of its rockets and drones.",
-  "extraInfoLink_DE": "Read more",
-  "extraInfoText_SE": "Sweden - It's very important for the customer to pay attention to the customer's needs. Aenean's good fortune needs pain. Jasmine mass. Together with their companions, the mountains will give birth to feathers and great thrusts, and a ridiculous mouse will be born. Until then, how many cats, ultricies and not, the kids football, the price who, sem. There is no mass effect for anyone. Until the foot just, fringilla or, aliquet nor, vulputate needs, arcu.",
+  "extraInfoText_DE": "",
+  "extraInfoLink_DE": "",
+  "extraInfoText_SE": "",
   "extraInfoLink_SE": ""
 }
